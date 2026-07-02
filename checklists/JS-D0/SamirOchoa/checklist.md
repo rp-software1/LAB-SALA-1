@@ -1,6 +1,6 @@
 
 ---
-- **alumno**: Flavio Silva
+- **alumno**: Samir Ochoa
 - **sala**: I-SALA1
 - **curso**: JS
 - **dia**: 0
