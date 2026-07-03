@@ -8,7 +8,7 @@
 ## Secciones
 - [x] A — Variables
 - [x] B — Funciones
-- [ ] C — Objeto plato del restaurante
+- [x] C — Objeto plato del restaurante
 - [ ] D — Exploración con IA
 - [ ] E — Evaluación entre pares
 - [ ] F — Cierre del día
