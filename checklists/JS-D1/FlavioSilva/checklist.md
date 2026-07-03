@@ -9,6 +9,6 @@
 - [x] A — Variables
 - [x] B — Funciones
 - [x] C — Objeto plato del restaurante
-- [ ] D — Exploración con IA
+- [x] D — Exploración con IA
 - [ ] E — Evaluación entre pares
 - [ ] F — Cierre del día
