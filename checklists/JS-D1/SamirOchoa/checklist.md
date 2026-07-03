@@ -6,7 +6,7 @@
 - **loom**: (agregar link al terminar)
 ---
 ## Secciones
-- [ ] A — Variables
+- [x] A — Variables
 - [ ] B — Funciones
 - [ ] C — Objeto plato del restaurante
 - [ ] D — Exploración con IA
