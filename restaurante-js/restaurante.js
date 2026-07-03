@@ -79,7 +79,7 @@ function estaDisponible(object) {
 };
 
 function vender(object) {
-    object.stock =  object.stock - 1;
+    object.stock--;
     return object.stock;
 };
 
