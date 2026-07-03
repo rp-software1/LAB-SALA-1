@@ -6,7 +6,7 @@
 - Bueno yo ya entendía el tema de las variables, así que esto me sirvió como un **repaso** y **reforzamiento**. 
 
 2) **Proyección:** Mañana vas a trabajar con ``arrays`` — l`istas de objetos`. Si mañana tuvieras que crear un `array` con los tres platos que hiciste hoy, ¿cómo lo harías? Escribe cómo imaginas que se vería ese código.
-- Primero tener un `array` digamos **"global"** y dentro de este tener los tres objetos de los **platos**. 
+- Primero tener un `array` llamemoslo  **"padre"** y dentro de este tener los tres objetos de los **platos**. 
 - **Lo haría así:**
   ```javascript
   const platos = [
