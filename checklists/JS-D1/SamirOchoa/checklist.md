@@ -11,4 +11,4 @@
 - [x] C — Objeto plato del restaurante
 - [x] D — Exploración con IA
 - [x] E — Evaluación entre pares
-- [ ] F — Cierre del día
+- [x] F — Cierre del día

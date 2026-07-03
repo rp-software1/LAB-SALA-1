@@ -1,7 +1,0 @@
-Aprendizaje: 
-Aprendi que un objeto declarado con const no puede ser reasignado, pero si se se pueden modificar sus propiedades, como el stock.
-
-Tambien entendi que cuando una funcion recibe un objeto, puede modificar el objeto original porque ambos hacen referencia al mismo objeto en memoria
-
-FEEDBACK:SeccionD:
-Las instrucciones fueron claras y no tuve problemas para completar la actividad.
