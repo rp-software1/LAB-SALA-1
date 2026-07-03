@@ -42,3 +42,4 @@ const nuevoStock = vender(stockPlato1);
 console.log(descripcion);
 console.log(disponible);
 console.log(nuevoStock);
+
