@@ -9,19 +9,44 @@ let menu = [
 
 // 2) FUNCIÓN: renderizar el menú en pantalla
 function renderMenu() {
- const output = document.getElementById("output");
- output.innerHTML = ""; // Limpiar antes de mostrar
+  const output = document.getElementById("output");
+  output.innerHTML = ""; // limpiar todo antes de renderizar
 
- // Tarea 3: Mostrar contador en pantalla
- output.innerHTML += `<p>Total de platos en el menú: ${contarPlatos()}</p>`;
+  // Contador
+  output.innerHTML += `<p>Total de platos en el menú: ${contarPlatos()}</p>`;
 
- let html = "<ul>";
- for (let i = 0; i < menu.length; i++) {
-   const plato = menu[i];
-   html += `<li>${plato.nombre} — S/ ${plato.precio} — Stock: ${plato.stock}</li>`;
- }
- html += "</ul>";
- output.innerHTML += html;
+  let html = `
+    <table border="1">
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  for (let i = 0; i < menu.length; i++) {
+    const plato = menu[i];
+
+    html += `
+      <tr>
+        <td>${i + 1}</td>
+        <td>${plato.nombre}</td>
+        <td>S/ ${plato.precio}</td>
+        <td>${plato.stock}</td>
+      </tr>
+    `;
+  }
+
+  html += `
+      </tbody>
+    </table>
+  `;
+
+  output.innerHTML += html;
 }
 
 // 3) FUNCIÓN: agregar plato (Tarea 2: Lógica de formulario)
