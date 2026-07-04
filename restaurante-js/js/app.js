@@ -11,20 +11,37 @@ function renderMenu() {
  output.innerHTML = ""; // limpiar
 
  // crear una lista HTML simple
- let html = "<ul>";
+ let html = `
+    <table border="1">
+    <thead>
+        <tr>
+            <td>N°</td>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Stock</td>
+        </tr>
+        </thead>
+        
+        <tbody>`;
 
  for (let i = 0; i < menu.length; i++) {
    const plato = menu[i];
-   html += `<li>${plato.nombre} — S/ ${plato.precio} — Stock: ${plato.stock}</li>`;
+   html += `
+            <tr>
+                <td>${i + 1}</td>
+                <td>${plato.nombre}</td>
+                <td>${plato.precio}</td>
+                <td>${plato.stock}</td>
+            </tr>`;
  }
 
- html += "</ul>";
+ html += "</tbody> </table>";
  output.innerHTML = html;
 }
 
 // 3) FUNCIÓN: agregar un plato demo al menú
 // HACER QUE RECIBA PARÁMETROS PARA CREAR EL PLATO
-function agregarPlatoDemo(object) {
+function agregarPlato(object) {
  const nuevoPlato = { 
     nombre: object.nombre, 
     precio: object.precio, 
@@ -64,7 +81,7 @@ formNewPlato.addEventListener("submit", e => {
         return;
     }
 
-    agregarPlatoDemo(newPlato);
+    agregarPlato(newPlato);
     renderMenu();
 
 })
