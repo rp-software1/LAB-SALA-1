@@ -23,9 +23,25 @@ function renderMenu() {
 }
 
 // 3) FUNCIÓN: agregar un plato demo al menú
-function agregarPlatoDemo() {
- const nuevoPlato = { nombre: "Pollo a la brasa", precio: 20, stock: 4 };
+// HACER QUE RECIBA PARÁMETROS PARA CREAR EL PLATO
+function agregarPlatoDemo(object) {
+ const nuevoPlato = { 
+    nombre: object.nombre, 
+    precio: object.precio, 
+    stock: object.stock };
+
  menu.push(nuevoPlato);
+};
+
+
+// VERIFICAR QUE NO EXISTA OTRO PLATO CON EL MISMO NOMNBRE Y MISMO PRECIO
+function validarPlato(object){
+    for(let i = 0 ; i < menu.length; i++){
+        const plato = menu[i];
+        if(plato.nombre === object.nombre && plato.precio === object.precio){
+            return true
+        }
+    }
 }
 
 // 4) EVENTOS: conectar botones con funciones
@@ -33,7 +49,22 @@ document.getElementById("btnMostrar").addEventListener("click", () => {
  renderMenu();
 });
 
-document.getElementById("btnAgregar").addEventListener("click", () => {
- agregarPlatoDemo();
- renderMenu();
-});
+const formNewPlato = document.getElementById("form-add-platoMenu");
+
+formNewPlato.addEventListener("submit", e => {
+    e.preventDefault(); 
+
+    const nombre = document.getElementById("nombreNewPlato").value.trim();
+    const precio = Number(document.getElementById("precioNewPlato").value.trim());
+    const stock = document.getElementById("stockNewPlato").value.trim();
+    const newPlato = {nombre, precio, stock}
+
+    if(validarPlato(newPlato)){
+        alert("Este plato ya está registrado en el menú..."); 
+        return;
+    }
+
+    agregarPlatoDemo(newPlato);
+    renderMenu();
+
+})

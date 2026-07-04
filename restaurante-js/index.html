@@ -16,7 +16,25 @@
     <h1>Menú del Restaurante</h1>
 
     <button id="btnMostrar">Mostrar menú</button>
-    <button id="btnAgregar">Agregar plato demo</button>
+
+    <form id="form-add-platoMenu">
+        <div class="box-input">
+            <input type="text" id="nombreNewPlato" 
+            placeholder="Nombre" required>
+        </div>
+        <div class="box-input">
+            <input type="text" id="precioNewPlato" 
+            placeholder="Precio" required>
+        </div>
+        <div class="box-input">
+            <input type="text" id="stockNewPlato" 
+            placeholder="Stock" required>
+        </div>
+        <div class="box-input">
+            <input id="btnAgregar" type="submit" value="Agregar plato">
+        </div>
+
+    </form>
 
     <div id="output"></div>
 
