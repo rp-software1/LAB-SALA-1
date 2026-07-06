@@ -134,7 +134,7 @@ function renderLista(titulo, listaDeTextos) {
 };
 
 // FUNCIÓN GENERAL PARA RENDERIZAR LA LISTA DE PLATOS EN TABLA
-function renderListPlatos(list){
+function renderListPlatos(list) {
   const output = document.getElementById("output");
 
   output.innerHTML = ""
@@ -176,10 +176,59 @@ function renderListPlatos(list){
 };
 
 // FORMATEAR EL NOMBRE DE CADA PLATO
-function FormatearNombre(nombre){
-  if(nombre.trim().length === 0){
+function FormatearNombre(nombre) {
+  if (nombre.trim().length === 0) {
     return "";
   }
 
-  return nombre.trim()[0].toUpperCase() + nombre.trim().slice(1).toLowerCase(); 
+  return nombre.trim()[0].toUpperCase() + nombre.trim().slice(1).toLowerCase();
+}
+
+// --- PARTE D: Conectar botones (Eventos) ---
+
+// 1. Conectar botón de buscar
+document.getElementById("btnBuscar").addEventListener("click", () => {
+  const nombreBuscado = document.getElementById("inputBuscar").value;
+  const platoEncontrado = buscarPlatoNombre(nombreBuscado);
+
+  if (platoEncontrado) {
+    // Usamos renderListPlatos pasándole un array con el plato encontrado
+    renderListPlatos([platoEncontrado]);
+  } else {
+    document.getElementById("output").innerHTML = "<p>Plato no encontrado.</p>";
+  }
+});
+
+// 2. Conectar botón de stock bajo
+document.getElementById("btnStockBajo").addEventListener("click", () => {
+  const platosBajos = menu.filter(plato => plato.stock <= 3);
+  const listaTextos = platosBajos.map(p => `${p.nombre} (Stock: ${p.stock})`);
+  renderLista("Platos con stock bajo (<= 3):", listaTextos);
+});
+
+// 3. Conectar botón de resumen
+document.getElementById("btnResumen").addEventListener("click", () => {
+  const listaResumen = resumenMenu();
+  renderLista("Resumen del Menú:", listaResumen);
+});
+
+// --- PARTE E: Tarea Extra (Venta de platos) ---
+
+function venderPlato(nombre, cantidad) {
+  const plato = buscarPlatoNombre(nombre);
+  const output = document.getElementById("output");
+
+  if (!plato) {
+    output.innerHTML = "<p>Error: Plato no encontrado.</p>";
+    return;
+  }
+
+  if (plato.stock >= cantidad) {
+    plato.stock -= cantidad;
+    output.innerHTML = `<p>¡Venta exitosa! Se vendieron ${cantidad} de ${plato.nombre}.</p>`;
+  } else {
+    output.innerHTML = `<p>Error: Stock insuficiente para ${plato.nombre}.</p>`;
+  }
+
+  renderMenu();
 }
