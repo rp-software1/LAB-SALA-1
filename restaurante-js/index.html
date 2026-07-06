@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,6 +11,7 @@
     <title>Restaurante — Día 1: Samir Ochoa y Flavio</title>
     <script src="js/app.js" defer></script>
 </head>
+
 <body>
 
     <h1>Menú del Restaurante de Samir Ochoa y Flavio</h1>
@@ -18,16 +20,13 @@
 
     <form id="form-add-platoMenu">
         <div class="box-input">
-            <input type="text" id="nombreNewPlato" 
-            placeholder="Nombre" required>
+            <input type="text" id="nombreNewPlato" placeholder="Nombre" required>
         </div>
         <div class="box-input">
-            <input type="text" id="precioNewPlato" 
-            placeholder="Precio" required>
+            <input type="text" id="precioNewPlato" placeholder="Precio" required>
         </div>
         <div class="box-input">
-            <input type="text" id="stockNewPlato" 
-            placeholder="Stock" required>
+            <input type="text" id="stockNewPlato" placeholder="Stock" required>
         </div>
         <div class="box-input">
             <input id="btnAgregar" type="submit" value="Agregar plato">
@@ -35,7 +34,21 @@
 
     </form>
 
+    <hr>
+
+    <h2>Herramientas</h2>
+
+    <input id="inputBuscar" placeholder="Buscar plato por nombre" />
+    <button id="btnBuscar">Buscar</button>
+
+    <button id="btnStockBajo">Ver stock bajo (&lt;= 3)</button>
+
+    <button id="btnResumen">Ver resumen</button>
+
+    <hr>
+
     <div id="output"></div>
 
 </body>
+
 </html>
