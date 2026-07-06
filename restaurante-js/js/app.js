@@ -184,6 +184,18 @@ document.getElementById("btnBuscar").addEventListener("click", () => {
 
 });
 
+// Evento para buscar al presionar Enter
+document.getElementById("inputBuscar").addEventListener("keydown", (e) => {
+  if(e.key === "Enter"){
+    document.getElementById("btnBuscar").click();
+  }
+});
+
+// Evento para limpiar el input al perder el foco
+document.getElementById("inputBuscar").addEventListener("blur", () => {
+  document.getElementById("inputBuscar").value = document.getElementById("inputBuscar").value.trim();
+});
+
 // 2. Conectar botón de stock bajo
 document.getElementById("btnStockBajo").addEventListener("click", () => {
   const listaPlatos = filtrarStockBajo(3); 
