@@ -9,70 +9,41 @@ let menu = [
 
 // 2) FUNCIÓN: renderizar el menú en pantalla
 function renderMenu() {
-  const output = document.getElementById("output");
-  output.innerHTML = ""; // limpiar todo antes de renderizar
-
-  // Contador
-  output.innerHTML += `<p>Total de platos en el menú: ${contarPlatos()}</p>`;
-
-  let html = `
-    <table border="1">
-      <thead>
-        <tr>
-          <th>N°</th>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Stock</th>
-        </tr>
-      </thead>
-      <tbody>
-  `;
-
-  for (let i = 0; i < menu.length; i++) {
-    const plato = menu[i];
-
-    html += `
-      <tr>
-        <td>${i + 1}</td>
-        <td>${plato.nombre}</td>
-        <td>S/ ${plato.precio}</td>
-        <td>${plato.stock}</td>
-      </tr>
-    `;
-  }
-
-  html += `
-      </tbody>
-    </table>
-  `;
-
-  output.innerHTML += html;
+  renderListPlatos(menu);
 }
 
 // 3) FUNCIÓN: agregar plato (Tarea 2: Lógica de formulario)
 function agregarPlatoDemo(object) {
+  if (object.nombre.trim().length === 0) {
+    return;
+  }
+
   const nuevoPlato = {
-    nombre: object.nombre,
+    nombre: FormatearNombre(object.nombre),
     precio: object.precio,
     stock: object.stock
   };
   menu.push(nuevoPlato);
-}
+};
 
 // Tarea 3: Función de contar platos (Obligatoria)
-function contarPlatos() {
-  return menu.length;
+function contarPlatos(list) {
+  return list.length;
 }
 
 // VALIDACIÓN: Evitar duplicados
 function validarPlato(object) {
+  const nombre = FormatearNombre(object.nombre);
+
+  if (object.precio <= 0 || object.stock <= 0) return true;
+
   for (let i = 0; i < menu.length; i++) {
     const plato = menu[i];
-    if (plato.nombre === object.nombre && plato.precio === object.precio) {
+    if (plato.nombre === nombre && plato.precio === object.precio) {
       return true;
     }
   }
-}
+};
 
 // 4) EVENTOS: Conectar botones
 document.getElementById("btnMostrar").addEventListener("click", () => {
@@ -86,11 +57,11 @@ if (formNewPlato) {
     e.preventDefault();
     const nombre = document.getElementById("nombreNewPlato").value.trim();
     const precio = Number(document.getElementById("precioNewPlato").value.trim());
-    const stock = document.getElementById("stockNewPlato").value.trim();
+    const stock = Number(document.getElementById("stockNewPlato").value.trim());
     const newPlato = { nombre, precio, stock }
 
     if (validarPlato(newPlato)) {
-      alert("Este plato ya está registrado...");
+      alert("Este plato ya está registrado o el precio/stock es inválido.");
       return;
     }
 
@@ -149,7 +120,9 @@ function renderLista(titulo, listaDeTextos) {
   if (listaDeTextos.length === 0) {
     output.innerHTML += "<p>No hay elementos para mostrar.</p>";
     return;
-  }
+  };
+
+  output.innerHTML += `<p>Total de platos: ${contarPlatos(listaDeTextos)}</p>`;
 
   let html = "<ul>";
   listaDeTextos.forEach(texto => {
@@ -158,4 +131,55 @@ function renderLista(titulo, listaDeTextos) {
   html += "</ul>";
 
   output.innerHTML += html;
+};
+
+// FUNCIÓN GENERAL PARA RENDERIZAR LA LISTA DE PLATOS EN TABLA
+function renderListPlatos(list){
+  const output = document.getElementById("output");
+
+  output.innerHTML = ""
+  // Contador
+  output.innerHTML += `<p>Total de platos: ${contarPlatos(list)}</p>`;
+
+  let html = `
+    <table border="1">
+      <thead>
+        <tr>
+          <th>N°</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+  `;
+
+  for (let i = 0; i < list.length; i++) {
+    const plato = list[i];
+
+    html += `
+      <tr>
+        <td>${i + 1}</td>
+        <td>${plato.nombre}</td>
+        <td>S/ ${plato.precio}</td>
+        <td>${plato.stock}</td>
+      </tr>
+    `;
+  }
+
+  html += `
+      </tbody>
+    </table>
+  `;
+
+  output.innerHTML += html;
+};
+
+// FORMATEAR EL NOMBRE DE CADA PLATO
+function FormatearNombre(nombre){
+  if(nombre.trim().length === 0){
+    return "";
+  }
+
+  return nombre.trim()[0].toUpperCase() + nombre.trim().slice(1).toLowerCase(); 
 }
