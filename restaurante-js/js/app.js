@@ -132,3 +132,12 @@ function filtrarStockBajo() {
 document.getElementById("btnStockBajo").addEventListener("click", () => {
   filtrarStockBajo();
 });
+
+// FUNCIÓN DEL RESUMEN DEL MENÚ (MAP)
+// RESUMEN DEL MENÚ (MAP)
+function resumenMenu() {
+  return menu.map(plato => {
+    return `${menu.indexOf(plato) + 1}) ${plato.nombre} - S/.${plato.precio}`;
+  });
+};
+
