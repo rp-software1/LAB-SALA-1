@@ -79,30 +79,10 @@ function buscarPlatoNombre(name) {
 };
 
 // FUNCION: Filtrar platos por stock bajo (<= 3)
-function filtrarStockBajo() {
-  const platosBajos = menu.filter(plato => plato.stock <= 3);
-
-  const output = document.getElementById("output");
-  output.innerHTML = "<h3>Platos con stock bajo (<= 3):</h3>";
-
-  if (platosBajos.length === 0) {
-    output.innerHTML += "<p>No hay platos con stock bajo.</p>";
-    return;
-  }
-
-  let html = "<ul>";
-  platosBajos.forEach(plato => {
-    html += `<li>${plato.nombre} - Stock: ${plato.stock}</li>`;
-  });
-  html += "</ul>";
-
-  output.innerHTML += html;
+function filtrarStockBajo(num) {
+  return menu.filter(plato => plato.stock <= num);
 }
 
-// Evento para el botón de stock bajo
-document.getElementById("btnStockBajo").addEventListener("click", () => {
-  filtrarStockBajo();
-});
 
 // FUNCIÓN DEL RESUMEN DEL MENÚ (MAP)
 // RESUMEN DEL MENÚ (MAP)
@@ -188,21 +168,25 @@ function FormatearNombre(nombre) {
 
 // 1. Conectar botón de buscar
 document.getElementById("btnBuscar").addEventListener("click", () => {
-  const nombreBuscado = document.getElementById("inputBuscar").value;
+  const nombreBuscado = document.getElementById("inputBuscar").value.trim();
+
+  if(nombreBuscado.length === 0) return;
+
   const platoEncontrado = buscarPlatoNombre(nombreBuscado);
 
-  if (platoEncontrado) {
-    // Usamos renderListPlatos pasándole un array con el plato encontrado
-    renderListPlatos([platoEncontrado]);
-  } else {
-    document.getElementById("output").innerHTML = "<p>Plato no encontrado.</p>";
+  if(!platoEncontrado){
+    document.getElementById("output").innerHTML = "<p style='color: red;'>Plato no encontrado</p>";
+    return;
   }
+
+  renderListPlatos([platoEncontrado]);
+
 });
 
 // 2. Conectar botón de stock bajo
 document.getElementById("btnStockBajo").addEventListener("click", () => {
-  const platosBajos = menu.filter(plato => plato.stock <= 3);
-  const listaTextos = platosBajos.map(p => `${p.nombre} (Stock: ${p.stock})`);
+  const listaPlatos = filtrarStockBajo(3); 
+  const listaTextos = listaPlatos.map(p => `${listaPlatos.indexOf(p) + 1}). ${p.nombre} - Stock: ${p.stock}`);
   renderLista("Platos con stock bajo (<= 3):", listaTextos);
 });
 
@@ -212,7 +196,7 @@ document.getElementById("btnResumen").addEventListener("click", () => {
   renderLista("Resumen del Menú:", listaResumen);
 });
 
-// --- PARTE E: Tarea Extra (Venta de platos) ---
+// PARTE E: Tarea Extra (Venta de platos)
 
 function venderPlato(nombre, cantidad) {
   const plato = buscarPlatoNombre(nombre);
@@ -231,4 +215,4 @@ function venderPlato(nombre, cantidad) {
   }
 
   renderMenu();
-}
+};
