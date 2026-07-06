@@ -143,6 +143,7 @@ function renderListPlatos(list) {
         <td>${plato.nombre}</td>
         <td>S/ ${plato.precio}</td>
         <td>${plato.stock}</td>
+        <td> <button class="btn-vender" data-index ="${menu.indexOf(plato)}">Vender</button> </td>
       </tr>
     `;
   }
@@ -198,8 +199,8 @@ document.getElementById("btnResumen").addEventListener("click", () => {
 
 // PARTE E: Tarea Extra (Venta de platos)
 
-function venderPlato(nombre, cantidad) {
-  const plato = buscarPlatoNombre(nombre);
+function venderPlato(idx, cantidad) {
+  const plato = menu[idx];
   const output = document.getElementById("output");
 
   if (!plato) {
@@ -209,10 +210,45 @@ function venderPlato(nombre, cantidad) {
 
   if (plato.stock >= cantidad) {
     plato.stock -= cantidad;
-    output.innerHTML = `<p>¡Venta exitosa! Se vendieron ${cantidad} de ${plato.nombre}.</p>`;
+    alert(`¡Venta exitosa! Se vendieron ${cantidad} de ${plato.nombre}.`);
   } else {
-    output.innerHTML = `<p>Error: Stock insuficiente para ${plato.nombre}.</p>`;
+    alert(`Error: Stock insuficiente para ${plato.nombre}. Solo hay ${plato.stock} disponibles.`);
   }
 
   renderMenu();
 };
+
+
+document.getElementById("output").addEventListener("click", e => {
+  const elemento = e.target;
+    const btnVender = elemento.classList.contains("btn-vender"); 
+
+    if(btnVender){
+      const cantidad = prompt("Ingrese la cantidad a vender:");
+
+      if(cantidad == 0 || cantidad === null){
+        alert("Cancelando operación...");
+        return;
+      }
+
+      if(!validarCantidad(cantidad)){
+        alert("Cantidad inválida");
+        return;
+      }
+
+      const index = Number(elemento.dataset.index); 
+      venderPlato(index, Number(cantidad));
+    }
+});
+
+
+function validarCantidad(cantidad){
+    // REGEX 
+    const regexNum = /^[0-9]+$/;
+    if(regexNum.test(cantidad)){
+        return true;
+    }else{
+        return false;
+    }
+
+}
