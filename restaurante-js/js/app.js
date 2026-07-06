@@ -141,3 +141,21 @@ function resumenMenu() {
   });
 };
 
+// FUNCIÓN: Renderizar lista genérica en pantalla
+function renderLista(titulo, listaDeTextos) {
+  const output = document.getElementById("output");
+  output.innerHTML = `<h3>${titulo}</h3>`;
+
+  if (listaDeTextos.length === 0) {
+    output.innerHTML += "<p>No hay elementos para mostrar.</p>";
+    return;
+  }
+
+  let html = "<ul>";
+  listaDeTextos.forEach(texto => {
+    html += `<li>${texto}</li>`;
+  });
+  html += "</ul>";
+
+  output.innerHTML += html;
+}
