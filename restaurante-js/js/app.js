@@ -97,3 +97,12 @@ if (formNewPlato) {
         renderMenu();
     });
 }
+
+
+// FUNCIONES DIA 4 
+// BUSCAR POR COINCIDENCIA - FIND
+// Usamos includes para buscar por coincidencia de texto en el nombre del plato
+function buscarPlatoNombre(name) {
+  return menu.find(plato => plato.nombre.toLowerCase().includes(name.trim().toLowerCase()));
+};
+
