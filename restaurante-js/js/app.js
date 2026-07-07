@@ -20,6 +20,7 @@ function estadoPlato(stock) {
 // 2) FUNCIÓN: renderizar el menú en pantalla
 function renderMenu() {
   renderListPlatos(menu);
+  verificarEstadoGeneral();
 }
 
 // 3) FUNCIÓN: agregar plato (Tarea 2: Lógica de formulario)
@@ -223,6 +224,7 @@ document.getElementById("btnStockBajo").addEventListener("click", () => {
 document.getElementById("btnResumen").addEventListener("click", () => {
   const listaResumen = resumenMenu();
   renderLista("Resumen del Menú:", listaResumen);
+  verificarEstadoGeneral();
 });
 
 // PARTE E: Tarea Extra (Venta de platos)
@@ -258,24 +260,30 @@ function venderPlato(idx, cantidad) {
 
 document.getElementById("output").addEventListener("click", e => {
   const elemento = e.target;
-  const btnVender = elemento.classList.contains("btn-vender");
+    const btnVender = elemento.classList.contains("btn-vender"); 
 
-  if (btnVender) {
-    const cantidad = prompt("Ingrese la cantidad a vender:");
+    if(btnVender){
+      const index = Number(elemento.dataset.index); 
+      const plato = menu[index]; 
+      if(plato.stock === 0){
+        alert("No disponible: El plato está agotado.");
+        return;
+      };
 
-    if (cantidad == 0 || cantidad === null) {
-      alert("Cancelando operación...");
-      return;
+      const cantidad = prompt("Ingrese la cantidad a vender:");
+
+      if(cantidad == 0 || cantidad === null){
+        alert("Cancelando operación...");
+        return;
+      }
+
+      if(!validarCantidad(cantidad)){
+        alert("Cantidad inválida");
+        return;
+      }
+
+      venderPlato(index, Number(cantidad));
     }
-
-    if (!validarCantidad(cantidad)) {
-      alert("Cantidad inválida");
-      return;
-    }
-
-    const index = Number(elemento.dataset.index);
-    venderPlato(index, Number(cantidad));
-  }
 });
 
 
