@@ -129,7 +129,10 @@ function renderListPlatos(list) {
 
   output.innerHTML = ""
   // Contador
-  output.innerHTML += `<p>Total de platos: ${contarPlatos(list)}</p>`;
+  const title = document.createElement("h3");
+  title.textContent = `Total de platos: ${contarPlatos(list)}`;
+
+  output.appendChild(title);
 
   let html = `
     <table border="1">
@@ -139,6 +142,8 @@ function renderListPlatos(list) {
           <th>Nombre</th>
           <th>Precio</th>
           <th>Stock</th>
+          <th> Vender </th> 
+          <th> Estado </th>
         </tr>
       </thead>
       <tbody>
@@ -148,12 +153,13 @@ function renderListPlatos(list) {
     const plato = list[i];
 
     html += `
-      <tr>
+      <tr class= "${estadoPlato(plato.stock).clase}">
         <td>${i + 1}</td>
         <td>${plato.nombre}</td>
         <td>S/ ${plato.precio}</td>
         <td>${plato.stock}</td>
         <td> <button class="btn-vender" data-index ="${menu.indexOf(plato)}">Vender</button> </td>
+        <td> ${estadoPlato(plato.stock).texto}</td>
       </tr>
     `;
   }
