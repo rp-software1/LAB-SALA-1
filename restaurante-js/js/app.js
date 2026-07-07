@@ -8,12 +8,12 @@ let menu = [
 ];
 
 // FUNCIÓN PARA HALLAR EL ESTADO 
-function estadoPlato(stock){
-  if(stock === 0) return {texto: "Agotado", clase: "agotado"};
+function estadoPlato(stock) {
+  if (stock === 0) return { texto: "Agotado", clase: "agotado" };
 
-  else if(stock <= 3) return {texto: "Bajo", clase: "bajo"};
+  else if (stock <= 3) return { texto: "Bajo", clase: "bajo" };
 
-  return {texto: "Normal", clase: "normal"};
+  return { texto: "Normal", clase: "normal" };
 }
 
 
@@ -187,11 +187,11 @@ function FormatearNombre(nombre) {
 document.getElementById("btnBuscar").addEventListener("click", () => {
   const nombreBuscado = document.getElementById("inputBuscar").value.trim();
 
-  if(nombreBuscado.length === 0) return;
+  if (nombreBuscado.length === 0) return;
 
   const platoEncontrado = buscarPlatoNombre(nombreBuscado);
 
-  if(!platoEncontrado){
+  if (!platoEncontrado) {
     document.getElementById("output").innerHTML = "<p style='color: red;'>Plato no encontrado</p>";
     return;
   }
@@ -202,7 +202,7 @@ document.getElementById("btnBuscar").addEventListener("click", () => {
 
 // Evento para buscar al presionar Enter
 document.getElementById("inputBuscar").addEventListener("keydown", (e) => {
-  if(e.key === "Enter"){
+  if (e.key === "Enter") {
     document.getElementById("btnBuscar").click();
   }
 });
@@ -214,7 +214,7 @@ document.getElementById("inputBuscar").addEventListener("blur", () => {
 
 // 2. Conectar botón de stock bajo
 document.getElementById("btnStockBajo").addEventListener("click", () => {
-  const listaPlatos = filtrarStockBajo(3); 
+  const listaPlatos = filtrarStockBajo(3);
   const listaTextos = listaPlatos.map(p => `${listaPlatos.indexOf(p) + 1}). ${p.nombre} - Stock: ${p.stock}`);
   renderLista("Platos con stock bajo (<= 3):", listaTextos);
 });
@@ -229,54 +229,63 @@ document.getElementById("btnResumen").addEventListener("click", () => {
 
 function venderPlato(idx, cantidad) {
   const plato = menu[idx];
-  const output = document.getElementById("output");
 
+  // 1. Validación: ¿El plato existe en el array?
   if (!plato) {
-    output.innerHTML = "<p>Error: Plato no encontrado.</p>";
+    alert("Error: Plato no encontrado.");
     return;
   }
 
+  // 2. Validación (NUEVA): ¿Está agotado desde antes?
+  if (plato.stock === 0) {
+    alert(`No disponible: ${plato.nombre} está agotado.`);
+    return;
+  }
+
+  // 3. Validación: ¿Hay stock suficiente para la cantidad pedida?
   if (plato.stock >= cantidad) {
     plato.stock -= cantidad;
     alert(`¡Venta exitosa! Se vendieron ${cantidad} de ${plato.nombre}.`);
   } else {
-    alert(`Error: Stock insuficiente para ${plato.nombre}. Solo hay ${plato.stock} disponibles.`);
+    alert(`Error: Stock insuficiente. Solo hay ${plato.stock} disponibles.`);
+    return; // Salimos de la función si no se pudo vender
   }
 
+  // 4. Actualizar pantalla (renderMenu redibuja y aplica el nuevo color automáticamente)
   renderMenu();
-};
+}
 
 
 document.getElementById("output").addEventListener("click", e => {
   const elemento = e.target;
-    const btnVender = elemento.classList.contains("btn-vender"); 
+  const btnVender = elemento.classList.contains("btn-vender");
 
-    if(btnVender){
-      const cantidad = prompt("Ingrese la cantidad a vender:");
+  if (btnVender) {
+    const cantidad = prompt("Ingrese la cantidad a vender:");
 
-      if(cantidad == 0 || cantidad === null){
-        alert("Cancelando operación...");
-        return;
-      }
-
-      if(!validarCantidad(cantidad)){
-        alert("Cantidad inválida");
-        return;
-      }
-
-      const index = Number(elemento.dataset.index); 
-      venderPlato(index, Number(cantidad));
+    if (cantidad == 0 || cantidad === null) {
+      alert("Cancelando operación...");
+      return;
     }
+
+    if (!validarCantidad(cantidad)) {
+      alert("Cantidad inválida");
+      return;
+    }
+
+    const index = Number(elemento.dataset.index);
+    venderPlato(index, Number(cantidad));
+  }
 });
 
 
-function validarCantidad(cantidad){
-    // REGEX 
-    const regexNum = /^[0-9]+$/;
-    if(regexNum.test(cantidad)){
-        return true;
-    }else{
-        return false;
-    }
+function validarCantidad(cantidad) {
+  // REGEX 
+  const regexNum = /^[0-9]+$/;
+  if (regexNum.test(cantidad)) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
