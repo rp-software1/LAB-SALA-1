@@ -289,3 +289,26 @@ function validarCantidad(cantidad) {
   }
 
 }
+
+function verificarEstadoGeneral() {
+  let agotados = 0;
+  let bajos = 0;
+
+  // Bucle for tradicional obligatorio
+  for (let i = 0; i < menu.length; i++) {
+    if (menu[i].stock === 0) {
+      agotados++;
+    } else if (menu[i].stock <= 3) {
+      bajos++;
+    }
+  }
+
+  // Mensajes visuales
+  if (agotados > 0) {
+    alert("Hay platos agotados.");
+  } else if (bajos > 0) {
+    alert("Hay platos con stock bajo.");
+  } else {
+    alert("Todo disponible.");
+  }
+}
