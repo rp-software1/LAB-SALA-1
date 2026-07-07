@@ -7,6 +7,16 @@ let menu = [
   { nombre: "Tallarines", precio: 15, stock: 6 }
 ];
 
+// FUNCIÓN PARA HALLAR EL ESTADO 
+function estadoPlato(stock){
+  if(stock === 0) return {texto: "Agotado", clase: "agotado"};
+
+  else if(stock <= 3) return {texto: "Bajo", clase: "bajo"};
+
+  return {texto: "Normal", clase: "normal"};
+}
+
+
 // 2) FUNCIÓN: renderizar el menú en pantalla
 function renderMenu() {
   renderListPlatos(menu);
