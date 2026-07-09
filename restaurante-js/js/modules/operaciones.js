@@ -34,8 +34,10 @@ function venderPlato(idx, cantidad) {
 
   if (cantidad > plato.stock) return { ok: false, mensaje: `Stock insuficiente, solo quedan ${plato.stock} platos` }
 
-  plato.stock -= cantidad;
-  return { ok: true, mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)} \nStock Restante: ${plato.stock}` }
+  return {
+    plato, 
+    ok: true, 
+    mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)}`}
 
 }
 
@@ -84,6 +86,8 @@ export async function venderPlatoAsync(idx, cantidad){
   if(!result.ok) throw new Error(result.mensaje);
 
   const respuesta = await simularRespuestaServidor(result.mensaje); 
+
+  if(respuesta === result.mensaje) result.plato.stock -= cantidad; 
 
   return respuesta; 
 };
