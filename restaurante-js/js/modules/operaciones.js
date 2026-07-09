@@ -76,3 +76,14 @@ export function simularRespuestaServidor(result) {
     }, 2000);
   })
 };
+
+// Función de vender plato (Async) 
+export async function venderPlatoAsync(idx, cantidad){
+  const result = venderPlato(idx, cantidad); 
+
+  if(!result.ok) throw new Error(result.mensaje);
+
+  const respuesta = await simularRespuestaServidor(result.mensaje); 
+
+  return respuesta; 
+};
