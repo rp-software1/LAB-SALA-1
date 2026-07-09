@@ -153,14 +153,18 @@ async function btnVenderPlato(index) {
     }
 
     let mensaje = document.querySelector(".message"); 
-    mensaje ? mensaje.innerHTML = "" : mensaje = document.createComment("p"); 
+    mensaje ? mensaje.innerHTML = "" : mensaje = document.createElement("p"); 
     // Agregar Clases proximas  
+    mensaje.classList.remove("error", "success");
+    mensaje.classList.add("wait", "message");
 
     mensaje.innerHTML = "Procesando Pedido..."; 
     output.appendChild(mensaje); 
 
     const venta = await venderPlatoAsync(index, cantidad); 
     // Modiifcar clases del mensaje 
+    mensaje.classList.remove("wait");
+    mensaje.classList.add("success");
 
     renderMenu(); 
     output.appendChild(mensaje); 
@@ -169,6 +173,8 @@ async function btnVenderPlato(index) {
   }
   catch(err){
     const mensaje = document.querySelector(".message"); 
+    mensaje.classList.remove("wait", "success"); 
+    mensaje.classList.add("error"); 
     mensaje.textContent = err;
     output.appendChild(mensaje);   
   }
