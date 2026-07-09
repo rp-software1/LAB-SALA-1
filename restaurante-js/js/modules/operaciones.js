@@ -61,3 +61,18 @@ export function verificarEstadoGeneral() {
     return "Todo disponible.";
   }
 }
+
+//DIA 7
+export function simularRespuestaServidor(result) {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      const time = Math.random();
+      if (time < 0.3) {
+        rej("Error del servidor simulado...");
+      }
+      else {
+        res(result);
+      }
+    }, 2000);
+  })
+};
