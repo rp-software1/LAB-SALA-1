@@ -23,15 +23,20 @@ export function resumenMenu() {
 }
 
 // Tarea Extra (Venta de platos)
-export function venderPlato(idx, cantidad) {
+function venderPlato(idx, cantidad) {
   const plato = menu[idx];
 
-  if (plato && plato.stock >= cantidad) {
-    plato.stock -= cantidad;
-    return true;
-  }
+  if (!plato) return { ok: false, mensaje: "Plato no Encontrado" }
 
-  return false;
+  if (plato.stock === 0) return { ok: false, mensaje: "No Disponible (agotado)" }
+
+  if (cantidad <= 0) return { ok: false, mensaje: "Cantidad Inválida" }
+
+  if (cantidad > plato.stock) return { ok: false, mensaje: `Stock insuficiente, solo quedan ${plato.stock} platos` }
+
+  plato.stock -= cantidad;
+  return { ok: true, mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)} \nStock Restante: ${plato.stock}` }
+
 }
 
 export function verificarEstadoGeneral() {
