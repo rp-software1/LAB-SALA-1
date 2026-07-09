@@ -4,7 +4,7 @@ import {
   buscarPlatoNombre,
   filtrarStockBajo,
   resumenMenu,
-  venderPlato,
+  venderPlatoAsync,
   verificarEstadoGeneral,
 } from "./operaciones.js";
 
@@ -137,36 +137,48 @@ function btnBuscarPorNombre() {
 }
 
 // btnVnederPlato
-function btnVenderPlato(index) {
-  const plato = menu[index];
-  if (plato.stock === 0) {
-    alert("No disponible: El plato está agotado.");
-    return;
+async function btnVenderPlato(index) {
+  try{
+    const plato = menu[index];
+    const cantidad = prompt("Ingrese la cantidad a vender:");
+
+    if (cantidad == 0 || cantidad === null) {
+      alert("Cancelando operación...");
+      return;
+    }
+
+    if (!validarCantidad(cantidad)) {
+      alert("Cantidad inválida");
+      return;
+    }
+
+    let mensaje = document.querySelector(".message"); 
+    mensaje ? mensaje.innerHTML = "" : mensaje = document.createElement("p"); 
+    // Agregar Clases proximas  
+    mensaje.classList.remove("error", "success");
+    mensaje.classList.add("wait", "message");
+
+    mensaje.innerHTML = "Procesando Pedido..."; 
+    output.appendChild(mensaje); 
+
+    const venta = await venderPlatoAsync(index, cantidad); 
+    // Modiifcar clases del mensaje 
+    mensaje.classList.remove("wait");
+    mensaje.classList.add("success");
+
+    renderMenu(); 
+    output.appendChild(mensaje); 
+    mensaje.innerHTML = venta.replaceAll("\n", "<br>");
+
   }
-
-  const cantidad = prompt("Ingrese la cantidad a vender:");
-
-  if (cantidad == 0 || cantidad === null) {
-    alert("Cancelando operación...");
-    return;
+  catch(err){
+    const mensaje = document.querySelector(".message"); 
+    mensaje.classList.remove("wait", "success"); 
+    mensaje.classList.add("error"); 
+    mensaje.textContent = err;
+    output.appendChild(mensaje);   
   }
-
-  if (!validarCantidad(cantidad)) {
-    alert("Cantidad inválida");
-    return;
-  }
-
-  const venta = venderPlato(index, Number(cantidad));
-  if (!venta) {
-    alert("No se pudo realizar la venta...");
-    return;
-  }
-
-  renderMenu();
-  alert(
-    `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)} \nStock Restante: ${plato.stock}`,
-  );
-}
+};
 
 // Validar cantidad
 function validarCantidad(cantidad) {

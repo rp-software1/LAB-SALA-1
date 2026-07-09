@@ -23,15 +23,22 @@ export function resumenMenu() {
 }
 
 // Tarea Extra (Venta de platos)
-export function venderPlato(idx, cantidad) {
+function venderPlato(idx, cantidad) {
   const plato = menu[idx];
 
-  if (plato && plato.stock >= cantidad) {
-    plato.stock -= cantidad;
-    return true;
-  }
+  if (!plato) return { ok: false, mensaje: "Plato no Encontrado" }
 
-  return false;
+  if (plato.stock === 0) return { ok: false, mensaje: "No Disponible (agotado)" }
+
+  if (cantidad <= 0) return { ok: false, mensaje: "Cantidad Inválida" }
+
+  if (cantidad > plato.stock) return { ok: false, mensaje: `Stock insuficiente, solo quedan ${plato.stock} platos` }
+
+  return {
+    plato, 
+    ok: true, 
+    mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)}`}
+
 }
 
 export function verificarEstadoGeneral() {
@@ -56,3 +63,31 @@ export function verificarEstadoGeneral() {
     return "Todo disponible.";
   }
 }
+
+//DIA 7
+export function simularRespuestaServidor(result) {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      const time = Math.random();
+      if (time < 0.3) {
+        rej("Error del servidor simulado...");
+      }
+      else {
+        res(result);
+      }
+    }, 2000);
+  })
+};
+
+// Función de vender plato (Async) 
+export async function venderPlatoAsync(idx, cantidad){
+  const result = venderPlato(idx, cantidad); 
+
+  if(!result.ok) throw new Error(result.mensaje);
+
+  const respuesta = await simularRespuestaServidor(result.mensaje); 
+
+  if(respuesta === result.mensaje) result.plato.stock -= cantidad; 
+
+  return respuesta; 
+};
