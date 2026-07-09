@@ -3,12 +3,13 @@
 - **Estado:** en desarrollo
 
 ---
-## Estructura del proyecto (Dia 6)
-Para mejorar la escalabilidad y mantener el principio de **Responsabilidad Única**, el codigo ha sido separado en los siguientes módulos:
-* **`menu.js`**: Maneja la lista de platos y las operaciones relacionadas con el menú.
-* **`operaciones.js`**: Realiza operaciones matemáticas y lógicas sobre el menú.
-* **`ui.js`**: Se encarga de la interfaz de usuario y la interacción con el usuario.
-* **`main.js`**: Punto de entrada del sistema. Importa los módulos y inicializa la aplicación.
+## Estructura del proyecto (Día 7)
+Para mantener el principio de **Responsabilidad Única** y una arquitectura profesional, el código se organiza así:
+* **`menu.js`**: Maneja la lista de platos.
+* **`operaciones.js`**: Contiene la lógica de negocio, cálculos de stock y la simulación asincrónica (Promesas).
+* **`ui.js`**: Gestiona la interfaz de usuario, eventos y la actualización dinámica de mensajes.
+* **`css/style.css`**: Hoja de estilos externa para la gestión de estados visuales (procesando, éxito, error).
+* **`main.js`**: Punto de entrada que coordina los módulos.
 
 ## ¿Por qué esta estructura?
 1. **Separacion de responsabilidades:** Cada módulo tiene una sola responsabilidad, lo que hace que el código sea más fácil de entender y mantener.
@@ -19,7 +20,8 @@ Para mejorar la escalabilidad y mantener el principio de **Responsabilidad Únic
 
 ## Roadmap del proyecto
 * **Día 1-2**: Variables, funciones y objetos.
-* **Dia 3**: Arrays y menú visual.
+* **Día 3**: Arrays y menú visual.
 * **Día 4**: Métodos avanzados de arrays.
 * **Día 5**: Condicionales, bucles y estados de stock.
-* **Día 6**: Modularizacion y estructura profesional.
+* **Día 6**: Modularización y estructura profesional.
+* **Día 7**: Async/Await, Promesas y simulación de servidor.
