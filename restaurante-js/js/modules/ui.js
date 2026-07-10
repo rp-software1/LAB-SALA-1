@@ -1,7 +1,8 @@
 // Import necesarios
 import { menu, agregarPlato, validarPlato } from "./menu.js";
 import {
-  buscarPlatoNombre,
+  buscarPlatoNombreExacto,
+  buscarPlatoNombreCoincidencia,
   filtrarStockBajo,
   resumenMenu,
   venderPlatoAsync,
@@ -11,6 +12,7 @@ import {
 // SELECCIONAR BOTONES Y FORMULARIO
 const btnMostrar = document.getElementById("btnMostrar");
 const btnBuscar = document.getElementById("btnBuscar");
+const btnVender = document.getElementById("btnVender");
 const btnResumen = document.getElementById("btnResumen");
 const formNewPlato = document.getElementById("form-add-platoMenu");
 const inputBuscar = document.getElementById("inputBuscar");
@@ -31,21 +33,40 @@ function contarPlatos(list) {
 }
 
 // Renderizar lista genérica en pantalla
-function renderLista(titulo, listaDeTextos) {
-  output.innerHTML = `<h3>${titulo}</h3>`;
+function renderListaResumen(listaDeTextos) {
+  output.innerHTML = `<h3>Resumen del Menú</h3>`;
 
   if (listaDeTextos.length === 0) {
-    output.innerHTML += "<p>No hay elementos para mostrar.</p>";
+    output.innerHTML += "<p>No hay platos para mostrar.</p>";
     return;
   }
 
   output.innerHTML += `<p>Total de platos: ${contarPlatos(listaDeTextos)}</p>`;
 
-  let html = "<ul>";
-  listaDeTextos.forEach((texto) => {
-    html += `<li>${texto}</li>`;
-  });
-  html += "</ul>";
+  let html = `
+    <table border="1">
+    <thead> 
+      <tr>
+        <th> N° </th>
+        <th> Resumen </th>
+      </tr>
+    </thead> 
+    <tbody> 
+  `;
+
+  for(let i = 0; i < listaDeTextos.length ; i++){
+    html += `
+      <tr>
+        <td>${i + 1}</td>
+        <td>${listaDeTextos[i]}</td>
+      </tr>
+    `;
+  }
+
+  html += `
+    </tbody> 
+    </table>
+  `;
 
   output.innerHTML += html;
 }
@@ -66,8 +87,7 @@ function renderListPlatos(list) {
           <th>N°</th>
           <th>Nombre</th>
           <th>Precio</th>
-          <th>Stock</th>
-          <th> Vender </th> 
+          <th>Stock</th> 
           <th> Estado </th>
         </tr>
       </thead>
@@ -78,12 +98,11 @@ function renderListPlatos(list) {
     const plato = list[i];
 
     html += `
-      <tr class= "${estadoPlato(plato.stock).clase}">
+      <tr class= "${estadoPlato(plato.stock).clase}" data-index ="${menu.indexOf(plato)}">
         <td>${i + 1}</td>
         <td>${plato.nombre}</td>
         <td>S/ ${plato.precio}</td>
         <td>${plato.stock}</td>
-        <td> <button class="btn-vender" data-index ="${menu.indexOf(plato)}">Vender</button> </td>
         <td> ${estadoPlato(plato.stock).texto}</td>
       </tr>
     `;
@@ -126,7 +145,7 @@ function btnBuscarPorNombre() {
 
   if (nombreBuscado.length === 0) return;
 
-  const platoEncontrado = buscarPlatoNombre(nombreBuscado);
+  const platoEncontrado = buscarPlatoNombreCoincidencia(nombreBuscado);
 
   if (!platoEncontrado) {
     output.innerHTML = "<p style='color: red;'>Plato no encontrado</p>";
@@ -137,9 +156,30 @@ function btnBuscarPorNombre() {
 }
 
 // btnVnederPlato
-async function btnVenderPlato(index) {
+async function btnVenderPlato() {
   try{
-    const plato = menu[index];
+    const nombre = prompt("Ingrese el nombre del plato:"); 
+
+    if(nombre === null){
+      alert("Cancelando operación..."); 
+      return;
+    }
+
+    if(nombre.trim() === ""){
+      alert("Debe de ingresar un nombre"); 
+      return;
+    }
+
+    const plato = buscarPlatoNombreExacto(nombre.trim());
+    const index = menu.indexOf(plato); 
+
+    if(!plato || index === -1){
+      alert("Plato no encontrado"); 
+      return;
+    }
+
+    alert(`Plato Encontrado: \nNombre: ${plato.nombre} \nPrecio: ${plato.precio} \nStock: ${plato.stock} \nAhora ingresará la cantidad`);
+
     const cantidad = prompt("Ingrese la cantidad a vender:");
 
     if (cantidad == 0 || cantidad === null) {
@@ -175,7 +215,16 @@ async function btnVenderPlato(index) {
     const mensaje = document.querySelector(".message"); 
     mensaje.classList.remove("wait", "success"); 
     mensaje.classList.add("error"); 
-    mensaje.textContent = err;
+    
+    if(err.name === "ErrorNegocio"){
+      mensaje.textContent = `${err.name}: ${err.message}`;
+      console.error(`${err.name}: ${err.message}`);
+    }
+    else{
+      mensaje.textContent = err;
+      console.error(err);
+    }
+
     output.appendChild(mensaje);   
   }
 };
@@ -206,25 +255,13 @@ export function inicializarUI() {
 
   btnStockBajo.addEventListener("click", () => {
     const listaPlatos = filtrarStockBajo(3);
-    const listaTextos = listaPlatos.map(
-      (p) => `${listaPlatos.indexOf(p) + 1}). ${p.nombre} - Stock: ${p.stock}`,
-    );
-    renderLista("Platos con stock bajo (<= 3):", listaTextos);
+    renderListPlatos(listaPlatos)
   });
 
   btnResumen.addEventListener("click", () => {
     const listaResumen = resumenMenu();
-    renderLista("Resumen del Menú:", listaResumen);
-    verificarEstadoGeneral();
+    renderListaResumen(listaResumen);
   });
 
-  output.addEventListener("click", (e) => {
-    const elemento = e.target;
-    const btnVender = elemento.classList.contains("btn-vender");
-
-    if (btnVender) {
-      const index = Number(elemento.dataset.index);
-      btnVenderPlato(index);
-    }
-  });
+  btnVender.addEventListener("click", () => btnVenderPlato());
 }

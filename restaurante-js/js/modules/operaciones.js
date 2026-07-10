@@ -3,12 +3,16 @@ import { menu } from "./menu.js";
 
 // BUSCAR POR COINCIDENCIA - FIND
 // Usamos includes para buscar por coincidencia de texto en el nombre del plato
-export function buscarPlatoNombre(name) {
+export function buscarPlatoNombreCoincidencia(name) {
   return menu.find((plato) =>
-    plato.nombre.toLowerCase().includes(name.trim().toLowerCase()),
+    plato.nombre.toLowerCase().includes(name.trim().toLowerCase())
   );
 }
-
+export function buscarPlatoNombreExacto(name) {
+  return menu.find((plato) =>
+    plato.nombre.toLowerCase() === (name.trim().toLowerCase())
+  );
+}
 // FUNCION: Filtrar platos por stock bajo (<= 3)
 export function filtrarStockBajo(num) {
   return menu.filter((plato) => plato.stock <= num);
@@ -18,7 +22,7 @@ export function filtrarStockBajo(num) {
 // RESUMEN DEL MENÚ (MAP)
 export function resumenMenu() {
   return menu.map((plato) => {
-    return `${menu.indexOf(plato) + 1}) ${plato.nombre} - S/.${plato.precio}`;
+    return `${plato.nombre} - S/.${plato.precio}`;
   });
 }
 
@@ -35,9 +39,10 @@ function venderPlato(idx, cantidad) {
   if (cantidad > plato.stock) return { ok: false, mensaje: `Stock insuficiente, solo quedan ${plato.stock} platos` }
 
   return {
-    plato, 
-    ok: true, 
-    mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)}`}
+    plato,
+    ok: true,
+    mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)}`
+  }
 
 }
 
@@ -80,14 +85,21 @@ export function simularRespuestaServidor(result) {
 };
 
 // Función de vender plato (Async) 
-export async function venderPlatoAsync(idx, cantidad){
-  const result = venderPlato(idx, cantidad); 
+export async function venderPlatoAsync(idx, cantidad) {
+  const result = venderPlato(idx, cantidad);
 
-  if(!result.ok) throw new Error(result.mensaje);
+  if (!result.ok) throw new ErrorNegocio(result.mensaje);
 
-  const respuesta = await simularRespuestaServidor(result.mensaje); 
+  const respuesta = await simularRespuestaServidor(result.mensaje);
 
-  if(respuesta === result.mensaje) result.plato.stock -= cantidad; 
+  if (respuesta === result.mensaje) result.plato.stock -= cantidad;
 
-  return respuesta; 
+  return respuesta;
+};
+// CLase ErrorNegocio (hereda de la clase nativa Error)
+export class ErrorNegocio extends Error {
+  constructor(mensaje) {
+    super(mensaje);
+    this.name = "ErrorNegocio"
+  };
 };
