@@ -1,7 +1,8 @@
 // Import necesarios
 import { menu, agregarPlato, validarPlato } from "./menu.js";
 import {
-  buscarPlatoNombre,
+  buscarPlatoNombreExacto,
+  buscarPlatoNombreCoincidencia,
   filtrarStockBajo,
   resumenMenu,
   venderPlatoAsync,
@@ -126,7 +127,7 @@ function btnBuscarPorNombre() {
 
   if (nombreBuscado.length === 0) return;
 
-  const platoEncontrado = buscarPlatoNombre(nombreBuscado);
+  const platoEncontrado = buscarPlatoNombreCoincidencia(nombreBuscado);
 
   if (!platoEncontrado) {
     output.innerHTML = "<p style='color: red;'>Plato no encontrado</p>";
