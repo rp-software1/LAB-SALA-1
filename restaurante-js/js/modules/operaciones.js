@@ -8,7 +8,11 @@ export function buscarPlatoNombre(name) {
     plato.nombre.toLowerCase().includes(name.trim().toLowerCase()),
   );
 }
-
+export function buscarPlatoNombreExacto(name) {
+  return menu.find((plato) =>
+    plato.nombre.toLowerCase() === (name.trim().toLowerCase())
+  );
+}
 // FUNCION: Filtrar platos por stock bajo (<= 3)
 export function filtrarStockBajo(num) {
   return menu.filter((plato) => plato.stock <= num);
