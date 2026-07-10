@@ -35,9 +35,10 @@ function venderPlato(idx, cantidad) {
   if (cantidad > plato.stock) return { ok: false, mensaje: `Stock insuficiente, solo quedan ${plato.stock} platos` }
 
   return {
-    plato, 
-    ok: true, 
-    mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)}`}
+    plato,
+    ok: true,
+    mensaje: `Venta Realizada Exitosamente! \nDetalles: \nPlato: ${plato.nombre} \nCantidad: ${cantidad} \nPrecio Unitario: S/.${plato.precio} \nTotal: S/.${plato.precio * Number(cantidad)}`
+  }
 
 }
 
@@ -80,14 +81,21 @@ export function simularRespuestaServidor(result) {
 };
 
 // Función de vender plato (Async) 
-export async function venderPlatoAsync(idx, cantidad){
-  const result = venderPlato(idx, cantidad); 
+export async function venderPlatoAsync(idx, cantidad) {
+  const result = venderPlato(idx, cantidad);
 
-  if(!result.ok) throw new Error(result.mensaje);
+  if (!result.ok) throw new Error(result.mensaje);
 
-  const respuesta = await simularRespuestaServidor(result.mensaje); 
+  const respuesta = await simularRespuestaServidor(result.mensaje);
 
-  if(respuesta === result.mensaje) result.plato.stock -= cantidad; 
+  if (respuesta === result.mensaje) result.plato.stock -= cantidad;
 
-  return respuesta; 
+  return respuesta;
+};
+// CLase ErrorNegocio (hereda de la clase nativa Error)
+export class ErrorNegocio extends Error {
+  constructor(mensaje) {
+    super(mensaje);
+    this.name = "ErrorNegocio"
+  };
 };
