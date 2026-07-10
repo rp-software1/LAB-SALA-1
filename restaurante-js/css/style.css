@@ -1,52 +1,70 @@
-     .normal td {
-         color: black;
-     }
+    #form-add-platoMenu {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-top: 1rem;
+    }
 
-     .bajo td {
-         color: orange;
-         font-weight: bold;
-     }
+    input[type="text"] {
+        padding-block: 5px;
+        padding-inline: 10px;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+    }
 
-     .agotado td {
-         color: red;
-         font-weight: bold;
-     }
+    #inputBuscar {
+        width: 250px
+    }
 
-     button,
-     input[type="submit"] {
-         padding-inline: 10px;
-         padding-block: 5px;
-         cursor: pointer;
-         border-radius: 5px;
-         border: 1px solid #aaa;
-     }
+    .normal td {
+        color: #222;
+    }
 
-     .btn-vender {
-         color: inherit;
-         border-color: inherit;
-         background-color: #ccc5;
-         letter-spacing: 1px;
-     }
+    .bajo td {
+        color: #f80;
+        font-weight: bold;
+    }
 
-     tr.agotado .btn-vender {
-         cursor: no-drop;
-     }
+    .agotado td {
+        color: #A00;
+        font-weight: bold;
+    }
 
-     p.message {
-         font-size: 1.2rem;
-         letter-spacing: 0.5px;
-     }
+    button,
+    input[type="submit"] {
+        padding-inline: 10px;
+        padding-block: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+    }
 
-     p.wait {
-         color: #008;
-     }
+    .btn-vender {
+        color: inherit;
+        border-color: inherit;
+        background-color: #ccc5;
+        letter-spacing: 1px;
+    }
 
-     p.success {
-         color: #080;
-         font-size: 1rem;
-     }
+    tr.agotado .btn-vender {
+        cursor: no-drop;
+    }
 
-     p.error {
-         color: #800;
-         letter-spacing: 2px;
-     }
+    p.message {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    p.wait {
+        color: #008;
+    }
+
+    p.success {
+        color: #080;
+        font-size: 1rem;
+    }
+
+    p.error {
+        color: #800;
+        letter-spacing: 2px;
+    }

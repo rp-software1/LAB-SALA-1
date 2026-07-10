@@ -87,8 +87,7 @@ function renderListPlatos(list) {
           <th>N°</th>
           <th>Nombre</th>
           <th>Precio</th>
-          <th>Stock</th>
-          <th> Vender </th> 
+          <th>Stock</th> 
           <th> Estado </th>
         </tr>
       </thead>
@@ -99,12 +98,11 @@ function renderListPlatos(list) {
     const plato = list[i];
 
     html += `
-      <tr class= "${estadoPlato(plato.stock).clase}">
+      <tr class= "${estadoPlato(plato.stock).clase}" data-index ="${menu.indexOf(plato)}">
         <td>${i + 1}</td>
         <td>${plato.nombre}</td>
         <td>S/ ${plato.precio}</td>
         <td>${plato.stock}</td>
-        <td> <button class="btn-vender" data-index ="${menu.indexOf(plato)}">Vender</button> </td>
         <td> ${estadoPlato(plato.stock).texto}</td>
       </tr>
     `;
