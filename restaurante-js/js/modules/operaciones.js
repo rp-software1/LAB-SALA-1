@@ -84,7 +84,7 @@ export function simularRespuestaServidor(result) {
 export async function venderPlatoAsync(idx, cantidad) {
   const result = venderPlato(idx, cantidad);
 
-  if (!result.ok) throw new Error(result.mensaje);
+  if (!result.ok) throw new ErrorNegocio(result.mensaje);
 
   const respuesta = await simularRespuestaServidor(result.mensaje);
 
