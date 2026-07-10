@@ -12,6 +12,7 @@ import {
 // SELECCIONAR BOTONES Y FORMULARIO
 const btnMostrar = document.getElementById("btnMostrar");
 const btnBuscar = document.getElementById("btnBuscar");
+const btnVender = document.getElementById("btnVender");
 const btnResumen = document.getElementById("btnResumen");
 const formNewPlato = document.getElementById("form-add-platoMenu");
 const inputBuscar = document.getElementById("inputBuscar");
@@ -138,9 +139,30 @@ function btnBuscarPorNombre() {
 }
 
 // btnVnederPlato
-async function btnVenderPlato(index) {
+async function btnVenderPlato() {
   try{
-    const plato = menu[index];
+    const nombre = prompt("Ingrese el nombre del plato:"); 
+
+    if(nombre === null){
+      alert("Cancelando operación..."); 
+      return;
+    }
+
+    if(nombre.trim() === ""){
+      alert("Debe de ingresar un nombre"); 
+      return;
+    }
+
+    const plato = buscarPlatoNombreExacto(nombre.trim());
+    const index = menu.indexOf(plato); 
+
+    if(!plato || index === -1){
+      alert("Plato no encontrado"); 
+      return;
+    }
+
+    alert(`Plato Encontrado: \nNombre: ${plato.nombre} \nPrecio: ${plato.precio} \nStock: ${plato.stock} \nAhora ingresará la cantidad`);
+
     const cantidad = prompt("Ingrese la cantidad a vender:");
 
     if (cantidad == 0 || cantidad === null) {
@@ -176,7 +198,16 @@ async function btnVenderPlato(index) {
     const mensaje = document.querySelector(".message"); 
     mensaje.classList.remove("wait", "success"); 
     mensaje.classList.add("error"); 
-    mensaje.textContent = err;
+    
+    if(err.name === "ErrorNegocio"){
+      mensaje.textContent = `${err.name}: ${err.message}`;
+      console.error(`${err.name}: ${err.message}`);
+    }
+    else{
+      mensaje.textContent = err;
+      console.error(err);
+    }
+
     output.appendChild(mensaje);   
   }
 };
@@ -219,13 +250,5 @@ export function inicializarUI() {
     verificarEstadoGeneral();
   });
 
-  output.addEventListener("click", (e) => {
-    const elemento = e.target;
-    const btnVender = elemento.classList.contains("btn-vender");
-
-    if (btnVender) {
-      const index = Number(elemento.dataset.index);
-      btnVenderPlato(index);
-    }
-  });
+  btnVender.addEventListener("click", () => btnVenderPlato());
 }
