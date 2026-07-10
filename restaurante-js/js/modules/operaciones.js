@@ -3,9 +3,9 @@ import { menu } from "./menu.js";
 
 // BUSCAR POR COINCIDENCIA - FIND
 // Usamos includes para buscar por coincidencia de texto en el nombre del plato
-export function buscarPlatoNombre(name) {
+export function buscarPlatoNombreCoincidencia(name) {
   return menu.find((plato) =>
-    plato.nombre.toLowerCase().includes(name.trim().toLowerCase()),
+    plato.nombre.toLowerCase().includes(name.trim().toLowerCase())
   );
 }
 export function buscarPlatoNombreExacto(name) {
