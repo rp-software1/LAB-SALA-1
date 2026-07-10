@@ -22,7 +22,7 @@ export function filtrarStockBajo(num) {
 // RESUMEN DEL MENÚ (MAP)
 export function resumenMenu() {
   return menu.map((plato) => {
-    return `${menu.indexOf(plato) + 1}) ${plato.nombre} - S/.${plato.precio}`;
+    return `${plato.nombre} - S/.${plato.precio}`;
   });
 }
 

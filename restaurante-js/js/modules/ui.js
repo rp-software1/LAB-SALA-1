@@ -33,21 +33,40 @@ function contarPlatos(list) {
 }
 
 // Renderizar lista genérica en pantalla
-function renderLista(titulo, listaDeTextos) {
-  output.innerHTML = `<h3>${titulo}</h3>`;
+function renderListaResumen(listaDeTextos) {
+  output.innerHTML = `<h3>Resumen del Menú</h3>`;
 
   if (listaDeTextos.length === 0) {
-    output.innerHTML += "<p>No hay elementos para mostrar.</p>";
+    output.innerHTML += "<p>No hay platos para mostrar.</p>";
     return;
   }
 
   output.innerHTML += `<p>Total de platos: ${contarPlatos(listaDeTextos)}</p>`;
 
-  let html = "<ul>";
-  listaDeTextos.forEach((texto) => {
-    html += `<li>${texto}</li>`;
-  });
-  html += "</ul>";
+  let html = `
+    <table border="1">
+    <thead> 
+      <tr>
+        <th> N° </th>
+        <th> Resumen </th>
+      </tr>
+    </thead> 
+    <tbody> 
+  `;
+
+  for(let i = 0; i < listaDeTextos.length ; i++){
+    html += `
+      <tr>
+        <td>${i + 1}</td>
+        <td>${listaDeTextos[i]}</td>
+      </tr>
+    `;
+  }
+
+  html += `
+    </tbody> 
+    </table>
+  `;
 
   output.innerHTML += html;
 }
@@ -238,16 +257,12 @@ export function inicializarUI() {
 
   btnStockBajo.addEventListener("click", () => {
     const listaPlatos = filtrarStockBajo(3);
-    const listaTextos = listaPlatos.map(
-      (p) => `${listaPlatos.indexOf(p) + 1}). ${p.nombre} - Stock: ${p.stock}`,
-    );
-    renderLista("Platos con stock bajo (<= 3):", listaTextos);
+    renderListPlatos(listaPlatos)
   });
 
   btnResumen.addEventListener("click", () => {
     const listaResumen = resumenMenu();
-    renderLista("Resumen del Menú:", listaResumen);
-    verificarEstadoGeneral();
+    renderListaResumen(listaResumen);
   });
 
   btnVender.addEventListener("click", () => btnVenderPlato());
