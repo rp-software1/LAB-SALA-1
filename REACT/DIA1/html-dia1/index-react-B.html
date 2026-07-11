@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+        const platos = [
+            {
+                id: 1,
+                nombre: "Lomo saltado",
+                categoria: "segundos",
+                precio: 18,
+                stock: 3,
+                disponible: true
+            },
+            {
+                id: 2,
+                nombre: "Arroz con pollo",
+                categoria: "segundos",
+                precio: 12,
+                stock: 5,
+                disponible: true
+            },
+            {
+                id: 3,
+                nombre: "Sopa de verduras",
+                categoria: "entradas",
+                precio: 8,
+                stock: 0,
+                disponible: false
+            }
+        ];
+
+        function Carta({ platos }) {
+            return (
+                <div>
+                    {platos.map(plato => (
+                        <div key={plato.id}>
+                            <h3>{plato.nombre}</h3>
+                            <p>Categoría: {plato.categoria}</p>
+                            <p>Precio: S/ {plato.precio}</p>
+                            <p>Stock: {plato.stock}</p>
+                            <p>{plato.disponible ? "✅ Disponible" : "❌ Agotado"}</p>
+                        </div>
+                    ))}
+                </div>
+            );
+        }
+
+        function Titulo(){
+            return (
+                <>
+                <h2> Holassss </h2>
+                <h2> Adioss </h2>
+                </>
+            )
+        };
+
+        function Lis() {
+            return(
+                <ul> 
+                    <li className="platoAgotado">Plato.... </li>
+                </ul>
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root")); 
+        root.render(<Carta platos={platos} />)
+    </script>
+</body>
+</html>
