@@ -1,0 +1,41 @@
+.disponible {
+    background-color: #bbf7d0;
+    color: #15803d;
+}
+
+.no-disponible {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.carta {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plato {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.plato h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+.plato p {
+    margin: 0.125rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.no-disponible .status {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+.disponible .status {
+    color: #059669;
+    font-weight: bold;
+}
