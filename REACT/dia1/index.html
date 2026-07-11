@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="Carta"></div>
+    <form id="form-add-platoMenu">
+        <div class="box-input">
+            <input type="text" id="nombreNewPlato" placeholder="Nombre" required />
+        </div>
+        <div class="box-input">
+            <input type="text" id="precioNewPlato" placeholder="Precio" required />
+        </div>
+        <div class="box-input">
+            <input type="text" id="categoriaNewPlato" placeholder="Categoria" required />
+        </div>
+        <div class="box-input">
+            <input type="text" id="stockNewPlato" placeholder="Stock" required />
+        </div>
+        <div class="box-input">
+            <input id="btnAgregar" type="submit" value="Agregar plato" />
+        </div>
+    </form>
+    <script>
+        const carta = document.getElementById("Carta")
+        const btnAgregar = document.getElementById("btnAgregar")
+        let platos = [
+            { id: 1, nombre: "Lomo saltado", categoria: "segundos", precio: 18, stock: 3, disponible: true },
+            { id: 2, nombre: "Arroz con pollo", categoria: "segundos", precio: 12, stock: 5, disponible: true },
+            { id: 3, nombre: "Sopa de verduras", categoria: "entradas", precio: 8, stock: 0, disponible: false },
+        ];
+        function renderCarta(lista) {
+            carta.innerHTML = ""
+            for (let i = 0; i < lista.length; i++) {
+                const plato = lista[i]
+                carta.innerHTML += `
+            <div>
+                <h3>${plato.nombre}</h3>
+                <p>Categoria: ${plato.categoria}</p>
+                <p>Precio: ${plato.precio}</p>
+                <p>Stock: ${plato.stock}</p>
+                <p>Disponible: ${plato.disponible}</p>
+            </div>
+            `
+            }
+
+        }
+        renderCarta(platos)
+        function agregarPlato() {
+            const nombreNewPlato = document.getElementById("nombreNewPlato").value
+            const precioNewPlato = document.getElementById("precioNewPlato").value
+            const stockNewPlato = document.getElementById("stockNewPlato").value
+            const categoriaNewPlato = document.getElementById("categoriaNewPlato").value
+            const plato = { id: platos.length + 1, nombre: nombreNewPlato, precio: precioNewPlato, stock: stockNewPlato, categoria: categoriaNewPlato, disponible: true }
+            platos.push(plato)
+            renderCarta(platos)
+        }
+
+        const formulario = document.getElementById("form-add-platoMenu");
+
+        formulario.addEventListener("submit", (e) => {
+            e.preventDefault();
+            agregarPlato();
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
