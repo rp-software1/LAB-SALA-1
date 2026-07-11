@@ -1,0 +1,28 @@
+.disponible {
+    background-color: #bbf7d0;
+    color: #15803d;
+}
+
+.no-disponible {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.cardPlato {
+    width: 300px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #222;
+    border-radius: 8px;
+}
+
+.cardPlato h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.1rem;
+}
+
+.cardPlato p {
+    margin: 0.125rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
