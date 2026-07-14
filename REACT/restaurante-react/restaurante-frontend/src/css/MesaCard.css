@@ -1,0 +1,19 @@
+.mesa-card {
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    color: #eee;
+}
+
+.mesa-card.libre {
+    background-color: #080;
+}
+
+.mesa-card.ocupada {
+    background-color: #800;
+}
+
+.mesa-card.reservada {
+    background-color: #f80;
+}
