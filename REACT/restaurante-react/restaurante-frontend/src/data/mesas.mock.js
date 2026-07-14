@@ -5,3 +5,4 @@ export const mesasMock = [
   { id: 3, numero: 3, capacidad: 6, estado: "reservada", comensales: 0 },
   // agreguen al menos 3 mesas más con distintos estados
 ];
+
