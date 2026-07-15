@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import MesasPage from "./pages/MesasPage";
 import Navbar from "./components/NavBar";
+import ComandasPage from "./pages/ComandasPage";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
     <Home />
     <h2>Mesas</h2>
     <MesasPage />
+    <h2>Comandas</h2>
+    <ComandasPage/>
     </>
+
 
   )
 }
