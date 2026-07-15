@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import OrderForm from "../components/OrderForm";
 
 function ComandasPage(){

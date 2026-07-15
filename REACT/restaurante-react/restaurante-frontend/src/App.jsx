@@ -1,7 +1,6 @@
 import Home from "./pages/Home";
 import MesasPage from "./pages/MesasPage";
 import Navbar from "./components/NavBar";
-import OrderForm from "./components/OrderForm";
 import ComandasPage from "./pages/ComandasPage";
 
 function App() {
