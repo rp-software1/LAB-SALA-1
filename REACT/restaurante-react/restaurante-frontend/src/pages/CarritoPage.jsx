@@ -57,7 +57,7 @@ export default function CarritoPage(){
                 </div>
             ))}
 
-            <h3>Hay {carrito.length} items</h3>
+            <h3>Hay {carrito.length} items | { carrito.reduce((sum, p)=> sum + p.cantidad, 0 )} unidades </h3>
 
             {carrito.map(plato => (
                 <div key={plato.id}>
