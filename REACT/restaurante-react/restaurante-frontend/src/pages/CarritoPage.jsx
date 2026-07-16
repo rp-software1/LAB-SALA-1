@@ -11,7 +11,7 @@ export default function CarritoPage(){
         setTimeout(() => {
            setPlatos(platosMock)
            setLoading(false) 
-        },800);
+        },2000);
     },[]);
 
     function agregarPlato(plato){
