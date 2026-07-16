@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import MesasPage from "./pages/MesasPage";
 import Navbar from "./components/NavBar";
 import ComandasPage from "./pages/ComandasPage";
+import CarritoPage from "./pages/CarritoPage";
 
 function App() {
   return (
@@ -13,9 +14,8 @@ function App() {
     <MesasPage />
     <h2>Comandas</h2>
     <ComandasPage/>
+    <CarritoPage />
     </>
-
-
   )
 }
 export default App
