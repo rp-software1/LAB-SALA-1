@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { platosMock } from "../data/platos.mock";
 
 
 export default function CarritoPage(){
     const [carrito, setCarrito] = useState([]);
+    const [platos, setPlatos] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+           setPlatos(platosMock)
+           setLoading(false) 
+        },800);
+    },[]);
 
     function agregarPlato(plato){
         setCarrito([...carrito, plato]);
@@ -13,6 +22,9 @@ export default function CarritoPage(){
         setCarrito(carrito.filter( p => p.id !== plato.id))
     }
 
+    if (loading){
+        return <p>Cargando menú...</p>;
+    }
     
     return(
         <div>
