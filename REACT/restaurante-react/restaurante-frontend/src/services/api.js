@@ -6,16 +6,11 @@ import { platosMock } from "../data/platos.mock";
 const BASE_URL = import.meta.env.VITE_API_URL
 
 export async function getPlatos(){
-    try{
-        if(!BASE_URL){
-            return platosMock;
-        }
 
-        const response = await axios.get(`${BASE_URL}/api/platos`); 
-        return response.data;
+    if(!BASE_URL){
+        return platosMock;
     }
-    catch(error){
-        console.error("Error al obtener los platos", error);
-        throw error;
-    }
+
+    const response = await axios.get(`${BASE_URL}/api/platos`); 
+    return response.data;
 }

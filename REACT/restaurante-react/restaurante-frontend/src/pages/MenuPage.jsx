@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPlatos } from "../services/api";
 
-export default function MenuPaga(){
+export default function MenuPage(){
     const [platos, setPlatos]= useState([]);
     const [loading, setLoading]= useState(true);
     const [error, setError] = useState(null);
@@ -31,7 +31,7 @@ export default function MenuPaga(){
                 <p>No hay platos disponibles por el momento. Vuelve más tarde</p>
             ):(
                 platos.map((plato)=>(
-                    <div key = {plato._id} className="plato-card">
+                    <div key = {plato._id ?? plato.id} className="plato-card">
                         <strong>{plato.nombre}</strong> - S/ {plato.precio}
                     </div>
                 ))
