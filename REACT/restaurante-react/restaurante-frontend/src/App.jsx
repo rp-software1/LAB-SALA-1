@@ -3,8 +3,17 @@ import MesasPage from "./pages/MesasPage";
 import Navbar from "./components/NavBar";
 import ComandasPage from "./pages/ComandasPage";
 import CarritoPage from "./pages/CarritoPage";
+import { getPlatos } from "./services/api";
+import { useEffect } from "react";
 
 function App() {
+  
+  useEffect(() => {
+    getPlatos()
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
+  }, []);
+
   return (
     <>
     <Navbar titulo = "Resturante el Buen Sabor" />
