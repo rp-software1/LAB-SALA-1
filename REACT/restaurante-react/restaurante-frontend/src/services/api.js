@@ -10,7 +10,10 @@ export async function getPlatos(){
     if(!BASE_URL){
         return platosMock;
     }
+    // Original 
+    // const response = await axios.get(`${BASE_URL}/api/platos`); 
 
-    const response = await axios.get(`${BASE_URL}/api/platos`); 
+    // Para prueba con backend simulado
+    const response = await axios.get(`${BASE_URL}/platos`); 
     return response.data;
 }

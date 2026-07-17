@@ -1,0 +1,16 @@
+{
+  "platos": [
+    {
+      "id": 1,
+      "nombre": "Ceviche",
+      "precio": 25,
+      "categoria": "Marino"
+    },
+    {
+      "id": 2,
+      "nombre": "Lomo Saltado",
+      "precio": 30,
+      "categoria": "Criollo"
+    }
+  ]
+}
