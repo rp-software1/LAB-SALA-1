@@ -1,4 +1,4 @@
-# Cierre del día 4 - Flavio Silva
+# Cierre del día 5 - Flavio Silva
 
 ## Preguntas 
 1) ¿Por qué `React` obliga a usar `setCarrito` en lugar de mutar el array directamente con `push`? ¿Qué mecanismo interno de `React` hace que esto sea necesario?
