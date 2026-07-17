@@ -1,24 +1,44 @@
 import { useEffect, useState } from "react";
-import { platosMock } from "../data/platos.mock";
+import { getPlatos } from "../services/api";
 
 
 export default function CarritoPage(){
     const [carrito, setCarrito] = useState([]);
     const [platos, setPlatos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
 
     useEffect(() => {
-        setTimeout(() => {
-           setPlatos(platosMock)
-           setLoading(false) 
-        },2000);
-    },[]);
+        async function cargarMenu(){
+            try {
+                setLoading(true);
+                setError(null)
+                const data = await getPlatos();
+                setPlatos(data); 
+            } catch (error) {
+                setError("Lo sentimos demasiado :(, no pudimos cargar el menú. Porfavor, intentalo de nuevo más tarde");
+                console.error("Error al cargar el menú:", error);
+            } finally {
+                setLoading(false);
+            }
+        }
+        cargarMenu()
+    },[])
+
+    if(error){
+        return <div className="error-message">{error}</div>
+    }
+
+    if (loading){
+        return <p>Cargando menú...</p>;
+    }
 
     function agregarPlato(plato){
-        const existe = carrito.find(p => p.id === plato.id); 
+        const existe = carrito.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
 
         if(existe){
-            setCarrito(carrito.map(p => p.id === plato.id 
+            setCarrito(carrito.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
                  ? {...p, cantidad: p.cantidad + 1}
                  : p));
         }else{
@@ -27,24 +47,20 @@ export default function CarritoPage(){
     }
 
     function eliminarPlatoCompleto(plato){
-        setCarrito(carrito.filter( p => p.id !== plato.id))
+        setCarrito(carrito.filter( p => (p._id ?? p.id) !== (plato._id ?? plato.id)))
     }
 
     function eliminarPlatoMenosUno(plato){
-        const existe = carrito.find(p => p.id === plato.id); 
+        const existe = carrito.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
 
         if(existe?.cantidad === 1){
             eliminarPlatoCompleto(plato);
         }
         else if (existe?.cantidad > 1){
-            setCarrito(carrito.map(p => p.id === plato.id 
+            setCarrito(carrito.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
                 ? {...p, cantidad: p.cantidad - 1}
                 : p));
         }
-    }
-
-    if (loading){
-        return <p>Cargando menú...</p>;
     }
     
     return(
