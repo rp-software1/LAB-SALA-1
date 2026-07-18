@@ -1,5 +1,6 @@
 import { mesasMock } from "../data/mesas.mock";
 import MesaCard from "../components/MesaCard";
+import { Link } from "react-router-dom";
 import "../css/MesasPage.css";
 
 export default function MesasPage(){
@@ -10,6 +11,7 @@ export default function MesasPage(){
                 {mesasMock.map((mesa)=>{
                     return(
                         <MesaCard   key={mesa.id} 
+                        id={mesa.id}
                         estado = {mesa.estado}
                         numero = {mesa.numero}
                         capacidad = {mesa.capacidad}

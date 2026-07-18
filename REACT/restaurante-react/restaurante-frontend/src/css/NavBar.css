@@ -1,0 +1,14 @@
+.nav-item:hover{
+    color: #f80;
+}
+
+.nav-link{
+    color: inherit;
+    font-size: 1rem;
+}
+
+.nav-link.active{
+    color: #f80;
+    font-weight: bold;
+    font-size: 1.1rem;
+}

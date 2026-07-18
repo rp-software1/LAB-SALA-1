@@ -12,6 +12,8 @@ export default function MenuPage(){
                 setLoading(true);
                 setError(null)
                 const data = await getPlatos();
+                console.log(data);
+                console.log(Array.isArray(data));
                 setPlatos(data); 
             } catch (error) {
                 setError("Lo sentimos demasiado :(, no pudimos cargar el menú. Porfavor, intentalo de nuevo más tarde");
@@ -26,7 +28,7 @@ export default function MenuPage(){
     if (error) return <div className="error-message">{error}</div>
     return (
         <div className="menu-container">
-            <h2>Nuestro Menú</h2>
+            <h2>Nuestra Carta</h2>
             {platos.length ===0? (
                 <p>No hay platos disponibles por el momento. Vuelve más tarde</p>
             ):(
