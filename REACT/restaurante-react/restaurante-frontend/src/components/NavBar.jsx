@@ -18,6 +18,9 @@ export default function Navbar({titulo = "Restaurante"}){
                 <li className="nav-item" >
                     <NavLink to='/comandas' className={`nav-link ${navLinkClass}`}>Comandas</NavLink>
                 </li>
+                <li className="nav-item">
+                    <NavLink to='/carrito' className={`nav-link ${navLinkClass}`}>Carrito</NavLink>
+                </li>
             </ul>
         </nav>
     )
