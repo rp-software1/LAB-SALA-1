@@ -1,4 +1,4 @@
-// import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MesasPage from "./pages/MesasPage";
 import Navbar from "./components/NavBar";
 import ComandasPage from "./pages/ComandasPage";
@@ -7,16 +7,15 @@ import MenuPage from "./pages/MenuPage";
 
 function App() {
   return (
-    <>
-    <Navbar titulo = "Resturante el Buen Sabor" />
-    <h2>Menú Principal</h2>
-    <MenuPage />
-    <h2>Mesas</h2>
-    <MesasPage />
-    <h2>Comandas</h2>
-    <ComandasPage/>
-    <CarritoPage />
-    </>
+    <BrowserRouter>
+      <Navbar titulo="Restaurante el Buen Sabor" /> 
+      <Routes>
+        <Route path="/" element={<MenuPage />} />
+        <Route path="/mesas" element={<MesasPage />} />
+        <Route path="/comandas" element={<ComandasPage />} />
+        <Route path="/carrito" element={<CarritoPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-export default App
+export default App;
