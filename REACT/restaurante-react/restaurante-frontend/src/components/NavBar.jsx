@@ -1,13 +1,23 @@
 import PropTypes from "prop-types"
-
+import { NavLink } from "react-router-dom"
+import "../css/NavBar.css"
 export default function Navbar({titulo = "Restaurante"}){
+
+    const navLinkClass = ({isActive}) => isActive ? "active" : ""
+
     return(
         <nav className="navBar">
-            <h1>{titulo}</h1>
+            <span>{titulo}</span>
             <ul className="nav-list">
-                <li className="nav-item" >Carta</li>
-                <li className="nav-item" >Mesas</li>
-                <li className="nav-item" >Comandas</li>
+                <li className="nav-item" >
+                    <NavLink to='/' className={`nav-link ${navLinkClass}`}> Cartas</NavLink>
+                </li>
+                <li className="nav-item" >
+                    <NavLink to='/mesas' className={`nav-link ${navLinkClass}`}>Mesas</NavLink>
+                </li>
+                <li className="nav-item" >
+                    <NavLink to='/comandas' className={`nav-link ${navLinkClass}`}>Comandas</NavLink>
+                </li>
             </ul>
         </nav>
     )
