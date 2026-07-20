@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 import { getPlatos } from "../services/api";
+import { usePedido } from "../context/PedidoContext";
 
 
 export default function CarritoPage(){
-    const [carrito, setCarrito] = useState([]);
+    const {pedido, setPedido} = usePedido();
+    // const [carrito, setCarrito] = useState([]);
     const [platos, setPlatos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const EstadoInicial = {
+        mesaId: null,
+        tipo: 'mesa',
+        estado: 'pendiente',
+        items: [],
+        total: 0,
+        fecha: ''
+    };
 
     useEffect(() => {
         async function cargarMenu(){
@@ -35,34 +45,45 @@ export default function CarritoPage(){
     }
 
     function agregarPlato(plato){
-        const existe = carrito.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
+        const existe = pedido.items.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
+
+        let nuevosItems; 
 
         if(existe){
-            setCarrito(carrito.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
+            nuevosItems = pedido.items.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
                  ? {...p, cantidad: p.cantidad + 1}
-                 : p));
+                 : p)
         }else{
-            setCarrito([...carrito, {...plato, cantidad: 1}])
+            nuevosItems = [...pedido.items, {...plato, cantidad: 1}]  
         }
+
+        setPedido({...pedido,  items: nuevosItems , total: calcularTotal(nuevosItems)})
     }
 
     function eliminarPlatoCompleto(plato){
-        setCarrito(carrito.filter( p => (p._id ?? p.id) !== (plato._id ?? plato.id)))
+        
+        const nuevosItems =  pedido.items.filter( p => (p._id ?? p.id) !== (plato._id ?? plato.id))
+        setPedido({...pedido, items: nuevosItems, total: calcularTotal(nuevosItems)})
     }
 
     function eliminarPlatoMenosUno(plato){
-        const existe = carrito.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
+        const existe = pedido.items.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
 
         if(existe?.cantidad === 1){
             eliminarPlatoCompleto(plato);
         }
         else if (existe?.cantidad > 1){
-            setCarrito(carrito.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
+            const nuevosItems = pedido.items.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
                 ? {...p, cantidad: p.cantidad - 1}
-                : p));
+                : p)
+            setPedido({...pedido, items: nuevosItems, total: calcularTotal(nuevosItems)})
         }
     }
     
+    function calcularTotal(items){
+        return items.reduce((sum, plato ) => sum + plato.precio * plato. cantidad, 0);
+    }
+
     return(
         <div>
             <h2>Carrito de compras del Menú</h2>
@@ -73,9 +94,9 @@ export default function CarritoPage(){
                 </div>
             ))}
 
-            <h3>Hay {carrito.length} items | { carrito.reduce((sum, p)=> sum + p.cantidad, 0 )} unidades </h3>
+            <h3>Hay {pedido.items.length} items | { pedido.items.reduce((sum, p)=> sum + p.cantidad, 0 )} unidades </h3>
 
-            {carrito.map(plato => (
+            {pedido.items.map(plato => (
                 <div key={plato.id}>
                     <span> {plato.nombre} - S/.{plato.precio} (unitario) - {plato.cantidad} (cantidad) </span>
                     <button onClick={() => eliminarPlatoMenosUno(plato)}> -1 </button>
@@ -83,9 +104,31 @@ export default function CarritoPage(){
                 </div>
             ))}
 
-            <h3>Total: S/. {carrito.reduce((sum, plato ) => sum + plato.precio * plato. cantidad, 0)}</h3>
+            <h3>Total: S/. {pedido.total}</h3>
 
-            <button onClick={() => setCarrito([])} >Limpiar Carrito</button>
+            <button onClick={() => setPedido(EstadoInicial)} >Limpiar Carrito</button>
+
+            <div>
+                <h1>Comanda Activa</h1>
+                <p>Tipo {pedido.tipo} | Estado: {pedido.estado}</p>
+
+                {pedido.items.length === 0 ? (
+                    <p> No hay items en la comanda</p> 
+                ) : (
+                    <>
+                        <ul>
+                            {pedido.items.map( item => (
+                                <li key={item.id}> 
+                                    <span>{item.nombre} x {item.cantidad}</span>
+                                    <br />
+                                    <span> Subtotal del plato {item.cantidad} x S/.{item.precio}   : {item.precio * item.cantidad}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <h3>Total: {pedido.total}</h3>
+                    </>
+                )}
+            </div>
             
         </div>
     )
