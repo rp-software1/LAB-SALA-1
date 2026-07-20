@@ -4,20 +4,12 @@ import { usePedido } from "../context/PedidoContext";
 
 
 export default function CarritoPage(){
-    const {pedido, setPedido} = usePedido();
+    const {pedido, agregarPlato, eliminarPlatoCompleto, eliminarPlatoMenosUno, cambiarTipo, limpiarPedido} = usePedido();
     // const [carrito, setCarrito] = useState([]);
     const [platos, setPlatos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-    const EstadoInicial = {
-        mesaId: null,
-        tipo: 'mesa',
-        estado: 'pendiente',
-        items: [],
-        total: 0,
-        fecha: ''
-    };
+    const [tipo, setTipo] = useState(pedido.tipo);
 
     useEffect(() => {
         async function cargarMenu(){
@@ -44,45 +36,6 @@ export default function CarritoPage(){
         return <p>Cargando menú...</p>;
     }
 
-    function agregarPlato(plato){
-        const existe = pedido.items.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
-
-        let nuevosItems; 
-
-        if(existe){
-            nuevosItems = pedido.items.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
-                 ? {...p, cantidad: p.cantidad + 1}
-                 : p)
-        }else{
-            nuevosItems = [...pedido.items, {...plato, cantidad: 1}]  
-        }
-
-        setPedido({...pedido,  items: nuevosItems , total: calcularTotal(nuevosItems)})
-    }
-
-    function eliminarPlatoCompleto(plato){
-        
-        const nuevosItems =  pedido.items.filter( p => (p._id ?? p.id) !== (plato._id ?? plato.id))
-        setPedido({...pedido, items: nuevosItems, total: calcularTotal(nuevosItems)})
-    }
-
-    function eliminarPlatoMenosUno(plato){
-        const existe = pedido.items.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
-
-        if(existe?.cantidad === 1){
-            eliminarPlatoCompleto(plato);
-        }
-        else if (existe?.cantidad > 1){
-            const nuevosItems = pedido.items.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
-                ? {...p, cantidad: p.cantidad - 1}
-                : p)
-            setPedido({...pedido, items: nuevosItems, total: calcularTotal(nuevosItems)})
-        }
-    }
-    
-    function calcularTotal(items){
-        return items.reduce((sum, plato ) => sum + plato.precio * plato. cantidad, 0);
-    }
 
     return(
         <div>
@@ -106,11 +59,15 @@ export default function CarritoPage(){
 
             <h3>Total: S/. {pedido.total}</h3>
 
-            <button onClick={() => setPedido(EstadoInicial)} >Limpiar Carrito</button>
+
+            <input type="text" placeholder="Cambiar tipo" value={tipo} onChange={(e) => setTipo(e.target.value)}></input>
+            <button onClick={() => cambiarTipo(tipo)} >Cambiar Tipo</button>
+
+            <button onClick={() => limpiarPedido()} >Limpiar Carrito</button>
 
             <div>
                 <h1>Comanda Activa</h1>
-                <p>Tipo {pedido.tipo} | Estado: {pedido.estado}</p>
+                <p>Tipo: {pedido.tipo} | Estado: {pedido.estado}</p>
 
                 {pedido.items.length === 0 ? (
                     <p> No hay items en la comanda</p> 

@@ -15,28 +15,57 @@ export const PedidoProvider = ({children}) => {
     const [pedido, setPedido] = useState(EstadoInicial);
 
     const calcularTotal = (items) => {
-        return items.reduce((acc, item) => acc + (item.precioUnitario * item.cantidad), 0);
+        return items.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
     }
 
-    const agregarPlato = (plato) =>{
-        setPedido(prev=>{
-            const existe = prev.items.find(i=> i.platoId === plato._id);
-            const nuevosItems = existe ? prev.items.map(i => i.platoId === plato._id ? {...i, cantidad: i.cantidad +1}:i)
-            : [...prev.items, {platoId:plato._id, nombre: plato.nombre, cantidad:1, precioUnitario: plato.precio}]; 
-            return {...prev, items: nuevosItems, total: calcularTotal(nuevosItems)};
-        });
-    };
+    function agregarPlato(plato){
+        const existe = pedido.items.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
 
-    const quitarPlato =(platoId) => {
-        setPedido(prev => {
-            const nuevosItems = prev.items
-            .map(i => i.platoId === platoId ? {...i, cantidad: i.cantidad - 1}:i)
-            .filter(i=> i.cantidad > 0)
-            return {...prev, items: nuevosItems, total: calcularTotal(nuevosItems)}
-        })
+        let nuevosItems; 
+
+        if(existe){
+            nuevosItems = pedido.items.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
+                 ? {...p, cantidad: p.cantidad + 1}
+                 : p)
+        }else{
+            nuevosItems = [...pedido.items, {...plato, cantidad: 1}]  
+        }
+
+        setPedido({...pedido,  items: nuevosItems , total: calcularTotal(nuevosItems)})
+    }
+
+    function eliminarPlatoCompleto(plato){
+        
+        const nuevosItems =  pedido.items.filter( p => (p._id ?? p.id) !== (plato._id ?? plato.id))
+        setPedido({...pedido, items: nuevosItems, total: calcularTotal(nuevosItems)})
+    }
+
+    function eliminarPlatoMenosUno(plato){
+        const existe = pedido.items.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
+
+        if(existe?.cantidad === 1){
+            eliminarPlatoCompleto(plato);
+        }
+        else if (existe?.cantidad > 1){
+            const nuevosItems = pedido.items.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
+                ? {...p, cantidad: p.cantidad - 1}
+                : p)
+            setPedido({...pedido, items: nuevosItems, total: calcularTotal(nuevosItems)})
+        }
     }
     
     const cambiarTipo = (tipo) => {
+        tipo = tipo.trim().toLowerCase();
+
+        if(tipo !== "para llevar" && tipo !== "para_llevar" && tipo !== "mesa"){
+            alert("Tipo inválido"); 
+            return;
+        }
+
+        if(tipo === "para llevar" || tipo === "para_llevar"){
+            tipo = "para_llevar";
+        }
+
         setPedido(prev => ({
             ...prev,
             tipo,
@@ -49,7 +78,7 @@ export const PedidoProvider = ({children}) => {
     };
 
     return(
-        <PedidoContext.Provider value={{pedido, setPedido, agregarPlato, quitarPlato, cambiarTipo, limpiarPedido}}>
+        <PedidoContext.Provider value={{pedido, setPedido, agregarPlato, eliminarPlatoCompleto, eliminarPlatoMenosUno, cambiarTipo, limpiarPedido}}>
             {children}
         </PedidoContext.Provider>
     );
