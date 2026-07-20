@@ -22,7 +22,7 @@ export const PedidoProvider = ({children}) => {
         setPedido(prev=>{
             const existe = prev.items.find(i=> i.platoId === plato._id);
             const nuevosItems = existe ? prev.items.map(i => i.platoId === plato._id ? {...i, cantidad: i.cantidad +1}:i)
-            : [...prev.items, {platoId:plato_id, nombre: plato.nombre, cantidad:1, precioUnitario: plato.precio}]; 
+            : [...prev.items, {platoId:plato._id, nombre: plato.nombre, cantidad:1, precioUnitario: plato.precio}]; 
             return {...prev, items: nuevosItems, total: calcularTotal(nuevosItems)};
         });
     };
