@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { getPlatos } from "../services/api";
+import { usePedido } from "../context/PedidoContext";
 
 
 export default function CarritoPage(){
-    const [carrito, setCarrito] = useState([]);
+    const {pedido, agregarPlato, eliminarPlatoCompleto, eliminarPlatoMenosUno, cambiarTipo, limpiarPedido} = usePedido();
+    // const [carrito, setCarrito] = useState([]);
     const [platos, setPlatos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
+    const [tipo, setTipo] = useState(pedido.tipo);
 
     useEffect(() => {
         async function cargarMenu(){
@@ -34,35 +36,7 @@ export default function CarritoPage(){
         return <p>Cargando menú...</p>;
     }
 
-    function agregarPlato(plato){
-        const existe = carrito.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
 
-        if(existe){
-            setCarrito(carrito.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
-                 ? {...p, cantidad: p.cantidad + 1}
-                 : p));
-        }else{
-            setCarrito([...carrito, {...plato, cantidad: 1}])
-        }
-    }
-
-    function eliminarPlatoCompleto(plato){
-        setCarrito(carrito.filter( p => (p._id ?? p.id) !== (plato._id ?? plato.id)))
-    }
-
-    function eliminarPlatoMenosUno(plato){
-        const existe = carrito.find(p => (p._id ?? p.id) === (plato._id ?? plato.id)); 
-
-        if(existe?.cantidad === 1){
-            eliminarPlatoCompleto(plato);
-        }
-        else if (existe?.cantidad > 1){
-            setCarrito(carrito.map(p => (p._id ?? p.id) === (plato._id ?? plato.id) 
-                ? {...p, cantidad: p.cantidad - 1}
-                : p));
-        }
-    }
-    
     return(
         <div>
             <h2>Carrito de compras del Menú</h2>
@@ -73,9 +47,9 @@ export default function CarritoPage(){
                 </div>
             ))}
 
-            <h3>Hay {carrito.length} items | { carrito.reduce((sum, p)=> sum + p.cantidad, 0 )} unidades </h3>
+            <h3>Hay {pedido.items.length} items | { pedido.items.reduce((sum, p)=> sum + p.cantidad, 0 )} unidades </h3>
 
-            {carrito.map(plato => (
+            {pedido.items.map(plato => (
                 <div key={plato.id}>
                     <span> {plato.nombre} - S/.{plato.precio} (unitario) - {plato.cantidad} (cantidad) </span>
                     <button onClick={() => eliminarPlatoMenosUno(plato)}> -1 </button>
@@ -83,9 +57,35 @@ export default function CarritoPage(){
                 </div>
             ))}
 
-            <h3>Total: S/. {carrito.reduce((sum, plato ) => sum + plato.precio * plato. cantidad, 0)}</h3>
+            <h3>Total: S/. {pedido.total}</h3>
 
-            <button onClick={() => setCarrito([])} >Limpiar Carrito</button>
+
+            <input type="text" placeholder="Cambiar tipo" value={tipo} onChange={(e) => setTipo(e.target.value)}></input>
+            <button onClick={() => cambiarTipo(tipo)} >Cambiar Tipo</button>
+
+            <button onClick={() => limpiarPedido()} >Limpiar Carrito</button>
+
+            <div>
+                <h1>Comanda Activa</h1>
+                <p>Tipo: {pedido.tipo} | Estado: {pedido.estado} | Mesa: {pedido.mesaId === null ? "No asignada (null)" : pedido.mesaId} </p>
+
+                {pedido.items.length === 0 ? (
+                    <p> No hay items en la comanda</p> 
+                ) : (
+                    <>
+                        <ul>
+                            {pedido.items.map( item => (
+                                <li key={item.id}> 
+                                    <span>{item.nombre} x {item.cantidad}</span>
+                                    <br />
+                                    <span> Subtotal del plato {item.cantidad} x S/.{item.precio}   : {item.precio * item.cantidad}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <h3>Total: {pedido.total}</h3>
+                    </>
+                )}
+            </div>
             
         </div>
     )
