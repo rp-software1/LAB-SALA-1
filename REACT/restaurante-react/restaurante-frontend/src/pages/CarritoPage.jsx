@@ -67,7 +67,7 @@ export default function CarritoPage(){
 
             <div>
                 <h1>Comanda Activa</h1>
-                <p>Tipo: {pedido.tipo} | Estado: {pedido.estado}</p>
+                <p>Tipo: {pedido.tipo} | Estado: {pedido.estado} | Mesa: {pedido.mesaId === null ? "No asignada (null)" : pedido.mesaId} </p>
 
                 {pedido.items.length === 0 ? (
                     <p> No hay items en la comanda</p> 

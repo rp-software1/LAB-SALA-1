@@ -3,7 +3,7 @@ import {createContext, useState, useContext} from 'react';
 const PedidoContext = createContext(null);
 
 const EstadoInicial = { 
-    mesaId: null,
+    mesaId: 1,
     tipo: 'mesa',
     estado: 'pendiente',
     items: [],
