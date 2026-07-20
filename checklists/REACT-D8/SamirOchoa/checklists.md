@@ -12,6 +12,6 @@
 - [x] C — Acciones del pedido: agregar, quitar, cambiar tipo
 - [x] D — Exploración con Claude
 - [x] E — Evaluación entre pares
-- [ ] F — Cierre del día
+- [x] F — Cierre del día
 
 --- 
