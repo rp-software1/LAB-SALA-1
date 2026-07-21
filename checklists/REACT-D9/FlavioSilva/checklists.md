@@ -7,7 +7,7 @@
 ---
 
 ## Secciones
-- [ ] A — APIs de mesas y pedidos en api.js
+- [x] A — APIs de mesas y pedidos en api.js
 - [ ] B — MesasPage conectada con GET /api/mesas
 - [ ] C — CarritoPage conectada con POST /api/pedidos
 - [ ] D — Exploración con Claude
