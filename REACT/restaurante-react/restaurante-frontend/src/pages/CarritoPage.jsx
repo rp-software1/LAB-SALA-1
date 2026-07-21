@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPlatos } from "../services/api";
+import { getPlatos, crearPedido } from "../services/api";
 import { usePedido } from "../context/PedidoContext";
 
 
@@ -10,6 +10,10 @@ export default function CarritoPage(){
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [tipo, setTipo] = useState(pedido.tipo);
+    //Estados nuevo requeridos para el envio de la comanda
+    const [enviando, setEnviando] = useState(false)
+    const [errorEnvio, setErrorEnvio] = useState(null);
+    const [pedidoCreado, setPedidoCreado] = useState(null);
 
     useEffect(() => {
         async function cargarMenu(){
@@ -27,7 +31,35 @@ export default function CarritoPage(){
         }
         cargarMenu()
     },[])
+    const handleEnviarComanda = async () => {
+            if (pedido.items.length === 0) return;
+            setEnviando(true);
+            setErrorEnvio(null);
 
+            // Guardamos el total actual antes de limpiar el carrito
+            const totalActual = pedido.total;
+
+            try {
+                const nuevoPedido = await crearPedido({
+                    mesaId: pedido.mesaId,
+                    tipo: pedido.tipo,
+                    items: pedido.items,
+                });
+                
+                // Le pasamos el total y aseguramos el _id
+                setPedidoCreado({
+                    ...nuevoPedido,
+                    total: nuevoPedido.total ?? totalActual
+                });
+
+                limpiarPedido(); 
+            } catch (err) {
+                setErrorEnvio('No se pudo crear el pedido. Intenta de nuevo.');
+                console.error("Error al enviar comanda:", err);
+            } finally {
+                setEnviando(false);
+            }
+        };
     if(error){
         return <div className="error-message">{error}</div>
     }
@@ -35,7 +67,19 @@ export default function CarritoPage(){
     if (loading){
         return <p>Cargando menú...</p>;
     }
-
+    if (pedidoCreado) {
+            return (
+                <div>
+                    <div>✅</div>
+                    <h2>Comanda enviada</h2>
+                    <p>
+                        Pedido #{pedidoCreado._id ? pedidoCreado._id.slice(-6).toUpperCase() : 'OK'}
+                    </p>
+                    <p>Estado: {pedidoCreado.estado || 'registrado'}</p>
+                    <p>Total: S/ {pedidoCreado.total ? pedidoCreado.total.toFixed(2) : pedido.total}</p>
+                </div>
+            );
+        }
 
     return(
         <div>
@@ -86,7 +130,19 @@ export default function CarritoPage(){
                     </>
                 )}
             </div>
-            
+            {/* Error de envío si ocurre */}
+            {errorEnvio && <p className='text-red-500 text-sm mb-4'>{errorEnvio}</p>}
+
+            {/* Botón de envío de comanda conectado a la API */}
+            <div className="mt-6">
+                <button
+                    onClick={handleEnviarComanda}
+                    disabled={enviando || pedido.items.length === 0}
+                    className='bg-yellow-500 text-white py-3 px-6 rounded-xl font-bold hover:bg-yellow-600 disabled:opacity-50 disabled:cursor-not-allowed'>
+                    {enviando ? 'Enviando comanda...' : 'Enviar comanda a cocina'}
+                </button>
+            </div>
         </div>
+        
     )
 }
