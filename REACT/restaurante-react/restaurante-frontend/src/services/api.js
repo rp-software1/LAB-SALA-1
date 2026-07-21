@@ -14,12 +14,12 @@ export async function getPlatos(){
 }
 
 export async function getMesas(){
-    const response = await axios.get(`${BASE_URL}/api/mesas`); 
+    const response = await axios.get(`${BASE_URL}/mesas`); 
     return response.data;
 }
 
 export async function getMesasDisponibles(){
-    const response = await axios.get(`${BASE_URL}/api/mesas?estado=disponible`); 
+    const response = await axios.get(`${BASE_URL}/mesas?estado=disponible`); 
     return response.data;
 }
 

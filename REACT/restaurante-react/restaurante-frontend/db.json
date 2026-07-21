@@ -11,6 +11,99 @@
       "nombre": "Lomo Saltado",
       "precio": 30,
       "categoria": "Criollo"
+    },
+    {
+      "_id": 3,
+      "nombre": "Ají de Gallina",
+      "precio": 22,
+      "categoria": "Criollo"
+    },
+    {
+      "_id": 4,
+      "nombre": "Arroz con Mariscos",
+      "precio": 28,
+      "categoria": "Marino"
+    },
+    {
+      "_id": 5,
+      "nombre": "Tallarines Verdes",
+      "precio": 18,
+      "categoria": "Pastas"
+    },
+    {
+      "_id": 6,
+      "nombre": "Pollo a la Brasa",
+      "precio": 35,
+      "categoria": "Parrilla"
+    },
+    {
+      "_id": 7,
+      "nombre": "Anticuchos",
+      "precio": 20,
+      "categoria": "Criollo"
+    },
+    {
+      "_id": 8,
+      "nombre": "Causa Limeña",
+      "precio": 16,
+      "categoria": "Entrada"
+    },
+    {
+      "_id": 9,
+      "nombre": "Chicha Morada",
+      "precio": 8,
+      "categoria": "Bebida"
+    },
+    {
+      "_id": 10,
+      "nombre": "Inca Kola",
+      "precio": 6,
+      "categoria": "Bebida"
     }
-  ]
+  ],
+  "mesas": [
+    {
+      "_id": 1,
+      "numero": 1,
+      "capacidad": 3,
+      "estado": "disponible",
+      "pedidoActivoId": null
+    },
+    {
+      "_id": 2,
+      "numero": 2,
+      "capacidad": 2,
+      "estado": "ocupada",
+      "pedidoActivoId": 101
+    },
+    {
+      "_id": 3,
+      "numero": 3,
+      "capacidad": 6,
+      "estado": "reservada",
+      "pedidoActivoId": null
+    },
+    {
+      "_id": 4,
+      "numero": 4,
+      "capacidad": 4,
+      "estado": "fuera_servicio",
+      "pedidoActivoId": null
+    },
+    {
+      "_id": 5,
+      "numero": 5,
+      "capacidad": 8,
+      "estado": "disponible",
+      "pedidoActivoId": null
+    },
+    {
+      "_id": 6,
+      "numero": 6,
+      "capacidad": 2,
+      "estado": "ocupada",
+      "pedidoActivoId": 102
+    }
+  ],
+  "pedidos": []
 }

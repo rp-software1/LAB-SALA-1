@@ -6,7 +6,7 @@
     color: #eee;
 }
 
-.mesa-card.libre {
+.mesa-card.disponible {
     background-color: #080;
 }
 
@@ -16,4 +16,8 @@
 
 .mesa-card.reservada {
     background-color: #f80;
+}
+
+.mesa-card.fuera_servicio {
+    background-color: #444;
 }
