@@ -3,7 +3,7 @@
 - **curso:** REACT
 - **dia:** 8
 - **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **loom:** [Enlace al video en Loom](https://www.loom.com/share/9b8c833e88cf47a7a4f11bba07b552e1)
 ---
 
 ## Secciones
