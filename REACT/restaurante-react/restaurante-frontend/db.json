@@ -4,13 +4,228 @@
       "_id": 1,
       "nombre": "Ceviche",
       "precio": 25,
-      "categoria": "Marino"
+      "categoria": "Marino",
+      "id": "SmmV_OQ7lE8"
     },
     {
       "_id": 2,
       "nombre": "Lomo Saltado",
       "precio": 30,
-      "categoria": "Criollo"
+      "categoria": "Criollo",
+      "id": "Vt6qtwVdDVA"
+    },
+    {
+      "_id": 3,
+      "nombre": "Ají de Gallina",
+      "precio": 22,
+      "categoria": "Criollo",
+      "id": "Ge9N9oIoUxs"
+    },
+    {
+      "_id": 4,
+      "nombre": "Arroz con Mariscos",
+      "precio": 28,
+      "categoria": "Marino",
+      "id": "EeF11x12flU"
+    },
+    {
+      "_id": 5,
+      "nombre": "Tallarines Verdes",
+      "precio": 18,
+      "categoria": "Pastas",
+      "id": "DxJYBmltNvQ"
+    },
+    {
+      "_id": 6,
+      "nombre": "Pollo a la Brasa",
+      "precio": 35,
+      "categoria": "Parrilla",
+      "id": "mOr2L5UuxcM"
+    },
+    {
+      "_id": 7,
+      "nombre": "Anticuchos",
+      "precio": 20,
+      "categoria": "Criollo",
+      "id": "YBN4Sx8tQtI"
+    },
+    {
+      "_id": 8,
+      "nombre": "Causa Limeña",
+      "precio": 16,
+      "categoria": "Entrada",
+      "id": "lhMZydrhSlE"
+    },
+    {
+      "_id": 9,
+      "nombre": "Chicha Morada",
+      "precio": 8,
+      "categoria": "Bebida",
+      "id": "-lsvVsMEWzE"
+    },
+    {
+      "_id": 10,
+      "nombre": "Inca Kola",
+      "precio": 6,
+      "categoria": "Bebida",
+      "id": "LlHJBq2z-_Q"
     }
-  ]
+  ],
+  "mesas": [
+    {
+      "_id": 1,
+      "numero": 1,
+      "capacidad": 3,
+      "estado": "disponible",
+      "pedidoActivoId": null,
+      "id": "tQedn4f9Fag"
+    },
+    {
+      "_id": 2,
+      "numero": 2,
+      "capacidad": 2,
+      "estado": "ocupada",
+      "pedidoActivoId": 101,
+      "id": "r7CWH2ESUzU"
+    },
+    {
+      "_id": 3,
+      "numero": 3,
+      "capacidad": 6,
+      "estado": "reservada",
+      "pedidoActivoId": null,
+      "id": "Bh2XB4D-DS8"
+    },
+    {
+      "_id": 4,
+      "numero": 4,
+      "capacidad": 4,
+      "estado": "fuera_servicio",
+      "pedidoActivoId": null,
+      "id": "sIi7qc6kpMQ"
+    },
+    {
+      "_id": 5,
+      "numero": 5,
+      "capacidad": 8,
+      "estado": "disponible",
+      "pedidoActivoId": null,
+      "id": "ViNfp_vB5GU"
+    },
+    {
+      "_id": 6,
+      "numero": 6,
+      "capacidad": 2,
+      "estado": "ocupada",
+      "pedidoActivoId": 102,
+      "id": "cpfxvtTu_EY"
+    }
+  ],
+  "pedidos": [
+    {
+      "_id": 1,
+      "mesaId": 1,
+      "tipo": "mesa",
+      "items": [
+        {
+          "_id": 1,
+          "nombre": "Ceviche",
+          "precio": 25,
+          "categoria": "Marino",
+          "id": "SmmV_OQ7lE8",
+          "cantidad": 1
+        }
+      ],
+      "id": "9NSrkm4X7NI"
+    },
+    {
+      "_id": 2,
+      "mesaId": 5,
+      "tipo": "mesa",
+      "items": [
+        {
+          "_id": 3,
+          "nombre": "Ají de Gallina",
+          "precio": 22,
+          "categoria": "Criollo",
+          "id": "Ge9N9oIoUxs",
+          "cantidad": 1
+        }
+      ],
+      "id": "M07UU0T19aA"
+    },
+    {
+      "_id": 3,
+      "mesaId": 1,
+      "tipo": "mesa",
+      "items": [
+        {
+          "_id": 2,
+          "nombre": "Lomo Saltado",
+          "precio": 30,
+          "categoria": "Criollo",
+          "id": "Vt6qtwVdDVA",
+          "cantidad": 1
+        },
+        {
+          "_id": 3,
+          "nombre": "Ají de Gallina",
+          "precio": 22,
+          "categoria": "Criollo",
+          "id": "Ge9N9oIoUxs",
+          "cantidad": 1
+        },
+        {
+          "_id": 5,
+          "nombre": "Tallarines Verdes",
+          "precio": 18,
+          "categoria": "Pastas",
+          "id": "DxJYBmltNvQ",
+          "cantidad": 1
+        },
+        {
+          "_id": 7,
+          "nombre": "Anticuchos",
+          "precio": 20,
+          "categoria": "Criollo",
+          "id": "YBN4Sx8tQtI",
+          "cantidad": 9
+        }
+      ],
+      "id": "zKzINrziM5A"
+    },
+    {
+      "_id": 4,
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "items": [
+        {
+          "_id": 8,
+          "nombre": "Causa Limeña",
+          "precio": 16,
+          "categoria": "Entrada",
+          "id": "lhMZydrhSlE",
+          "cantidad": 1
+        },
+        {
+          "_id": 9,
+          "nombre": "Chicha Morada",
+          "precio": 8,
+          "categoria": "Bebida",
+          "id": "-lsvVsMEWzE",
+          "cantidad": 1
+        },
+        {
+          "_id": 10,
+          "nombre": "Inca Kola",
+          "precio": 6,
+          "categoria": "Bebida",
+          "id": "LlHJBq2z-_Q",
+          "cantidad": 1
+        }
+      ],
+      "id": "bxd2I5qsGuY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

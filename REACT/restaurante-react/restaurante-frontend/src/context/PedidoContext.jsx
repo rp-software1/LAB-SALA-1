@@ -3,7 +3,8 @@ import {createContext, useState, useContext} from 'react';
 const PedidoContext = createContext(null);
 
 const EstadoInicial = { 
-    mesaId: 1,
+    _id : null,
+    mesaId: null,
     tipo: 'mesa',
     estado: 'pendiente',
     items: [],
@@ -77,8 +78,14 @@ export const PedidoProvider = ({children}) => {
         setPedido(EstadoInicial);
     };
 
+    // Asignar mesa al pedido
+    const asignarMesa = (mesaId) => {
+        setPedido(prev => ({ ...prev, mesaId, tipo: 'mesa' }));
+    };
+
+
     return(
-        <PedidoContext.Provider value={{pedido, setPedido, agregarPlato, eliminarPlatoCompleto, eliminarPlatoMenosUno, cambiarTipo, limpiarPedido}}>
+        <PedidoContext.Provider value={{pedido, setPedido, asignarMesa, agregarPlato, eliminarPlatoCompleto, eliminarPlatoMenosUno, cambiarTipo, limpiarPedido}}>
             {children}
         </PedidoContext.Provider>
     );

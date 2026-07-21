@@ -3,16 +3,16 @@
 - **curso:** REACT
 - **dia:** 8
 - **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **loom:** [Enlace al video en Loom](https://www.loom.com/share/9b8c833e88cf47a7a4f11bba07b552e1)
 ---
 
 ## Secciones
-- [ ] A — APIs de mesas y pedidos en api.js
-- [ ] B — MesasPage conectada con GET /api/mesas
-- [ ] C — CarritoPage conectada con POST /api/pedidos
-- [ ] D — Exploración con Claude
-- [ ] E — Evaluación entre pares
-- [ ] F — Cierre del día
+- [x] A — APIs de mesas y pedidos en api.js
+- [x] B — MesasPage conectada con GET /api/mesas
+- [x] C — CarritoPage conectada con POST /api/pedidos
+- [X] D — Exploración con Claude
+- [x] E — Evaluación entre pares
+- [x] F — Cierre del día
 
 
 --- 

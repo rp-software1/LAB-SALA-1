@@ -3,7 +3,7 @@ import OrderForm from "../components/OrderForm";
 
 function ComandasPage(){
     const [mesaSeleccionada, setMesaSeleccionada] = useState("1");
-    const mesa = ["1","2","3","4","5"]
+    const mesa = ["1","2","3","4","5", "6"]
 
     return(
         <div>
