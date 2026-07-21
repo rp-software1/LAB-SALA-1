@@ -137,8 +137,7 @@ export default function CarritoPage(){
             <div className="mt-6">
                 <button
                     onClick={handleEnviarComanda}
-                    disabled={enviando || pedido.items.length === 0}
-                    className='bg-yellow-500 text-white py-3 px-6 rounded-xl font-bold hover:bg-yellow-600 disabled:opacity-50 disabled:cursor-not-allowed'>
+                    disabled={enviando || pedido.items.length === 0}>
                     {enviando ? 'Enviando comanda...' : 'Enviar comanda a cocina'}
                 </button>
             </div>

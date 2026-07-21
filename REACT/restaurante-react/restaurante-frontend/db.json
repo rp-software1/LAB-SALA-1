@@ -123,9 +123,17 @@
   ],
   "pedidos": [
     {
-      "mesaId": null,
+      "mesaId": 5,
       "tipo": "mesa",
       "items": [
+        {
+          "_id": 1,
+          "nombre": "Ceviche",
+          "precio": 25,
+          "categoria": "Marino",
+          "id": "SmmV_OQ7lE8",
+          "cantidad": 1
+        },
         {
           "_id": 10,
           "nombre": "Inca Kola",
@@ -143,58 +151,11 @@
           "cantidad": 1
         },
         {
-          "_id": 6,
-          "nombre": "Pollo a la Brasa",
-          "precio": 35,
-          "categoria": "Parrilla",
-          "id": "mOr2L5UuxcM",
-          "cantidad": 1
-        },
-        {
-          "_id": 3,
-          "nombre": "Ají de Gallina",
-          "precio": 22,
+          "_id": 7,
+          "nombre": "Anticuchos",
+          "precio": 20,
           "categoria": "Criollo",
-          "id": "Ge9N9oIoUxs",
-          "cantidad": 1
-        },
-        {
-          "_id": 2,
-          "nombre": "Lomo Saltado",
-          "precio": 30,
-          "categoria": "Criollo",
-          "id": "Vt6qtwVdDVA",
-          "cantidad": 9
-        },
-        {
-          "_id": 1,
-          "nombre": "Ceviche",
-          "precio": 25,
-          "categoria": "Marino",
-          "id": "SmmV_OQ7lE8",
-          "cantidad": 1
-        }
-      ],
-      "id": "Wp1bvh2Qd_0"
-    },
-    {
-      "mesaId": null,
-      "tipo": "mesa",
-      "items": [
-        {
-          "_id": 1,
-          "nombre": "Ceviche",
-          "precio": 25,
-          "categoria": "Marino",
-          "id": "SmmV_OQ7lE8",
-          "cantidad": 1
-        },
-        {
-          "_id": 4,
-          "nombre": "Arroz con Mariscos",
-          "precio": 28,
-          "categoria": "Marino",
-          "id": "EeF11x12flU",
+          "id": "YBN4Sx8tQtI",
           "cantidad": 1
         },
         {
@@ -203,77 +164,7 @@
           "precio": 35,
           "categoria": "Parrilla",
           "id": "mOr2L5UuxcM",
-          "cantidad": 3
-        },
-        {
-          "_id": 7,
-          "nombre": "Anticuchos",
-          "precio": 20,
-          "categoria": "Criollo",
-          "id": "YBN4Sx8tQtI",
-          "cantidad": 2
-        },
-        {
-          "_id": 8,
-          "nombre": "Causa Limeña",
-          "precio": 16,
-          "categoria": "Entrada",
-          "id": "lhMZydrhSlE",
-          "cantidad": 5
-        }
-      ],
-      "id": "jK_zXqA4VMw"
-    },
-    {
-      "mesaId": null,
-      "tipo": "mesa",
-      "items": [
-        {
-          "_id": 4,
-          "nombre": "Arroz con Mariscos",
-          "precio": 28,
-          "categoria": "Marino",
-          "id": "EeF11x12flU",
           "cantidad": 1
-        },
-        {
-          "_id": 2,
-          "nombre": "Lomo Saltado",
-          "precio": 30,
-          "categoria": "Criollo",
-          "id": "Vt6qtwVdDVA",
-          "cantidad": 2
-        },
-        {
-          "_id": 8,
-          "nombre": "Causa Limeña",
-          "precio": 16,
-          "categoria": "Entrada",
-          "id": "lhMZydrhSlE",
-          "cantidad": 2
-        },
-        {
-          "_id": 7,
-          "nombre": "Anticuchos",
-          "precio": 20,
-          "categoria": "Criollo",
-          "id": "YBN4Sx8tQtI",
-          "cantidad": 2
-        }
-      ],
-      "id": "qv-pSPoRALs"
-    },
-    {
-      "mesaId": null,
-      "tipo": "mesa",
-      "items": [
-        {
-          "_id": 5,
-          "nombre": "Tallarines Verdes",
-          "precio": 18,
-          "categoria": "Pastas",
-          "id": "DxJYBmltNvQ",
-          "cantidad": 2
         },
         {
           "_id": 4,
@@ -282,9 +173,25 @@
           "categoria": "Marino",
           "id": "EeF11x12flU",
           "cantidad": 4
+        },
+        {
+          "_id": 5,
+          "nombre": "Tallarines Verdes",
+          "precio": 18,
+          "categoria": "Pastas",
+          "id": "DxJYBmltNvQ",
+          "cantidad": 7
+        },
+        {
+          "_id": 3,
+          "nombre": "Ají de Gallina",
+          "precio": 22,
+          "categoria": "Criollo",
+          "id": "Ge9N9oIoUxs",
+          "cantidad": 3
         }
       ],
-      "id": "fuhORIUNTY4"
+      "id": "oZj2VIYpUZs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
