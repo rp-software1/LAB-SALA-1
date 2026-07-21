@@ -41,9 +41,8 @@ export default function MesasPage(){
             {error && <p style={{ color: "red" }}>{error}</p>}
             <div className="mesas-container">
                 {mesas.map((mesa) => (
-                    <div>
+                    <div key={mesa._id}>
                         <MesaCard
-                        key={mesa._id}
                         _id={mesa._id}
                         estado={mesa.estado}
                         numero={mesa.numero}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { getPlatos, crearPedido } from "../services/api";
+import { getPlatos, crearPedido, getPedidos } from "../services/api";
 import { usePedido } from "../context/PedidoContext";
+
 
 
 export default function CarritoPage(){
@@ -39,8 +40,16 @@ export default function CarritoPage(){
             // Guardamos el total actual antes de limpiar el carrito
             const totalActual = pedido.total;
 
+            const listPedidos = await getPedidos();
+
+            // GENERAR ID AUTO_INCREMENTAR
+            const ultimoPedido = listPedidos[listPedidos.length - 1]; 
+            const nuevoId = ultimoPedido ? ultimoPedido._id + 1 : 1;
+
+
             try {
                 const nuevoPedido = await crearPedido({
+                    _id: nuevoId,
                     mesaId: pedido.mesaId,
                     tipo: pedido.tipo,
                     items: pedido.items,
@@ -73,7 +82,7 @@ export default function CarritoPage(){
                     <div>✅</div>
                     <h2>Comanda enviada</h2>
                     <p>
-                        Pedido #{pedidoCreado._id ? pedidoCreado._id.slice(-6).toUpperCase() : 'OK'}
+                        Pedido # {(pedidoCreado._id) ? (String(pedidoCreado._id).slice(-6).toUpperCase()) : 'OK'}
                     </p>
                     <p>Estado: {pedidoCreado.estado || 'registrado'}</p>
                     <p>Total: S/ {pedidoCreado.total ? pedidoCreado.total.toFixed(2) : pedido.total}</p>

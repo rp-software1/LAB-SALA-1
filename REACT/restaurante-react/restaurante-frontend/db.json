@@ -123,7 +123,8 @@
   ],
   "pedidos": [
     {
-      "mesaId": 5,
+      "_id": 1,
+      "mesaId": 1,
       "tipo": "mesa",
       "items": [
         {
@@ -133,65 +134,25 @@
           "categoria": "Marino",
           "id": "SmmV_OQ7lE8",
           "cantidad": 1
-        },
-        {
-          "_id": 10,
-          "nombre": "Inca Kola",
-          "precio": 6,
-          "categoria": "Bebida",
-          "id": "LlHJBq2z-_Q",
-          "cantidad": 1
-        },
-        {
-          "_id": 8,
-          "nombre": "Causa Limeña",
-          "precio": 16,
-          "categoria": "Entrada",
-          "id": "lhMZydrhSlE",
-          "cantidad": 1
-        },
-        {
-          "_id": 7,
-          "nombre": "Anticuchos",
-          "precio": 20,
-          "categoria": "Criollo",
-          "id": "YBN4Sx8tQtI",
-          "cantidad": 1
-        },
-        {
-          "_id": 6,
-          "nombre": "Pollo a la Brasa",
-          "precio": 35,
-          "categoria": "Parrilla",
-          "id": "mOr2L5UuxcM",
-          "cantidad": 1
-        },
-        {
-          "_id": 4,
-          "nombre": "Arroz con Mariscos",
-          "precio": 28,
-          "categoria": "Marino",
-          "id": "EeF11x12flU",
-          "cantidad": 4
-        },
-        {
-          "_id": 5,
-          "nombre": "Tallarines Verdes",
-          "precio": 18,
-          "categoria": "Pastas",
-          "id": "DxJYBmltNvQ",
-          "cantidad": 7
-        },
+        }
+      ],
+      "id": "9NSrkm4X7NI"
+    },
+    {
+      "_id": 2,
+      "mesaId": 5,
+      "tipo": "mesa",
+      "items": [
         {
           "_id": 3,
           "nombre": "Ají de Gallina",
           "precio": 22,
           "categoria": "Criollo",
           "id": "Ge9N9oIoUxs",
-          "cantidad": 3
+          "cantidad": 1
         }
       ],
-      "id": "oZj2VIYpUZs"
+      "id": "M07UU0T19aA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

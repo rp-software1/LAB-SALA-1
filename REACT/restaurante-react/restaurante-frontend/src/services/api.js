@@ -33,6 +33,11 @@ export async function getPedido(id){
     return response.data;
 }
 
+export async function getPedidos(){
+    const response = await axios.get(`${BASE_URL}/pedidos`);
+    return response.data;
+}
+
 export async function cambiarEstadoPedido(id, estado){
     const response = await axios.patch(`${BASE_URL}/pedidos/${id}/estado`,{estado});
     return response.data;
