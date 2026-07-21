@@ -11,7 +11,7 @@
 - [x] B — MesasPage conectada con GET /api/mesas
 - [x] C — CarritoPage conectada con POST /api/pedidos
 - [X] D — Exploración con Claude
-- [ ] E — Evaluación entre pares
+- [x] E — Evaluación entre pares
 - [ ] F — Cierre del día
 
 --- 
