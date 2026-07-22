@@ -42,3 +42,10 @@
  - Recibe propiedades como el número de la mesa, su estado (disponible, ocupada), la capacidad y funciones o manejadores de eventos para hacer clic o ver el detalle.
  2) ¿TypeScript puede inferir el tipo de retorno de una función que retorna JSX sin que lo declares?
  - Sí, TypeScript puede inferir automáticamente que un componente funcional de React retorna un elemento de tipo JSX.Element (o React.ReactNode), aunque muchas veces se recomienda declarar explícitamente las props para mantener la claridad.
+
+ # Predicción E
+ 1) Si getMesas() retorna Promise<Mesa[]>, ¿qué tipo tiene 'mesas' en este código?
+  const mesas = await getMesas();
+ - mesas es de tipo `Mesa[]`
+
+ 
