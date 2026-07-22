@@ -14,7 +14,7 @@ function OrderForm({mesaNumero}){
     
     useEffect(() =>{
         console.log("OrderForm montado - mesa:", mesaNumero);
-    }, []); 
+    }, [mesaNumero]); 
 
     const handleSubmit = (event) =>{
         event.preventDefault(); 

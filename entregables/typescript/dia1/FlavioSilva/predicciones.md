@@ -32,3 +32,17 @@
 2) ¿En qué tipo de líneas crees que aparecerá el primer error `TS`?
 
     - Seguro en lineas de props por el tipo de datos. 
+
+# Predicción C 
+1) El componente PlatoCard recibe un plato como prop. ¿Qué propiedades tiene un plato según el modelo de datos del sistema?
+¿Qué tipo TypeScript corresponde a cada una? Escríbelo aquí antes de ver el código:
+
+  | Prop       | Type |
+  |------------|------|
+  | _id:       | `Number`|
+  | nombre:    |`String` |
+  | precio:    | `Number`|
+  | categoria: | `String`|
+  | disponible:| `Boolean`|
+
+> Como el `_id` nos dice el que es un `objectId`, pero como no tenemos la `API` real del `backend`, usamos un servidor simulado con `Number` en `auto_increment`.  
