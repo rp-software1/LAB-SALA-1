@@ -36,3 +36,9 @@
 | disponible | `boolean` |
 
 > Como el `_id` nos dice el que es un `objectId`, pero como no tenemos la `API` real del `backend`, usamos un servidor simulado con `number` en `auto_increment`.
+
+# Predicción D
+1) ¿Qué props recibe MesaCard? (mira tu implementación de días anteriores)
+ - Recibe propiedades como el número de la mesa, su estado (disponible, ocupada), la capacidad y funciones o manejadores de eventos para hacer clic o ver el detalle.
+ 2) ¿TypeScript puede inferir el tipo de retorno de una función que retorna JSX sin que lo declares?
+ - Sí, TypeScript puede inferir automáticamente que un componente funcional de React retorna un elemento de tipo JSX.Element (o React.ReactNode), aunque muchas veces se recomienda declarar explícitamente las props para mantener la claridad.
