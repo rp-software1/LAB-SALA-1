@@ -1,16 +1,26 @@
 # Reflexiones - Día 1: TypeScript en React
-# Nombre y Apellido : Samir Sharuk Ochoa Caballero
-## Reflexión - Bloque A (Configuración inicial)
-- ¿Qué implicancias tiene configurar TypeScript desde cero en un proyecto existente? Requiere prestar mucha atención a los archivos de configuración (`tsconfig.json` y `tsconfig.node.json`) para que el compilador entienda dónde buscar el código y cómo interpretar la sintaxis sin romper la estructura previa.
+# Nombre y Apellido: Samir Sharuk Ochoa Caballero
 
-## Reflexión - Bloque B (Renombrar archivos y primer error TS)
-- ¿Cuántos errores aparecieron? Aparecieron múltiples errores en la consola al correr la compilación, principalmente relacionados con tipos implícitos (`any`) y props sin declarar en los componentes que pasamos de `.jsx` a `.tsx`.
-- ¿Qué error fue el más inesperado? Ver la inmediatez con la que TypeScript audita el código exigiendo interfaces estrictas en las props y en los contextos, obligándonos a tipar correctamente.
+## Bloque A (Instalación y configuración)
+- **¿Qué parte fue confusa?** La inicialización de los archivos de configuración en el proyecto existente de Vite.
+- **¿Qué opción del tsconfig no tienes clara?** Algunas configuraciones avanzadas de resolución de módulos y restricciones estrictas (`strict`).
 
-## Reflexión - Bloque D (Tipar props de MesaCard y NavBar)
-- ¿El union type te parece mejor que usar string? ¿Por qué sí o por qué no? Sí, porque restringe los valores permitidos de forma estricta, previniendo errores de tipeo y mejorando drásticamente el autocompletado en el editor.
+## Bloque B (Renombrar archivos y errores)
+- **¿Cuántos errores aparecieron?** Múltiples errores por tipos implícitos (`any`) y props sin declarar al pasar de `.jsx` a `.tsx`.
+- **¿Cuál fue el más inesperado?** La inmediatez con la que TypeScript exige interfaces estrictas en props y contextos.
+
+## Bloque C (Tipado de PlatoCard y funciones)
+- **¿El tipado de 'onAgregar' fue lo que esperabas? ¿Qué significa '(plato: Plato) => void'?** 
+  Sí. Significa que `onAgregar` es una función que recibe obligatoriamente un objeto `plato` (según la interfaz `Plato`) y no retorna ningún valor (`void`).
+
+## Bloque D (Tipar props de MesaCard y NavBar)
+- **¿El union type te parece mejor que usar string?** Sí, porque restringe los valores permitidos de forma estricta, previniendo errores de tipeo y mejorando el autocompletado.
+
+## Bloque E (Tipar funciones de la API)
+- **¿Tiene sentido tipar el retorno de las funciones API?** 
+  Sí, garantiza *type safety* de extremo a extremo, ofreciendo autocompletado inteligente (*IntelliSense*) y detección temprana de errores antes de ejecutar la aplicación.
 
 ## Cierre del día (Bloque F)
-- **¿Qué concepto de TypeScript te costó más entender hoy?** La configuración inicial de los tipos y la relación de interfaces entre componentes.
-- **¿Qué ventaja concreta viste de TypeScript vs JavaScript puro?** La seguridad en las props y el autocompletado inteligente que previene errores de tipeo.
-- **Total de errores TypeScript al cierre:** 97 (quedan pendientes en las carpetas `context/` y `pages/` para los días 2 y 3, estando los componentes clave como `PlatoCard`, `MesaCard`, `NavBar` y `api.ts` completamente limpios).
+- **Concepto que más costó:** La relación de interfaces entre componentes.
+- **Ventaja de TS frente a JS puro:** La seguridad en las props y el autocompletado que previene errores tipográficos.
+- **Total de errores al cierre:** 97 (pendientes en `context/` y `pages/` para los días 2 y 3; componentes clave totalmente limpios).
