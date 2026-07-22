@@ -11,3 +11,13 @@
         ```json
         "jsx": "react-jsx",
         ```
+3) ¿Cuántos archivos vas a renombrar en total? Lista sus nombres.
+
+    - Como tal renombrariamos en total 11 archivos en total:
+    - `NavBar.tsx`, `PlatoCard.tsx`, `MesaCard.tsx`
+    - `MenuPage.tsx`, `MesasPage.tsx`, `CarritoPage.tsx`, `DetalleMesa.tsx`, `NotFound.tsx`
+    - `PedidoContext.tsx`
+    - `App.tsx`, `main.tsx`
+
+4) ¿En qué tipo de líneas crees que aparecerá el primer error TS?
+    -Creemos que aparecerá en los parametros de las funciones de los componentes que reciben props (como '({plato})') , porque Typescript exigira ver, de que tipo son.
