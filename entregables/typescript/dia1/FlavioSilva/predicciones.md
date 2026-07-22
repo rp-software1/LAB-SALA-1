@@ -12,3 +12,23 @@
        "jsx": "react-jsx",
        ```
 
+## Predicción B 
+1) ¿Cuántos archivos vas a renombrar en total? Lista sus nombres. 
+
+    - 10 archivos en total: 
+    ```txt 
+    MenuPage.jsx             
+    MesasPage.jsx            
+    CarritoPage.jsx         
+    DetalleMesa.jsx         
+    NotFound.jsx            
+    NavBar.jsx               
+    PlatoCard.jsx            
+    MesaCard.jsx             
+    App.jsx                   
+    main.jsx                  
+    ```
+
+2) ¿En qué tipo de líneas crees que aparecerá el primer error `TS`?
+
+    - Seguro en lineas de props por el tipo de datos. 
