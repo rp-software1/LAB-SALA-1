@@ -1,10 +1,13 @@
-import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
 import "../css/NavBar.css"
-export default function Navbar({titulo = "Restaurante"}){
 
-    const navLinkClass = ({isActive}) => isActive ? "active" : ""
+interface NavbarProps {
+    titulo?: string;
+}
+export default function Navbar({titulo = "Restaurante"}: NavbarProps){
 
+    const navLinkClass = ({ isActive }: { isActive: boolean }) => isActive ? "active" : "";
+    
     return(
         <nav className="navBar">
             <span>{titulo}</span>
@@ -24,8 +27,4 @@ export default function Navbar({titulo = "Restaurante"}){
             </ul>
         </nav>
     )
-};
-
-Navbar.PropTypes ={
-    titulo : PropTypes.string.isRequired,
 };

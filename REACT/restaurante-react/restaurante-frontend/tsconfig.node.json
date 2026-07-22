@@ -1,0 +1,11 @@
+// tsconfig.node.json (en la raíz de restaurante-frontend/)
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.*"]
+}

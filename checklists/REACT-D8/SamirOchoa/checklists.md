@@ -2,8 +2,8 @@
 - **sala:** I-SALA1
 - **curso:** REACT
 - **dia:** 8
-- **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **estado:** finalizado
+- **loom:** [Enlace al video de Loom](https://www.loom.com/share/1148d8450da6466dabef615dc6ef8a17)
 ---
 
 ## Secciones
