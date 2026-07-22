@@ -33,7 +33,7 @@
 
     - Seguro en lineas de props por el tipo de datos. 
 
-# Predicción C 
+## Predicción C 
 1) El componente PlatoCard recibe un plato como prop. ¿Qué propiedades tiene un plato según el modelo de datos del sistema?
 ¿Qué tipo TypeScript corresponde a cada una? Escríbelo aquí antes de ver el código:
 
@@ -46,3 +46,12 @@
   | disponible:| `Boolean`|
 
 > Como el `_id` nos dice el que es un `objectId`, pero como no tenemos la `API` real del `backend`, usamos un servidor simulado con `Number` en `auto_increment`.  
+
+## Predicción D 
+1) ¿Qué props recibe MesaCard? (mira tu implementación de días anteriores) 
+
+    - `_id`, `estado`, `numero`, `capacidad`, `pedidoActivoId`
+
+2) ¿TypeScript puede inferir el tipo de retorno de una función que retorna JSX sin que lo declares?
+
+    - Sí, TypeScript podrá inferir automáticamente que la función retorna un elemento JSX sin necesidad de declarar explícitamente el tipo de retorno.
