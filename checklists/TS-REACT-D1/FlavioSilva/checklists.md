@@ -11,7 +11,7 @@
 - [x] Bloque C — Tipar props de PlatoCard
 - [x] Bloque D — Tipar props de MesaCard y NavBar
 - [x] Bloque E — Tipar funciones de api.js
-- [ ] Bloque F — Cero errores y verificación final
+- [x] Bloque F — Cero errores y verificación final
 
 ## Verificación
-- [ ] npx tsc --noEmit ejecuta sin errores
+- [x] npx tsc --noEmit ejecuta sin errores
