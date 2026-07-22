@@ -1,9 +1,16 @@
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom"; // 1. Importar Link
 import "../css/MesaCard.css";
+type EstadoMesa='disponible' | 'ocupada' | 'reservada' | 'fuera_servicio';
 
+interface MesaCardProps {
+    _id: string | number;
+    estado: EstadoMesa;
+    numero: number;
+    capacidad: number;
+    pedidoActivoId: string | number | null;
+}
 // 2. Agregar 'id' a la destructuración de props
-function MesaCard({ _id, estado, numero, capacidad, pedidoActivoId }) {
+function MesaCard({ _id, estado, numero, capacidad, pedidoActivoId }: MesaCardProps) {
     return(
         <div className={`mesa-card ${estado}`} >
             <h3>Mesa número {numero}</h3>
@@ -11,20 +18,11 @@ function MesaCard({ _id, estado, numero, capacidad, pedidoActivoId }) {
             <p> Estado: {estado} </p>
             <p> Pedido Activo: {pedidoActivoId === null ? "Ninguno" : pedidoActivoId} </p>
             
-            {/* 3. Agregar el enlace al detalle */}
             <Link to={`/mesas/${_id}`} className="ver-detalle-btn">
                 Ver detalle
             </Link>
         </div>
-    )
-};
-
-MesaCard.propTypes = {
-    _id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired, // 4. Validar el id
-    estado: PropTypes.string.isRequired,
-    numero: PropTypes.number.isRequired,
-    capacidad: PropTypes.number.isRequired,
-    pedidoActivoId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    );
 }
 
 export default MesaCard;
