@@ -55,3 +55,11 @@
 2) ¿TypeScript puede inferir el tipo de retorno de una función que retorna JSX sin que lo declares?
 
     - Sí, TypeScript podrá inferir automáticamente que la función retorna un elemento JSX sin necesidad de declarar explícitamente el tipo de retorno.
+
+# Predicción E 
+1) Si `getMesas()` retorna `Promise<Mesa[]>`, ¿qué tipo tiene 'mesas' en este código?
+  ```typescript
+  const mesas = await getMesas();
+  ```
+
+    - `Mesa[]` , un array de objetos `Mesa`.
