@@ -1,16 +1,9 @@
 import { Link } from "react-router-dom"; // 1. Importar Link
 import "../css/MesaCard.css";
-type EstadoMesa='disponible' | 'ocupada' | 'reservada' | 'fuera_servicio';
+import type { Mesa } from "../types"
 
-interface MesaCardProps {
-    _id: string | number;
-    estado: EstadoMesa;
-    numero: number;
-    capacidad: number;
-    pedidoActivoId: string | number | null;
-}
 // 2. Agregar 'id' a la destructuración de props
-function MesaCard({ _id, estado, numero, capacidad, pedidoActivoId }: MesaCardProps) {
+function MesaCard({ _id, estado, numero, capacidad, pedidoActivoId }: Mesa) {
     return(
         <div className={`mesa-card ${estado}`} >
             <h3>Mesa número {numero}</h3>

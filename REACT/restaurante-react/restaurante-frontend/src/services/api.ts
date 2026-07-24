@@ -1,53 +1,12 @@
 import axios from "axios";
-// Si necesitan el 'platosMock' solo modifiquen parte de la variable como: 
-// VITE_API_URL => VITE_API
+import type {  EstadoPedido,  Mesa, Pedido, Plato } from "../types";
+
 // const BASE_URL = import.meta.env.VITE_API_URL
 
 // La instancia de Axios existente (sin cambios)
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
-
-
-// Tipos locales en api.ts (mañana los moveremos a types/index.ts)
-type EstadoMesa = 'disponible' | 'ocupada' | 'reservada' | 'fuera_servicio';
-type EstadoPedido = 'pendiente' | 'en_preparacion' | 'lista' | 'entregada' | 'cancelada' | 'cerrada';
-type TipoPedido = 'mesa' | 'para_llevar';
-
-
-interface Mesa {
-    _id: string | number;
-    numero: number;
-    capacidad: number;
-    estado: EstadoMesa;
-    pedidoActivoId: string | null;
-}
-
-interface ItemPedido {
-  platoId: string | number;
-  nombre: string;
-  cantidad: number;
-  precioUnitario: number;
-}
-
-interface Pedido {
-  _id: string | number;
-  mesaId: string | null;
-  tipo: TipoPedido;
-  estado: EstadoPedido;
-  items: ItemPedido[];
-  total: number;
-  creadoEn: string;
-  actualizadoEn: string;
-}
-
-interface Plato {
-  _id: string | number;
-  nombre: string;
-  precio: number;
-  categoria: string;
-}
-
 
 export async function getPlatos() : Promise<Plato[]> {
 
