@@ -11,7 +11,7 @@
 - [x] Bloque B — Importar tipos en api.ts y eliminar duplicados
 - [x] Bloque C — Tipar PedidoContext.tsx completo
 - [x] Bloque D — Exploración con Claude
-- [ ] Bloque E — Evaluación entre pares
+- [x] Bloque E — Evaluación entre pares
 - [ ] Bloque F — Cierre del día y verificación final
 
 ## Verificación
