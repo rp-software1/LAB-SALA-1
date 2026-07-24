@@ -9,4 +9,4 @@
 
 ## Predicción B 
 1) ¿Cuántas `interfaces/types` duplicados hay en total en `api.ts`, `PlatoCard.tsx` y `MesaCard.tsx` que vas a eliminar en este bloque?
-    - 5
+    - 8
