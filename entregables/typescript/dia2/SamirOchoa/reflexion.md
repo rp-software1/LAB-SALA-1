@@ -12,3 +12,12 @@
 ## Sección C — Reflexión Bloque C
 • **¿Qué error de runtime podría haberse producido sin el guard if (!context) throw?**
 - Si se usa el contexto fuera del Provider, `useContext` devuelve `undefined`. Al intentar acceder a sus propiedades (como `context.pedido`), JavaScript lanzaría un `TypeError`, rompiendo la aplicación. El guardia lo evita lanzando un error claro de inmediato.
+
+## Seccion F
+• **¿Qué concepto de TypeScript te costó más entender hoy?**
+Tipar contextos complejos con `createContext` y el manejo de `undefined`.
+
+• **¿Qué ventaja concreta viste de centralizar los tipos en types/index.ts?**
+Evita la duplicación de interfaces y garantiza un autocompletado consistente y preciso en toda la aplicación.
+
+• Total de errores TypeScript al cierre del Día 2: `44`_(los eliminaremos mañana)_
