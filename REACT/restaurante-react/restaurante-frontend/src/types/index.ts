@@ -50,6 +50,8 @@ export interface PedidoContextType{
   pedido: EstadoPedidoContext;
   agregarPlato: (plato: Plato) => void;
   quitarPlato: (platoId: string) => void;
+  eliminarPlatoCompleto?: (plato: Plato) => void;
+  eliminarPlatoMenosUno?: (plato: Plato) => void;
   cambiarTipo: (tipo: TipoPedido) => void;
   asignarMesa: (mesaId: string) => void;
   limpiarPedido: () => void;
