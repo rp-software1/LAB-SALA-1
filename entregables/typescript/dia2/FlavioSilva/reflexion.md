@@ -9,3 +9,6 @@
 1) ¿Qué pasa con el autocompletado en el IDE ahora que los tipos están en un solo lugar?
     - Mejora significativamente, ya que el IDE puede inferir los tipos de manera más precisa y ofrecer sugerencias más relevantes.
 
+## Bloque C
+- **¿Qué error de runtime podría haberse producido sin el guard if (!context) throw?**
+- Si se usa el contexto fuera del Provider, `useContext` devuelve `undefined`. Al intentar acceder a sus propiedades (como `context.pedido`), JavaScript lanzaría un `TypeError`, rompiendo la aplicación. El guardia lo evita lanzando un error claro de inmediato.
