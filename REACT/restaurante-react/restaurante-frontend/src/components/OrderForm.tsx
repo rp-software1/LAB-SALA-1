@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 
-function OrderForm({mesaNumero}){
+function OrderForm({mesaNumero}: {mesaNumero: string}){
     const [plato, setPlato] = useState(""); 
     const [cantidad, setCantidad] = useState(1); 
     const [enviando, setEnviando] = useState(false); 
     const [mensaje, setMensaje] = useState("");
 
-    const handleChange = (event) =>{
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
         const {name, value} = event.target; 
         if(name === "plato") setPlato(value);
-        if(name === "cantidad") setCantidad(value);
+        if(name === "cantidad") setCantidad(Number(value));
     };
     
     useEffect(() =>{
         console.log("OrderForm montado - mesa:", mesaNumero);
     }, [mesaNumero]); 
 
-    const handleSubmit = (event) =>{
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) =>{
         event.preventDefault(); 
         setEnviando(true); 
         setMensaje(""); 

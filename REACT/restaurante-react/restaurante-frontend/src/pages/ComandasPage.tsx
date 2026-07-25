@@ -1,10 +1,11 @@
 import OrderForm from "../components/OrderForm";
 import { getMesas } from "../services/api";
 import { useEffect, useState } from "react";
+import { Mesa } from "../types";
 
 function ComandasPage(){
     const [mesaSeleccionada, setMesaSeleccionada] = useState("1");
-    const [listMesas, setListMesas] = useState([]);
+    const [listMesas, setListMesas] = useState<Mesa[]>([]);
 
     useEffect(() => {
         const fetchMesas = async () => {
