@@ -10,9 +10,9 @@
 - [x] Bloque B — Tipar MenuPage.tsx y CarritoPage.tsx
 - [x] Bloque C — Tipar DetalleMesa.tsx (useParams y useNavigate)
 - [x] Bloque D — Verificación final: npx tsc --noEmit → 0 errores
-- [ ] Bloque E — Exploración con Claude
+- [x] Bloque E — Exploración con Claude
 - [ ] Bloque F — Cierre de los 3 días de TypeScript
 
 ## Verificación final
-- [ ] npx tsc --noEmit retorna 0 errores en todo el proyecto
-- [ ] npm run dev corre sin crash y todas las páginas cargan
+- [x] npx tsc --noEmit retorna 0 errores en todo el proyecto
+- [x] npm run dev corre sin crash y todas las páginas cargan
