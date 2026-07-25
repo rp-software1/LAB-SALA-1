@@ -15,3 +15,11 @@
 3) **¿El comportamiento de useParams te sorprendió? ¿Por qué el genérico no garantiza el tipo?**
     - Si, me sorprendió.
     - Porque como tal React Router tipea el Resultado como `string | undefined` ya que la ruta no podria coincidir en ejecución. El genérico solo es una anotación y se requiere obligatoriamente el control de flujo (*narrowing*) con un guard.
+
+## Bloque D 
+4) **¿Cuántos errores había al inicio del Día 1? ¿Y ahora?**
+    - Habia **_97_** errores.
+    - Ahora hay **_0_** errores.
+
+5) **¿Qué error fue el más difícil de resolver en los 3 días?**
+    - El más dificil para mi fue el de `CarritoPage.tsx` sus `types`.
