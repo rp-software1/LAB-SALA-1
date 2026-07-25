@@ -11,7 +11,7 @@
 - [x] Bloque C — Tipar DetalleMesa.tsx (useParams y useNavigate)
 - [x] Bloque D — Verificación final: npx tsc --noEmit → 0 errores
 - [x] Bloque E — Exploración con Claude
-- [ ] Bloque F — Cierre de los 3 días de TypeScript
+- [x] Bloque F — Cierre de los 3 días de TypeScript
 
 ## Verificación final
 - [x] npx tsc --noEmit retorna 0 errores en todo el proyecto

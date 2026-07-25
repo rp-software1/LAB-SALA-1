@@ -25,15 +25,16 @@
     - El más dificil para mi fue el de `CarritoPage.tsx` sus `types`.
 
 ## Bloque F
-6) **¿Qué concepto de TypeScript te resultó más difícil en los 3 días?**
-    - Más que conceptos fue el manejar el tipado, las formas de tipar como `:string` o `<string[]>` y entender cuando hacerlo y cunado lo infiere `TypeScript`.
+**¿Qué concepto de TypeScript te resultó más difícil en los 3 días?**
+  - Me costó un poco aprender cuándo era estrictamente necesario declarar los tipos a mano y en qué momentos `TypeScript` los deducía automáticamente por su cuenta.
 
-7) **¿Qué error de los 3 días fue el más útil para aprender? ¿Por qué?**
-    - Creo que todos, pues no conozco casi nada de `TypeScript` y me sirvió para entender como funciona, no al 100% pero al menos una base.
+**¿Qué error de los 3 días fue el más útil para aprender? ¿Por qué?**
+  - En general, todos me ayudaron muchísimo porque al dominar poco el lenguaje, cada error me sirvió para entender cómo funciona la herramienta desde cero y ganar bases firmes.
 
-8) **¿En qué parte del proyecto React del Día 9 detectarías bugs ahora que antes no veías?**
-    - Quizás en la llamada a la `API` pues habia algunos que aún usaban el `.mock` en vez de la `API` real.
+**¿En qué parte del proyecto React del Día 9 detectarías bugs ahora que antes no veías?**
+  - Sobre todo al momento de conectar los servicios, identificando con mayor claridad diferencias entre el uso de datos locales (`mock`) y la API definitiva.
 
-9) **Total de errores al inicio del Día 1: _97_  →  Total de errores hoy: _0_**
+**Total de errores al inicio del Día 1: _97_  →  Total de errores hoy: _0_**
 
-10) **Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript: El tipado pues me da una idea del tipo que es cada cosa.**
+**Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript:**
+  - Implementar tipados para saber con certeza absoluta qué estructura tiene cada variable y prevenir confusiones.
