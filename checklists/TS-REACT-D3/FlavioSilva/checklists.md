@@ -7,7 +7,7 @@
 ---
 ## Bloques
 - [x] Bloque A — Tipar MesasPage.tsx (useEffect, loading/error/data, handler)
-- [ ] Bloque B — Tipar MenuPage.tsx y CarritoPage.tsx
+- [x] Bloque B — Tipar MenuPage.tsx y CarritoPage.tsx
 - [ ] Bloque C — Tipar DetalleMesa.tsx (useParams y useNavigate)
 - [ ] Bloque D — Verificación final: npx tsc --noEmit → 0 errores
 - [ ] Bloque E — Exploración con Claude
