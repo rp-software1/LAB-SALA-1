@@ -1,31 +1,29 @@
 import { useEffect, useState } from "react";
-import { getPlatos, crearPedido, getPedidos } from "../services/api";
+import { getPlatos, crearPedido} from "../services/api";
 import { usePedido } from "../context/PedidoContext";
-
+import type { Plato, Pedido, TipoPedido } from "../types";
 
 
 export default function CarritoPage(){
-    const {pedido, agregarPlato, eliminarPlatoCompleto, eliminarPlatoMenosUno, cambiarTipo, limpiarPedido} = usePedido();
-    // const [carrito, setCarrito] = useState([]);
-    const [platos, setPlatos] = useState([]);
+    const {pedido, agregarPlato, quitarPlato, cambiarTipo, limpiarPedido} = usePedido();
+    const [platos, setPlatos] = useState<Plato[]>([]);
+    const [tipo, setTipo] = useState<TipoPedido>('mesa');
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [tipo, setTipo] = useState(pedido.tipo);
-    //Estados nuevo requeridos para el envio de la comanda
+    const [error, setError] = useState<string | null>(null);
     const [enviando, setEnviando] = useState(false)
-    const [errorEnvio, setErrorEnvio] = useState(null);
-    const [pedidoCreado, setPedidoCreado] = useState(null);
+    const [errorEnvio, setErrorEnvio] = useState<string | null>(null);
+    const [pedidoCreado, setPedidoCreado] = useState<Pedido | null>(null);
 
     useEffect(() => {
-        async function cargarMenu(){
+        async function cargarMenu(): Promise<void>{
             try {
                 setLoading(true);
                 setError(null)
                 const data = await getPlatos();
                 setPlatos(data); 
-            } catch (error) {
+            } catch (error: unknown) {
+                error instanceof Error ? console.error("Error al cargar el menú:", error) : console.error("Error al cargar el menú");
                 setError("Lo sentimos demasiado :(, no pudimos cargar el menú. Porfavor, intentalo de nuevo más tarde");
-                console.error("Error al cargar el menú:", error);
             } finally {
                 setLoading(false);
             }
@@ -40,20 +38,16 @@ export default function CarritoPage(){
             // Guardamos el total actual antes de limpiar el carrito
             const totalActual = pedido.total;
 
-            const listPedidos = await getPedidos();
-
-            // GENERAR ID AUTO_INCREMENTAR
-            const ultimoPedido = listPedidos[listPedidos.length - 1]; 
-            const nuevoId = ultimoPedido ? ultimoPedido._id + 1 : 1;
-
-
             try {
-                const nuevoPedido = await crearPedido({
-                    _id: nuevoId,
+                const body: Omit<Pedido, "_id" | "creadoEn" | "actualizadoEn"> = {
                     mesaId: pedido.mesaId,
                     tipo: pedido.tipo,
+                    estado: "pendiente",
                     items: pedido.items,
-                });
+                    total: pedido.total,
+                };
+
+                const nuevoPedido = await crearPedido(body);
                 
                 // Le pasamos el total y aseguramos el _id
                 setPedidoCreado({
@@ -94,7 +88,7 @@ export default function CarritoPage(){
         <div>
             <h2>Carrito de compras del Menú</h2>
             {platos.map(plato =>(
-                <div key={plato.id}>
+                <div key={plato._id}>
                     <span> {plato.nombre} - {plato.precio} </span>    
                     <button onClick={() => agregarPlato(plato)}> Agregar</button>
                 </div>
@@ -103,17 +97,16 @@ export default function CarritoPage(){
             <h3>Hay {pedido.items.length} items | { pedido.items.reduce((sum, p)=> sum + p.cantidad, 0 )} unidades </h3>
 
             {pedido.items.map(plato => (
-                <div key={plato.id}>
-                    <span> {plato.nombre} - S/.{plato.precio} (unitario) - {plato.cantidad} (cantidad) </span>
-                    <button onClick={() => eliminarPlatoMenosUno(plato)}> -1 </button>
-                    <button onClick={() => eliminarPlatoCompleto(plato)}> Eliminar del carrito </button>
+                <div key={plato.platoId}>
+                    <span> {plato.nombre} - S/.{plato.precioUnitario} (unitario) - {plato.cantidad} (cantidad) </span>
+                    <button onClick={() => quitarPlato(plato.platoId)}> -1 </button>
                 </div>
             ))}
 
             <h3>Total: S/. {pedido.total}</h3>
 
 
-            <input type="text" placeholder="Cambiar tipo" value={tipo} onChange={(e) => setTipo(e.target.value)}></input>
+            <input type="text" placeholder="Cambiar tipo" value={tipo} onChange={(e) => setTipo(e.target.value as TipoPedido)}></input>
             <button onClick={() => cambiarTipo(tipo)} >Cambiar Tipo</button>
 
             <button onClick={() => limpiarPedido()} >Limpiar Carrito</button>
@@ -128,10 +121,10 @@ export default function CarritoPage(){
                     <>
                         <ul>
                             {pedido.items.map( item => (
-                                <li key={item.id}> 
+                                <li key={item.platoId}> 
                                     <span>{item.nombre} x {item.cantidad}</span>
                                     <br />
-                                    <span> Subtotal del plato {item.cantidad} x S/.{item.precio}   : {item.precio * item.cantidad}</span>
+                                    <span> Subtotal del plato {item.cantidad} x S/.{item.precioUnitario}   : {item.precioUnitario * item.cantidad}</span>
                                 </li>
                             ))}
                         </ul>

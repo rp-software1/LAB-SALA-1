@@ -6,18 +6,18 @@
     color: #eee;
 }
 
-.mesa-card.disponible {
+.mesa-card.Disponible {
     background-color: #080;
 }
 
-.mesa-card.ocupada {
+.mesa-card.Ocupada {
     background-color: #800;
 }
 
-.mesa-card.reservada {
+.mesa-card.Reservada {
     background-color: #f80;
 }
 
-.mesa-card.fuera_servicio {
+.mesa-card.Fuera_Servicio {
     background-color: #444;
 }

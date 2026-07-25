@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getPlatos } from "../services/api";
-
+import type { Plato } from "../types";
 import { usePedido } from "../context/PedidoContext";
 
 export default function MenuPage(){
@@ -8,12 +8,12 @@ export default function MenuPage(){
     const totalUnidades = pedido.items.reduce((acc, i) => acc + i.cantidad, 0);
     const totalItems = pedido.items.length;
     
-    const [platos, setPlatos]= useState([]);
+    const [platos, setPlatos]= useState<Plato[]>([]);
     const [loading, setLoading]= useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(()=>{
-        async function cargarMenu(){
+        async function cargarMenu() : Promise<void>{
             try {
                 setLoading(true);
                 setError(null)
@@ -21,9 +21,9 @@ export default function MenuPage(){
                 console.log(data);
                 console.log(Array.isArray(data));
                 setPlatos(data); 
-            } catch (error) {
+            } catch (error : unknown) {
+                error instanceof Error ? console.error("Error al cargar el menú:", error) : console.error("Error al cargar el menú");
                 setError("Lo sentimos demasiado :(, no pudimos cargar el menú. Porfavor, intentalo de nuevo más tarde");
-                console.error("Error al cargar el menú:", error);
             } finally {
                 setLoading(false);
             }
@@ -40,7 +40,7 @@ export default function MenuPage(){
                     <p>No hay platos disponibles por el momento. Vuelve más tarde</p>
                 ):(
                     platos.map((plato)=>(
-                        <div key = {plato._id ?? plato.id} className="plato-card">
+                        <div key = {plato._id} className="plato-card">
                             <strong>{plato.nombre}</strong> - S/ {plato.precio}
                         </div>
                     ))

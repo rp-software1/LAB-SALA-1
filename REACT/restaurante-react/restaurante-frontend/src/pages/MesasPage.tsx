@@ -3,23 +3,25 @@ import { getMesas } from "../services/api";
 import MesaCard from "../components/MesaCard";
 import { useNavigate } from "react-router-dom";
 import { usePedido } from "../context/PedidoContext";
+import type { Mesa } from "../types";
 import "../css/MesasPage.css";
 
 export default function MesasPage(){
-    const [mesas, setMesas] = useState([]); 
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const {asignarMesa} = usePedido();
+    const [mesas, setMesas] = useState<Mesa[]>([]); 
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
+    const { asignarMesa } = usePedido();
     const navigate = useNavigate();
 
     useEffect(() =>{
-        async function loadMesas(){
+        async function loadMesas(): Promise<void>{
             try{
-                const dataList = await getMesas(); 
+                const dataList: Mesa[] = await getMesas(); 
                 setMesas(dataList)
-            }catch(error){
-                console.error("Error al cargar mesas", error);
-                setError("Error al cargar mesas...");
+            }catch(err: unknown){
+                const mensaje = err instanceof Error ? err.message : "Error al cargar mesas";
+                console.error("Error al cargar mensaje", err);
+                setError(mensaje);
             }
             finally{
                 setLoading(false);
@@ -29,7 +31,7 @@ export default function MesasPage(){
         loadMesas();
     }, []);
 
-    function handleSeleccionarMesa(mesa){
+    function handleSeleccionarMesa(mesa: Mesa): void {
         asignarMesa(mesa._id);
         navigate("/carrito");
     }
@@ -40,7 +42,7 @@ export default function MesasPage(){
             {loading && <p>Cargando mesas...</p>}
             {error && <p style={{ color: "red" }}>{error}</p>}
             <div className="mesas-container">
-                {mesas.map((mesa) => (
+                {mesas.map((mesa: Mesa) => (
                     <div key={mesa._id}>
                         <MesaCard
                         _id={mesa._id}
@@ -50,7 +52,7 @@ export default function MesasPage(){
                         pedidoActivoId={mesa.pedidoActivoId}
                         />    
 
-                        {mesa.estado === "disponible" && (
+                        {mesa.estado === "Disponible" && (
                             <button onClick={() => handleSeleccionarMesa(mesa)}>
                                 Seleccionar Mesa
                             </button>

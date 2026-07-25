@@ -28,8 +28,10 @@ export async function getMesasDisponibles() : Promise<Mesa[]>{
     return response.data;
 }
 
-export async function crearPedido(pedidoData :Pedido ){
-    const response = await api.post<Pedido>(`/pedidos`, pedidoData);
+export async function crearPedido(
+    pedidoData: Omit<Pedido, "_id" | "creadoEn" | "actualizadoEn">
+): Promise<Pedido> {
+    const response = await api.post<Pedido>("/pedidos", pedidoData);
     return response.data;
 }
 
