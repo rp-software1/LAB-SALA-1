@@ -23,3 +23,17 @@
 
 5) **¿Qué error fue el más difícil de resolver en los 3 días?**
     - El más dificil para mi fue el de `CarritoPage.tsx` sus `types`.
+
+## Bloque F
+6) **¿Qué concepto de TypeScript te resultó más difícil en los 3 días?**
+    - Más que conceptos fue el manejar el tipado, las formas de tipar como `:string` o `<string[]>` y entender cuando hacerlo y cunado lo infiere `TypeScript`.
+
+7) **¿Qué error de los 3 días fue el más útil para aprender? ¿Por qué?**
+    - Creo que todos, pues no conozco casi nada de `TypeScript` y me sirvió para entender como funciona, no al 100% pero al menos una base.
+
+8) **¿En qué parte del proyecto React del Día 9 detectarías bugs ahora que antes no veías?**
+    - Quizás en la llamada a la `API` pues habia algunos que aún usaban el `.mock` en vez de la `API` real.
+
+9) **Total de errores al inicio del Día 1: _97_  →  Total de errores hoy: _0_**
+
+10) **Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript: El tipado pues me da una idea del tipo que es cada cosa.**
