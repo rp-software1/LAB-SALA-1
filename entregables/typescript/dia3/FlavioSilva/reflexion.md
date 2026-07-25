@@ -7,6 +7,11 @@
     - Obliga a verificar el tipo de error antes de usarlo y puedo tener formas de manejarlo dependiendo de lo que sea.
 
 ## Bloque B 
-1) **¿`Omit<Pedido, ...>` fue lo que esperabas? ¿Cuándo usarías `Omit` en otros contextos del proyecto?**
+2) **¿`Omit<Pedido, ...>` fue lo que esperabas? ¿Cuándo usarías `Omit` en otros contextos del proyecto?**
     - Si, esperaba algo asi.
     - Lo usaría para crear un tipo de pedido que no tenga ciertos campos, o sea que serían omitidos.
+
+## Bloque C 
+3) **¿El comportamiento de useParams te sorprendió? ¿Por qué el genérico no garantiza el tipo?**
+    - Si, me sorprendió.
+    - Porque como tal React Router tipea el Resultado como `string | undefined` ya que la ruta no podria coincidir en ejecución. El genérico solo es una anotación y se requiere obligatoriamente el control de flujo (*narrowing*) con un guard.
