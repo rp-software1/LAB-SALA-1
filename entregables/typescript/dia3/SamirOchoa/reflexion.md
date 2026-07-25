@@ -22,15 +22,15 @@
 ## Cierre de los 3 días
 
 **¿Qué concepto de TypeScript te resultó más difícil en los 3 días?**
-  - El tipado avanzado de eventos en formularios y la manipulación de contextos complejos con múltiples funciones (*callbacks*).
+  - Me costó un poco aprender cuándo era estrictamente necesario declarar los tipos a mano y en qué momentos `TypeScript` los deducía automáticamente por su cuenta.
 
 **¿Qué error de los 3 días fue el más útil para aprender? ¿Por qué?**
-  - Los errores de incompatibilidad de tipos en los estados globales (`null` vs objetos), porque me obligaron a entender la importancia del tipado estricto y el manejo defensivo con operadores de fusión nula (`??`).
+  - En general, todos me ayudaron muchísimo porque al dominar poco el lenguaje, cada error me sirvió para entender cómo funciona la herramienta desde cero y ganar bases firmes.
 
 **¿En qué parte del proyecto React del Día 9 detectarías bugs ahora que antes no veías?**
-  - Al pasar props entre componentes y consumir APIs, ahora podría identificar de inmediato discrepancias en las estructuras de datos antes de que rompan la interfaz en tiempo de ejecución.
+  - Sobre todo al momento de conectar los servicios, identificando con mayor claridad diferencias entre el uso de datos locales (`mock`) y la API definitiva.
 
-**Total de errores al inicio del Día 1: 97  →  Total de errores hoy: 0**
+**Total de errores al inicio del Día 1: _97_  →  Total de errores hoy: _0_**
 
 **Una cosa que cambiaría de la forma en que escribí JavaScript antes de TypeScript:**
-  - Dejar de asumir que los objetos y parámetros siempre tienen las propiedades que espero; ahora implementaría interfaces claras desde el inicio para evitar sorpresas con valores `undefined`.
+  - Implementar tipados para saber con certeza absoluta qué estructura tiene cada variable y prevenir confusiones.
