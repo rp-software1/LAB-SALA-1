@@ -1,7 +1,11 @@
+import Link from "next/link";
 export default function Navbar() {
-    return (
-        <nav className="bg-white shadow p-4 mb-4">
-            <h2 className="font-bold text-lg">RV4 Navbar</h2>
-        </nav>
-    )
+   return(
+    <nav className="flex gap-6 py-4 bg-slate-800">
+        <Link href="/">Inicio</Link>
+        <Link href="/dashboard">Dashboard</Link>
+        <Link href="/projects">Proyectos</Link>
+        <Link href="/students">Estudiantes</Link>
+    </nav>
+   )   
 }
