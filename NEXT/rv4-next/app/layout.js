@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/layout/NavBar";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "RV4 Dashboard",
+  icons : {
+    icon: "/image/logo-rv4.svg"
+  },
+  title: "RV4 Home",
   description: "Panel de gestión RV4",
 };
 
