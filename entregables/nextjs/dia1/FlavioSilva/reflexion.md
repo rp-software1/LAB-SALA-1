@@ -15,3 +15,7 @@
 ## Bloque D 
 1) **¿params como prop fue lo que predijiste o esperabas un hook como en React? ¿Qué implica esa diferencia?**
     - Si era lo que esperaba, un `prop` llamado `params` que contiene el `mesaId`.
+
+## Bloque E 
+1) ¿El archivo `not-found.tsx` fue el que esperabas, o esperabas un nombre diferente?
+    - Pensé que tendríamos que configurar algo en el `layout.tsx` para que detectara las rutas no existentes, pero no, solo es un archivo `not-found.tsx`.
