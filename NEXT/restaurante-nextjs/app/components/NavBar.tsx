@@ -5,6 +5,13 @@ import { usePathname } from "next/navigation";
 export default function NavBar() {
   const pathname = usePathname();
 
+  const routes = [
+    {href : "/" , label: "Inicio"},
+    {href : "/mesas" , label: "Mesas"},
+    {href : "/menu" , label: "Menú"},
+    {href : "/carrito" , label: "Carrito"}
+  ]
+
   const esActiva = (ruta: string): string =>
     pathname === ruta
       ? 'font-bold text-blue-700 underline'
@@ -12,10 +19,12 @@ export default function NavBar() {
 
   return (
     <nav className='bg-white shadow px-6 py-3 flex gap-6'>
-      <span className='font-bold text-lg mr-4'>🍽 Restaurante</span>
-      <Link href='/mesas' className={esActiva('/mesas')}>Mesas</Link>
-      <Link href='/menu' className={esActiva('/menu')}>Menú</Link>
-      <Link href='/carrito' className={esActiva('/carrito')}>Carrito</Link>
+      <span className='font-bold text-lg mr-4'>
+        <Link href='/'>🍽 Restaurante</Link>
+      </span>
+      {routes.map(route => (
+        <Link key={route.href} href={route.href} className={esActiva(route.href)}>{route.label}</Link>
+      ))}
     </nav>
   );
 }
