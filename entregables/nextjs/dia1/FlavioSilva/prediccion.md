@@ -38,3 +38,7 @@
 ## Bloque C 
 1) **¿Cuántas carpetas van a crear en este bloque? Lista los nombres de las carpetas antes de ejecutar el primer mkdir.**
     - 3 carpetas: `mesas`, `menu`, `carrito` y uno adicional de `[id]` que sería así `mesas/[id]`
+
+## Bloque D 
+1) **¿Cómo llega el parámetro mesaId al componente page.tsx? ¿Como prop, como hook, o de otra forma?**
+    - Como una `prop` llamada `params`
