@@ -36,3 +36,7 @@
     - No, no funciona (necesita adaptación)
 - **¿Qué import cambia?**
     - Se cambia react-router-dom por import Link from 'next/link' y se agrega usePathname desde next/navigation.
+## Bloque D
+- **¿Cómo llega el parámetro mesaId al componente page.tsx? ¿Como prop, como hook, o de otra forma?**
+    - El componente recibe mesaId como: **prop**
+    - ¿Es string o puede ser number? **string**
