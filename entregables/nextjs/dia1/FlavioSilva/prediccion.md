@@ -42,3 +42,10 @@
 ## Bloque D 
 1) **¿Cómo llega el parámetro mesaId al componente page.tsx? ¿Como prop, como hook, o de otra forma?**
     - Como una `prop` llamada `params`
+  
+## Bloque E 
+1) **En React usaban <Route path="*" element={<NotFound/>}> para capturar cualquier ruta no existente. ¿Cómo detecta Next.js que una ruta no existe y qué archivo usa para mostrarlo?**
+    - Next.js detecta rutas no existentes cuando no encuentra una carpeta o archivo que coincida con la URL solicitada.
+    - El archivo que usa para mostrar la página de error 404 es `not-found.tsx`.
+2. **¿Por qué el archivo se llama not-found.tsx y no 404.tsx o notfound.tsx? ¿Es una convención o Next.js acepta cualquier nombre?**
+    - Es una convención de Next.js, no acepta cualquier nombre.
