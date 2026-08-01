@@ -11,11 +11,11 @@
 - [x] B — Layout raíz + migrar NavBar
 - [x] C — Mapear rutas del restaurante como carpetas
 - [x] D — Ruta dinámica /mesa/[mesaId] + Link en NavBar
-- [ ] E — not-found.tsx + verificación TypeScript
+- [x] E — not-found.tsx + verificación TypeScript
 - [ ] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final
-- [ ] npm run dev → localhost:3000 carga
-- [ ] Todas las rutas responden sin 404
-- [ ] npx tsc --noEmit → 0 errores
+- [x] npm run dev → localhost:3000 carga
+- [x] Todas las rutas responden sin 404
+- [x] npx tsc --noEmit → 0 errores
 - [ ] PR aprobado por sala par
