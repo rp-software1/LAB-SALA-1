@@ -32,3 +32,6 @@
     - `next.config.ts` es el archivo de configuración de `Next.js`, define las opciones de `Next.js` para la **web**.
 
 # Bloque B
+1) **El `NavBar` de React Día 1 usaba `NavLink` con `activeClassName` o `className` con función. ¿Eso va a funcionar en `Next.js` sin cambios, o necesita adaptación?**
+    - Necesita adaptación, ya que usamos `app router`, en el `NavBar` usaremos el `Link` con propiedad `href`.
+  
