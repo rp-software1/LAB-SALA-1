@@ -2,8 +2,8 @@
 - **curso:** Next.js
 - **alumno:** Flavio Silva
 - **dia:** 1
-- **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **estado:** finalizado
+- **loom:** [Enlace al video Loom](https://www.loom.com/share/7a35a67b9eec45f59cddba68c81f3cd2)
 ---
 
 ## Bloques
@@ -12,10 +12,10 @@
 - [x] C — Mapear rutas del restaurante como carpetas
 - [x] D — Ruta dinámica /mesa/[mesaId] + Link en NavBar
 - [x] E — not-found.tsx + verificación TypeScript
-- [ ] F — Evaluación entre pares + Loom + PR
+- [x] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final
 - [x] npm run dev → localhost:3000 carga
 - [x] Todas las rutas responden sin 404
 - [x] npx tsc --noEmit → 0 errores
-- [ ] PR aprobado por sala par
+- [x] PR aprobado por sala par
