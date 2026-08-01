@@ -11,3 +11,7 @@
 ## Bloque C 
 1) **La tabla React Router → App Router: ¿fue el momento donde el App Router "hizo clic"? ¿Qué parte fue la más reveladora?**
     - Pues lo más revelador fue que solo necesitaba una carpeta como `mesas/`  y dentro de el tener el `page.tsx` y si fuera necesario pues tener el `layout.tsx`. 
+  
+## Bloque D 
+1) **¿params como prop fue lo que predijiste o esperabas un hook como en React? ¿Qué implica esa diferencia?**
+    - Si era lo que esperaba, un `prop` llamado `params` que contiene el `mesaId`.
