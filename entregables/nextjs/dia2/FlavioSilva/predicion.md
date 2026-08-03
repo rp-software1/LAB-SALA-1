@@ -8,3 +8,7 @@
 ## Bloque B 
 1) **`MesasPage` llama a `getMesas()` con await. Si el backend tarda 2 segundos en responder, ¿qué ve el usuario durante esos 2 segundos? ¿Una pantalla en blanco, el layout con `NavBar`, o el skeleton de `loading.tsx`?**
     - Lo ideal es que vea el `loading.tsx` para que sepa que se están cargando los datos.
+
+## Bloque C 
+1) **¿error.tsx captura errores de JavaScript (como un error de sintaxis en el código) o solo errores del fetch (como un 500 del backend)?**
+    - Captura errores de ejecución como el del `fetch`. 
