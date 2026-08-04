@@ -19,7 +19,7 @@ export interface Plato {
   descripcion: string;
   precio: number;
   categoria: string;
-  disponible: boolean;
+  disponible?: boolean;
 }
 export interface ItemPedido {
   platoId: string;
