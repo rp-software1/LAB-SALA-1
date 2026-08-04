@@ -9,7 +9,7 @@
 ## Bloques
 - [x] A — Videos + types/index.ts + variables de entorno
 - [x] B — MesasPage Server Component + MesaCard Client Component
-- [ ] C — loading.tsx + error.tsx en /mesas
+- [x] C — loading.tsx + error.tsx en /mesas
 - [ ] D — MenuPage Server Component + PlatoCard Client Component
 - [ ] E — Verificación TypeScript completa
 - [ ] F — Evaluación entre pares + Loom + PR
