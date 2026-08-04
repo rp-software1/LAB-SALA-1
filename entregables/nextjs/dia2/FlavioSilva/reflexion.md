@@ -15,3 +15,7 @@
 ## Bloque D 
 1) **¿Qué haría distinto en `PlatoCard` cuando llegue el Context en Día 3? ¿Qué línea va a cambiar?**
     - Al momento de agregar el plato, no se está guardando en ningún lado, solo se muestra un mensaje de "Agregado". En el día 3 se debe agregar el plato al contexto del Pedido.
+
+## Bloque E 
+1) **¿Cuántos errores TypeScript había antes de resolver? ¿Cuál fue el más difícil?**
+    - No hubo errores de TypeScript.
