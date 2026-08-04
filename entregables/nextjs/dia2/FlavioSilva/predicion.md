@@ -10,5 +10,11 @@
     - Lo ideal es que vea el `loading.tsx` para que sepa que se están cargando los datos.
 
 ## Bloque C 
-1) **¿error.tsx captura errores de JavaScript (como un error de sintaxis en el código) o solo errores del fetch (como un 500 del backend)?**
+1) **¿`error.tsx `captura errores de JavaScript (como un error de sintaxis en el código) o solo errores del fetch (como un 500 del backend)?**
     - Captura errores de ejecución como el del `fetch`. 
+
+## Bloque D 
+1) **`¿MenuPage` va a necesitar `loading.tsx` y `error.tsx` también? Decide antes de empezar si los vas a crear o no, y anota la razón.**
+    - Necesitará de ambos, aunque sea un **Server Component** _(`loading.tsx` es para server components)_, igual puede haber errores en el fetch _(`error.tsx` captura errores de ejecución)_. 
+
+## Bloque E 
