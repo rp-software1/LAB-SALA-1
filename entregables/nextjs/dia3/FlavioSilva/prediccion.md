@@ -9,3 +9,7 @@
     - Se debe agregar antes del `setAgregado(true)`
 
 ## Bloque C: 
+1) **¿CarritoPage puede exportar metadata de Next.js? ¿Por qué?**
+    - No, porque `CarritoPage` es un Client Component y solo los Server Components pueden exportar `metadata`.
+
+## Bloque D:
