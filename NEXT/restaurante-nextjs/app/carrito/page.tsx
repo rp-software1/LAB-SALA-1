@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 export default function CarritoPage() {
-  return(
+  return (
     <CarritoList />
   )
 }

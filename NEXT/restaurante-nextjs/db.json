@@ -324,6 +324,1591 @@
       ],
       "total": 99,
       "id": "tZpyP9o8tD4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 3,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 115,
+      "id": "pDCmirQCIk4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 2,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 85,
+      "id": "eGHO68ivc6c"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 5,
+          "nombre": "Tallarines Verdes",
+          "cantidad": 2,
+          "precioUnitario": 18
+        }
+      ],
+      "total": 66,
+      "id": "a0kslNgB5P0"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 100,
+      "id": "Yt6DBkg_JpA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 1,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 78,
+      "id": "MQGHkLEDKqE"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 3,
+          "nombre": "Ají de Gallina",
+          "cantidad": 1,
+          "precioUnitario": 22
+        }
+      ],
+      "total": 72,
+      "id": "1xZYgiLyvBs"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "6ffTd_DRUUI"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "wI04N6E4nvc"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 3,
+          "nombre": "Ají de Gallina",
+          "cantidad": 1,
+          "precioUnitario": 22
+        }
+      ],
+      "total": 72,
+      "id": "4diE9eIyPDY"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "-lj7ukT9Zr4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "Jt5Nux_AWu4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "pjYIjvwLLnY"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "W7xvwrf9YxA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "-IcsVEIogXI"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "lra11cSIIE4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 80,
+      "id": "EHQjj9bhvCQ"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "oXd_WTHu39w"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Z9GfEY2iMAI"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "_YMFCDukiXo"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "KZ1X0tHZDR4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Z08uUf7AwZ4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "pNddg-JXvnw"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "4-frpmXkKk8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "wF3LJFq7gt8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "GQVACdKkx2M"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "voCFlP-np34"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "0LBFETEXsRE"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "ml7_oSREX6I"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "g3aSK_ocfNk"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Pf2rkKRsUvg"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "apFGKWU6qtk"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "NqEe2Iu2o1o"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "bQAgFG9wvv8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "QJMka5CRimU"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "BwA8piYf1Qc"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "ycL6Oce7uns"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Qc6D8LOQegw"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "FmdyiFgCRB8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "mkzVgXaHzSc"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "OFGwuDmPS10"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "JKZ0fbM7Jes"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "ZP_-iHw7n5Q"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "dimfn3xoeYE"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 3,
+          "nombre": "Ají de Gallina",
+          "cantidad": 1,
+          "precioUnitario": 22
+        }
+      ],
+      "total": 77,
+      "id": "er9g_hrjPoM"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 3,
+          "nombre": "Ají de Gallina",
+          "cantidad": 1,
+          "precioUnitario": 22
+        }
+      ],
+      "total": 77,
+      "id": "-gmRtjpm_2s"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 3,
+          "nombre": "Ají de Gallina",
+          "cantidad": 1,
+          "precioUnitario": 22
+        }
+      ],
+      "total": 77,
+      "id": "Q7cnUf5W_q8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 100,
+      "id": "nL6-4JzQihk"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Vdm0wau4rEE"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Qk8wKXq2T24"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 100,
+      "id": "A1cJnc782ow"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "_W0_1Kp3Og4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 100,
+      "id": "f4v7LwFOLG0"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "YcYbFww8wDw"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "Ve9se8sl6q0"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "6n6NtqlljdA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "uVD26fDFv-M"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "S_mT2yBQimg"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "6GTs6QTksbQ"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "-yBroQe4HhI"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "atRFdxGmOG4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "9bXrcNHR7m8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "8-PAjUiBJyc"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "ERPOynxEsr0"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "GFlc_AElRho"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "2sPrJKNwu1E"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "TFSXjVdEhmI"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "mRahd1cGmvM"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "K1eY9ZwVoOU"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "eD2EUg3HdJU"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "aJPr6jrjucQ"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "gZaYsPM5lHE"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "-5C2Ty7rgqw"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "Ok-WR1ySfhk"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "4AkEalC2aSY"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "yawQGifpBVs"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "qXH5Un_kyq8"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 2,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 106,
+      "id": "pZCL8ajQTKA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "s4TMvfpX674"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "XhWm21BMFMU"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Ijue9msPLIg"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "TRRAHVP1ofE"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "9hN6jy_JrIQ"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "6dGSgb5CTX4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "6V6Bj59YtKM"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Cs8HT_7jwBs"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "iU9EscJoc4w"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "Au7hSqS-01U"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "23zHLz6AVjA"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
