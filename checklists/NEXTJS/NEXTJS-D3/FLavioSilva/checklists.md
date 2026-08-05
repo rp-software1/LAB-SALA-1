@@ -11,11 +11,11 @@
 - [x] B — Conectar PlatoCard al Context + contador en NavBar
 - [x] C — CarritoPage Client Component con Context
 - [x] D — Server Action: enviarComanda()
-- [ ] E — Verificación TypeScript completa
+- [x] E — Verificación TypeScript completa
 - [ ] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final
-- [ ] Agregar plato en /menu → aparece en /carrito
-- [ ] Enviar comanda desde /carrito → POST real al backend
-- [ ] npx tsc --noEmit → 0 errores
+- [x] Agregar plato en /menu → aparece en /carrito
+- [x] Enviar comanda desde /carrito → POST real al backend
+- [x] npx tsc --noEmit → 0 errores
 - [ ] PR aprobado por sala par
