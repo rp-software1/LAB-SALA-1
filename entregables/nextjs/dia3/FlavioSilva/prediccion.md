@@ -5,3 +5,7 @@
     - No necesita "use client" para poder importar un componente que sí tiene "use client", lo necesitaría si el usara `APIs` exclusivas del cliente como los `hooks` de react o `eventos` del navegador.
 
 ## Bloque B: 
+1) **¿Dónde exactamente en `PlatoCard.tsx` van a agregar la llamada a `agregarPlato(plato)`? ¿Antes o después del `setAgregado(true)`?**
+    - Se debe agregar antes del `setAgregado(true)`
+
+## Bloque C: 
