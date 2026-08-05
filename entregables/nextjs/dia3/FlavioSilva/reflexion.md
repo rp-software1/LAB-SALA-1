@@ -13,3 +13,5 @@
     - Sí, fue correcta, implica que los Client Components no pueden exportar `metadata`, pero convertí a `carrito/page.tsx` en un `Server Component`, ya que dividí en componentes para no tener todo en uno solo, sino en varios archivos, divididor por responsabilidades, facilitando el manejo.
 
 ## Bloque D: 
+1) **¿La separación entre lo que hace el Server Action y lo que hace el cliente fue clara?**
+    - Sí, fue clara, ya que el Server Action se encarga de enviar la comanda al backend, mientras que el cliente se encarga de mostrar el estado del pedido y manejar la interacción del usuario.

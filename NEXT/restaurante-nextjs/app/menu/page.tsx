@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default async function MenuPage() {
   const platos: Plato[] = await getPlatos();
   // Filtrar solo platos disponibles
-    const platosDisponibles = platos.filter(p => p.disponible);
+  // const platosDisponibles = platos.filter(p => p.disponible);
   return (
     <div>
       <h1 className="text-2xl font-bold mb-6">Menú del Restaurante</h1>

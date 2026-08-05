@@ -1908,6 +1908,84 @@
       ],
       "total": 75,
       "id": "23zHLz6AVjA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 4,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 212,
+      "id": "YcEWvMtvYwc"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 5,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 3,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 215,
+      "id": "vHl9JBRuyY4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 130,
+      "id": "ulhH9UV5Mh0"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 100,
+      "id": "I7hUMXMP6ss"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
