@@ -7,3 +7,11 @@
 ## Bloque B:
 1) **¿El TODO era más simple de conectar de lo que esperabas, o fue complicado?**
     - Fue bastante simple, ya que solo bastó con que llame`agregarPlato(plato)` y usar `reduce` en el NavBar para mostrar las unidades totales en tiempo real.
+
+## Bloque C: 
+1) **¿La predicción sobre metadata fue correcta? ¿Qué implica esa limitación para el diseño de la app?**
+    - Sí, fue correcta, implica que los Client Components no pueden exportar `metadata`, pero convertí a `carrito/page.tsx` en un `Server Component`, ya que dividí en componentes para no tener todo en uno solo, sino en varios archivos, divididor por responsabilidades, facilitando el manejo.
+
+## Bloque D: 
+1) **¿La separación entre lo que hace el Server Action y lo que hace el cliente fue clara?**
+    - La separación fue clara porque el Server Action procesó la comunicación con el backend en el servidor, mientras que el cliente gestionó la interfaz visual y el estado de la aplicación.
