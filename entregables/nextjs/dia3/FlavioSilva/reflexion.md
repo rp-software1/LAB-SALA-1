@@ -15,3 +15,7 @@
 ## Bloque D: 
 1) **¿La separación entre lo que hace el Server Action y lo que hace el cliente fue clara?**
     - Sí, fue clara, ya que el Server Action se encarga de enviar la comanda al backend, mientras que el cliente se encarga de mostrar el estado del pedido y manejar la interacción del usuario.
+
+## Bloque E: 
+1) **¿Cuántos errores TypeScript había antes de resolver? Anota en reflexion.md sección E.**
+    - Bueno ayer no hubo errores pendientes a reolver y ahora tampoco hay ningún error.
