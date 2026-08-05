@@ -9,4 +9,7 @@
     - Fue bastante simple, ya que solo bastó con que llame`agregarPlato(plato)` y usar `reduce` en el NavBar para mostrar las unidades totales en tiempo real.
 
 ## Bloque C: 
-1) 
+1) **¿La predicción sobre metadata fue correcta? ¿Qué implica esa limitación para el diseño de la app?**
+    - Sí, fue correcta, implica que los Client Components no pueden exportar `metadata`, pero convertí a `carrito/page.tsx` en un `Server Component`, ya que dividí en componentes para no tener todo en uno solo, sino en varios archivos, divididor por responsabilidades, facilitando el manejo.
+
+## Bloque D: 
