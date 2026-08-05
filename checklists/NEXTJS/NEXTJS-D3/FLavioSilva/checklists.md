@@ -3,7 +3,7 @@
 - **nombre:** Flavio Silva
 - **dia:** 3
 - **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **loom:** [Video Loom](https://www.loom.com/share/8c18ea5b162c49679878527fe17289bb)
 ---
 
 ## Bloques
@@ -12,10 +12,10 @@
 - [x] C — CarritoPage Client Component con Context
 - [x] D — Server Action: enviarComanda()
 - [x] E — Verificación TypeScript completa
-- [ ] F — Evaluación entre pares + Loom + PR
+- [x] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final
 - [x] Agregar plato en /menu → aparece en /carrito
 - [x] Enviar comanda desde /carrito → POST real al backend
 - [x] npx tsc --noEmit → 0 errores
-- [ ] PR aprobado por sala par
+- [x] PR aprobado por sala par

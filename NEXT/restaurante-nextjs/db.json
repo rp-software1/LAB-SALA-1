@@ -1986,6 +1986,54 @@
       ],
       "total": 100,
       "id": "I7hUMXMP6ss"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 1,
+          "precioUnitario": 28
+        },
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        }
+      ],
+      "total": 83,
+      "id": "-R1ppULFeNw"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 4,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 4,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 212,
+      "id": "_eAVSH-5W1Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
