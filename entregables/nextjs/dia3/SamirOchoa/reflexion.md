@@ -15,3 +15,7 @@
 ## Bloque D: 
 1) **¿La separación entre lo que hace el Server Action y lo que hace el cliente fue clara?**
     - La separación fue clara porque el Server Action procesó la comunicación con el backend en el servidor, mientras que el cliente gestionó la interfaz visual y el estado de la aplicación.
+
+## Bloque E: 
+1) **¿Cuántos errores TypeScript había antes de resolver?¿El flujo manual encontró algún bug que TypeScript no detectó?**
+    - En primera, cero errores, y la segunda pregunta, no se encontro ningun error en el flujo manual.
