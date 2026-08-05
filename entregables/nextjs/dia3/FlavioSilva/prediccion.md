@@ -13,3 +13,5 @@
     - No, porque `CarritoPage` es un Client Component y solo los Server Components pueden exportar `metadata`.
 
 ## Bloque D:
+1) **El Server Action recibe los datos del pedido como parámetro. ¿Qué tipo TypeScript le pondrías a ese parámetro?**
+    - Le pondría `EstadoPedidoContext`
