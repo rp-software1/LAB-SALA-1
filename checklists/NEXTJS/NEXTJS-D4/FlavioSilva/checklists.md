@@ -3,7 +3,7 @@
 - **nombre:** Flavio Silva
 - **dia:** 4
 - **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **loom:** [Video Loom](https://www.loom.com/share/c27ceedc4d1a47749c7eed7821e0cb15)
 ---
 
 ## Bloques
@@ -12,11 +12,11 @@
 - [x] C — MesaDetalle Client Component + Suspense manual
 - [x] D — Server Action cambiarEstadoMesa + revalidatePath
 - [x] E — Verificación TypeScript + flujo completo
-- [ ] F — Evaluación entre pares + Loom + PR
+- [x] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final
 - [x] Clic en mesa → /mesa/[id] muestra datos reales
 - [x] Pestaña del browser muestra "Mesa N — Restaurante"
 - [x] Cambiar estado → la mesa en /mesas se actualiza
 - [x] npx tsc --noEmit → 0 errores
-- [ ] PR aprobado por sala par
+- [x] PR aprobado por sala par
