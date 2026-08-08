@@ -8,7 +8,7 @@
 
 ## Bloques
 - [x] A — getMesaById en api.ts + verificar con Postman
-- [ ] B — page.tsx con fetch real + generateMetadata + notFound()
+- [x] B — page.tsx con fetch real + generateMetadata + notFound()
 - [ ] C — MesaDetalle Client Component + Suspense manual
 - [ ] D — Server Action cambiarEstadoMesa + revalidatePath
 - [ ] E — Verificación TypeScript + flujo completo
