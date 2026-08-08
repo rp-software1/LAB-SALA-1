@@ -15,3 +15,7 @@
 ## Bloque D
 1) **¿revalidatePath fue lo que predijiste? ¿Actualiza en tiempo real o al siguiente request?**
     - `revalidatePath` cumplió exactamente lo esperado: invalida el caché del servidor de forma declarativa para que la siguiente navegación muestre la información actualizada de la base de datos.
+
+## Bloque E 
+1) **¿Cuántos errores TypeScript había antes de resolver?**
+    - No hubo errores con respecto a tipado, sino a la importación de archivos que no existian aún.
