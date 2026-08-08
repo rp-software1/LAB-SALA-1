@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getMesasById } from '../../../src/services/api';
-import MesaDetalle from './MesaDetalle';
-import MesaDetalleSkeleton from './MesaDetalleSkeleton';
+import MesaDetalleSkeleton from "./MesaDetalleSkeleton";
+import MesaDetalle from "./MesaDetalle";
 
 interface PageProps{
   params: Promise<{ mesaId: string }>;
