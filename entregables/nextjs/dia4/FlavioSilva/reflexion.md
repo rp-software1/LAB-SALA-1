@@ -7,3 +7,7 @@
 ## Bloque B
 1) **¿La predicción sobre generateMetadata async fue correcta? ¿Qué implica hacer dos fetches iguales (en generateMetadata y en el componente)?**
     - Si fue correcta. Realizar dos fetches (uno en la metadata y otro en el componente) funciona en Next.js, aunque se puede optimizar cacheando o deduplicando la petición si es necesario.
+  
+## Bloque C 
+1) **¿useTransition fue más claro o más confuso que un `useState<boolean>` de loading?**
+    - Podría decir más confuso, pues es un hook nuevo para mí. 
