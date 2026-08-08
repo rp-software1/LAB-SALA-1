@@ -7,3 +7,7 @@
 ## Bloque B 
 1) **¿generateMetadata puede hacer fetch de datos del backend para construir el title dinámico? ¿O solo puede usar los params de la URL?**
     - Si puede hacer el fetch. 
+
+## Bloque C 
+1) **¿El Suspense manual que envuelve `<MesaDetalle>` en `page.tsx` — cuándo exactamente muestra el skeleton? ¿`MesaDetalle` hace algún `fetch` asíncrono?**
+    - El skeleton se muestra cuando `MesaDetalle` hace el fetch de los datos de la mesa, y sí, `MesaDetalle` hace un fecth. 
