@@ -48,3 +48,17 @@ export async function cambiarEstadoPedido(
   if (!res.ok) throw new Error(`Error al cambiar estado: ${res.status}`);
   return res.json();
 }
+
+export async function getMesasById(id:string):Promise<Mesa>{
+  const res = await fetch(`${BASE_URL}/mesas?_id=${id}`)
+
+  if(res.status === 404) throw new Error(`No se encontro la mesa con el _id ${id} [Status: ${res.status}]`)
+
+  if(!res.ok) throw new Error(`Error al buscar la mesa [Status: ${res.status}]`)
+
+  const mesas: Mesa[] = await res.json();
+
+  if(mesas.length === 0) throw new Error(`No se encontro la mesa con el _id ${id}`)
+
+  return mesas[0];
+}
