@@ -11,3 +11,7 @@
 ## Bloque C 
 1) **¿El Suspense manual que envuelve `<MesaDetalle>` en `page.tsx` — cuándo exactamente muestra el skeleton? ¿`MesaDetalle` hace algún `fetch` asíncrono?**
     - El skeleton se muestra cuando `MesaDetalle` hace el fetch de los datos de la mesa, y sí, `MesaDetalle` hace un fecth. 
+
+## Bloque D 
+1) **Después de llamar a `cambiarEstadoMesa() `con éxito, ¿el usuario tiene que recargar /mesas manualmente para ver el nuevo estado, o `Next.js` lo actualiza solo?**
+    - `Next.js` lo actualizará solo.
