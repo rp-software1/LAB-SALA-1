@@ -11,3 +11,7 @@
 ## Bloque C 
 1) **¿useTransition fue más claro o más confuso que un `useState<boolean>` de loading?**
     - Podría decir más confuso, pues es un hook nuevo para mí. 
+
+## Bloque D
+1) **¿revalidatePath fue lo que predijiste? ¿Actualiza en tiempo real o al siguiente request?**
+    - `revalidatePath` cumplió exactamente lo esperado: invalida el caché del servidor de forma declarativa para que la siguiente navegación muestre la información actualizada de la base de datos.
