@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getMesasById } from '../../../src/services/api';
@@ -24,12 +23,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function MesaPage({ params }: PageProps){
   const { mesaId } = await params;
-  let mesa;
-  try{
-    mesa = await getMesasById(mesaId);
-  }catch{
-    notFound();
-  }
+  const mesa = await getMesasById(mesaId);
+
   return(
     <div className="max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-6">

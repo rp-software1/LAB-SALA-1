@@ -50,7 +50,7 @@ export async function cambiarEstadoPedido(
 }
 
 export async function getMesasById(id:string):Promise<Mesa>{
-  const res = await fetch(`${BASE_URL}/mesas?_id=${id}`)
+  const res = await fetch(`${BASE_URL}/mesas?_id=${id}`, { cache: 'no-store' })
 
   if(res.status === 404) throw new Error(`No se encontro la mesa con el _id ${id} [Status: ${res.status}]`)
 
