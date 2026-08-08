@@ -1,4 +1,4 @@
-export type EstadoMesa = | 'Disponible' | 'Ocupada' | 'Reservada' | 'Fuera_servicio';
+export type EstadoMesa = | 'Disponible' | 'Ocupada' | 'Reservada' | 'Fuera_Servicio';
 
 export type TipoPedido = 'mesa' | 'para_llevar';
 
@@ -6,6 +6,7 @@ export type EstadoPedido = | 'pendiente' | 'en_preparacion' | 'lista' | 'entrega
 
 export interface Mesa {
   _id: string;
+  id: string;
   numero: number;
   capacidad: number;
   estado: EstadoMesa;

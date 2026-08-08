@@ -2,18 +2,17 @@
 
 import { useState, useTransition } from 'react';
 import type { Mesa, EstadoMesa } from '../../../src/types';
-import { cambiarEstadoMesa } from './actions';
-
+import {cambiarEstadoMesa} from './actions';
 interface MesaDetalleProps {
   mesa: Mesa;
 }
 
-// Estados posibles y sus colores
+// Estados posibles y sus colores — los valores deben coincidir EXACTOS con la BD
 const ESTADOS: { valor: EstadoMesa; etiqueta: string; color: string }[] = [
-  { valor: 'disponible',     etiqueta: 'Disponible',      color: 'bg-green-600 hover:bg-green-700' },
-  { valor: 'ocupada',        etiqueta: 'Ocupada',          color: 'bg-red-600 hover:bg-red-700' },
-  { valor: 'reservada',      etiqueta: 'Reservada',        color: 'bg-yellow-500 hover:bg-yellow-600' },
-  { valor: 'fuera_servicio', etiqueta: 'Fuera de servicio', color: 'bg-gray-500 hover:bg-gray-600' },
+  { valor: 'Disponible',      etiqueta: 'Disponible',      color: 'bg-green-600 hover:bg-green-700' },
+  { valor: 'Ocupada',         etiqueta: 'Ocupada',          color: 'bg-red-600 hover:bg-red-700' },
+  { valor: 'Reservada',       etiqueta: 'Reservada',        color: 'bg-yellow-500 hover:bg-yellow-600' },
+  { valor: 'Fuera_Servicio',  etiqueta: 'Fuera de servicio', color: 'bg-gray-500 hover:bg-gray-600' },
 ];
 
 export default function MesaDetalle({ mesa }: MesaDetalleProps) {
@@ -24,7 +23,8 @@ export default function MesaDetalle({ mesa }: MesaDetalleProps) {
     if (nuevoEstado === estadoActual) return;
 
     startTransition(async () => {
-      const resultado = await cambiarEstadoMesa(mesa._id, nuevoEstado);
+      // json-server enruta por el campo `id` (string), no por `_id`
+      const resultado = await cambiarEstadoMesa(mesa.id, nuevoEstado);
       if (resultado.ok) {
         setEstadoActual(nuevoEstado);
       } else {
