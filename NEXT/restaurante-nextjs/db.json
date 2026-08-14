@@ -2070,6 +2070,66 @@
       ],
       "total": 75,
       "id": "kECOEhRMKis"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 50,
+      "id": "CXcoJtNYbWA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 5,
+          "nombre": "Tallarines Verdes",
+          "cantidad": 3,
+          "precioUnitario": 18
+        },
+        {
+          "platoId": 3,
+          "nombre": "Ají de Gallina",
+          "cantidad": 1,
+          "precioUnitario": 22
+        },
+        {
+          "platoId": 6,
+          "nombre": "Pollo a la Brasa",
+          "cantidad": 1,
+          "precioUnitario": 35
+        },
+        {
+          "platoId": 9,
+          "nombre": "Chicha Morada",
+          "cantidad": 2,
+          "precioUnitario": 8
+        },
+        {
+          "platoId": 8,
+          "nombre": "Causa Limeña",
+          "cantidad": 3,
+          "precioUnitario": 16
+        }
+      ],
+      "total": 205,
+      "id": "oGL3SNAICp0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

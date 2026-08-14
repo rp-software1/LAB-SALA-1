@@ -11,3 +11,7 @@
 ## Bloque C 
 1) **¿La tabla de flujo de estados fue clara antes de escribir SIGUIENTE?**
     - Mas o menos, no domino tanto `Next.js`, pero poco a poco iré aprendiendo más.
+
+## Bloque D
+1) **¿La lista se actualizó automáticamente o necesitaron router.refresh()?**
+    - La lista se actualizó automáticamente.
