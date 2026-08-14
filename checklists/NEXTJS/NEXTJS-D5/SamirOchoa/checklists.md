@@ -11,7 +11,7 @@
 - [x] B — ComandasPage Server Component + metadata estática
 - [x] C — ComandaCard Client Component + flujo de estados
 - [x] D — avanzarEstadoPedido Server Action + revalidatePath
-- [ ] E — NavBar actualizado + loading + error + verificación TypeScript
+- [x] E — NavBar actualizado + loading + error + verificación TypeScript
 - [ ] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final

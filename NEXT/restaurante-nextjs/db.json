@@ -2130,6 +2130,51 @@
       ],
       "total": 205,
       "id": "oGL3SNAICp0"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 25,
+      "id": "k07WMD-GYpI"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 25,
+      "id": "7OdO5fKYu6M"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 25,
+      "id": "7YlKH0T68Dk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

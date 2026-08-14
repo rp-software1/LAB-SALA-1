@@ -15,3 +15,7 @@
 ## Bloque D
 1) **¿La lista se actualizó automáticamente o necesitaron router.refresh()?**
     - La lista se actualizó automáticamente.
+
+## Bloque E 
+1) **¿Cuántos errores TypeScript había?**
+    - Have algunas secciones hubo por componentes que no existían aún, pero ahora ningún error.

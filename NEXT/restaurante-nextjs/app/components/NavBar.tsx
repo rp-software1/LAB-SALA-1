@@ -13,7 +13,8 @@ export default function NavBar() {
     {href : "/" , label: "Inicio"},
     {href : "/mesas" , label: "Mesas"},
     {href : "/menu" , label: "Menú"},
-    {href : "/carrito" , label: "Carrito"}
+    {href : "/carrito" , label: "Carrito"},
+    {href: "/comandas", label: "Comandas"}
   ]
 
   const esActiva = (ruta: string): string =>
