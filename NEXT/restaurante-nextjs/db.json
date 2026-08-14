@@ -84,7 +84,7 @@
       "_id": 2,
       "numero": 2,
       "capacidad": 2,
-      "estado": "Ocupada",
+      "estado": "Disponible",
       "pedidoActivoId": 101,
       "id": "r7CWH2ESUzU"
     },
