@@ -26,10 +26,18 @@ export default function ComandaCard({ pedido }: { pedido: Pedido }) {
  const [isPending, startTransition] = useTransition();
  const config = CONFIG[pedido.estado] ?? CONFIG.cancelada;
  const siguiente = SIGUIENTE[pedido.estado];
- const hora = new Date(pedido.creadoEn).toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' });
+const fechaValida = pedido.creadoEn && !isNaN(new Date(pedido.creadoEn).getTime());
+const hora = fechaValida
+  ? new Date(pedido.creadoEn).toLocaleTimeString('es-PE', { hour: '2-digit', minute: '2-digit' })
+  : '--:--';
+
+ const total = pedido.items.reduce(
+  (acc, item) => acc + (item.precioUnitario ?? 0) * item.cantidad,
+  0
+);
 
   const handleAvanzar = (): void => {
- if (!siguiente) return;
+ if (!siguiente || !pedido._id) return;
  startTransition(async () => {
  const r = await avanzarEstadoPedido(pedido._id, siguiente);
  if (!r.ok) alert(`Error: ${r.error}`);
@@ -48,13 +56,11 @@ export default function ComandaCard({ pedido }: { pedido: Pedido }) {
  <span className='text-xs font-medium px-2 py-1 rounded-full bg-white/50'>{config.label}</span>
  </div>
  <ul className='text-sm mb-3 space-y-1'>
- {pedido.items.map(item=>(<li key={item.platoId} className='flex justify-between'><span>{item.cantidad}x {item.nombre}</span><span>S/ {(item.precioUnitario*item.cantidad).toFixed(2)}</span></li>))}
- </ul>
+{pedido.items.map((item, idx)=>(<li key={`${item.platoId ?? 'item'}-${idx}`} className='flex justify-between'><span>{item.cantidad}x {item.nombre}</span><span>S/ {((item.precioUnitario ?? 0)*item.cantidad).toFixed(2)}</span></li>))} </ul>
  <div className='flex justify-between font-bold text-sm border-t border-current/20 pt-2 mb-3'>
- <span>Total</span><span>S/ {pedido.total.toFixed(2)}</span>
- </div>
+<span>Total</span><span>S/ {total.toFixed(2)}</span> </div>
  {siguiente&&(
- <button onClick={handleAvanzar} disabled={isPending}
+<button onClick={handleAvanzar} disabled={isPending || !pedido._id}
  className='w-full py-2 rounded bg-white/70 hover:bg-white/90 text-sm font-medium disabled:opacity-50'>
  {isPending?'Actualizando...':`Marcar como: ${CONFIG[siguiente].label}`}
  </button>

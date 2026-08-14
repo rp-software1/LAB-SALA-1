@@ -2034,6 +2034,42 @@
       ],
       "total": 212,
       "id": "_eAVSH-5W1Y"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 1,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 78,
+      "id": "KbRiRg0CKJo"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 3,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 75,
+      "id": "kECOEhRMKis"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
