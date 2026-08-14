@@ -16,3 +16,7 @@
 ## Bloque C 
 1) **¿Qué muestra ComandaCard para un pedido tipo "para_llevar" donde mesaId es null?**
     - Debería de mostrar algún mensaje representativo según el tipo que es.
+
+## Bloque D 
+1) **Si `avanzarEstadoPedido()` llama a `revalidatePath("/comandas")` en el servidor, `¿ComandasPage` hace el `fetch` automáticamente o el usuario tiene que recargar?**
+    - Es automáticamente, la `caché` se invalida y al volver a renderizarlo `Next.js` hace el `fetch` nuevamente.
