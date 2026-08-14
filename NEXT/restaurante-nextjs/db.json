@@ -1961,7 +1961,7 @@
     {
       "mesaId": null,
       "tipo": "para_llevar",
-      "estado": "pendiente",
+      "estado": "entregada",
       "items": [
         {
           "platoId": 1,
@@ -1976,7 +1976,7 @@
     {
       "mesaId": null,
       "tipo": "para_llevar",
-      "estado": "lista",
+      "estado": "entregada",
       "items": [
         {
           "platoId": 1,
@@ -1987,6 +1987,33 @@
       ],
       "total": 75,
       "id": "p50tm6rYppQ"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "entregada",
+      "items": [
+        {
+          "platoId": 2,
+          "nombre": "Lomo Saltado",
+          "cantidad": 1,
+          "precioUnitario": 30
+        },
+        {
+          "platoId": 7,
+          "nombre": "Anticuchos",
+          "cantidad": 4,
+          "precioUnitario": 20
+        },
+        {
+          "platoId": 10,
+          "nombre": "Inca Kola",
+          "cantidad": 1,
+          "precioUnitario": 6
+        }
+      ],
+      "total": 116,
+      "id": "sy6h6B4Vi40"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

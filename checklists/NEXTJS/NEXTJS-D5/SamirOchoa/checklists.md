@@ -3,7 +3,7 @@
 - **nombre:** Samir Ochoa
 - **dia:** 5
 - **estado:** en_progreso
-- **loom:** (agregar link al terminar)
+- **loom:** [Video Loom](https://www.loom.com/share/a1fe3682c96947c3819aecbb0c6ff363)
 ---
 
 ## Bloques
@@ -12,11 +12,11 @@
 - [x] C — ComandaCard Client Component + flujo de estados
 - [x] D — avanzarEstadoPedido Server Action + revalidatePath
 - [x] E — NavBar actualizado + loading + error + verificación TypeScript
-- [ ] F — Evaluación entre pares + Loom + PR
+- [x] F — Evaluación entre pares + Loom + PR
 
 ## Verificación final
-- [ ] /comandas muestra pedidos reales del backend
-- [ ] Avanzar estado → lista actualizada automáticamente
-- [ ] Flujo pendiente→en_preparacion→lista→entregada funciona
-- [ ] npx tsc --noEmit → 0 errores
-- [ ] PR aprobado por sala par
+- [x] /comandas muestra pedidos reales del backend
+- [x] Avanzar estado → lista actualizada automáticamente
+- [x] Flujo pendiente→en_preparacion→lista→entregada funciona
+- [x] npx tsc --noEmit → 0 errores
+- [x] PR aprobado por sala par
