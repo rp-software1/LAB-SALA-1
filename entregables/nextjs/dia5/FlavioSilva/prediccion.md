@@ -6,3 +6,9 @@
     ```tsx 
     ${BASE_URL}/pedidos/${pedidoId}/estado // URL
     ```
+
+## Bloque B
+1) - **¿generateMetadata necesita async en /comandas? ¿Necesita hacer fetch para construir el título?** 
+    - No, porque el título de esta página es estático ("Comandas — Restaurante") y no depende de datos `async`. 
+- **¿Puede ser síncrona?** Sí.
+- **¿Por qué?** Al no requerir parámetros de URL ni llamadas asíncronas para buscar información específica de un registro, se puede declarar directamente como un objeto estático `export const metadata`
