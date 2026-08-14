@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import type { EstadoPedido, Pedido } from '../../src/types';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL||'http://localhost:3001';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL||'http://localhost:3500';
 
 export async function avanzarEstadoPedido(
  pedidoId: string,
@@ -12,7 +12,7 @@ export async function avanzarEstadoPedido(
  if (!BASE_URL) return { ok: false, error: 'NEXT_PUBLIC_API_URL no configurada' };
  if (!pedidoId) return { ok: false, error: 'pedidoId no definido' };   // ← AGREGAR ESTA LÍNEA
  try {
- const res = await fetch(`${BASE_URL}/pedidos/${pedidoId}/estado`, {
+ const res = await fetch(`${BASE_URL}/pedidos/${pedidoId}`, {
  method: 'PATCH',
  headers: { 'Content-Type': 'application/json' },
  body: JSON.stringify({ estado: nuevoEstado }),

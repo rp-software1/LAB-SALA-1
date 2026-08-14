@@ -30,6 +30,7 @@ export interface ItemPedido {
 }
 
 export interface Pedido {
+  id: string;
   _id: string;
   mesaId: string | null;
   tipo: TipoPedido;

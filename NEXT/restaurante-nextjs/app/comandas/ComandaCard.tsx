@@ -37,9 +37,9 @@ const hora = fechaValida
 );
 
   const handleAvanzar = (): void => {
- if (!siguiente || !pedido._id) return;
+ if (!siguiente || !pedido.id) return;
  startTransition(async () => {
- const r = await avanzarEstadoPedido(pedido._id, siguiente);
+ const r = await avanzarEstadoPedido(pedido.id, siguiente);
  if (!r.ok) alert(`Error: ${r.error}`);
  });
  };
@@ -60,8 +60,8 @@ const hora = fechaValida
  <div className='flex justify-between font-bold text-sm border-t border-current/20 pt-2 mb-3'>
 <span>Total</span><span>S/ {total.toFixed(2)}</span> </div>
  {siguiente&&(
-<button onClick={handleAvanzar} disabled={isPending || !pedido._id}
- className='w-full py-2 rounded bg-white/70 hover:bg-white/90 text-sm font-medium disabled:opacity-50'>
+<button onClick={handleAvanzar} disabled={isPending || !pedido.id}
+ className='w-full py-2 rounded bg-white/70 hover:bg-white/90 text-sm font-medium disabled:opacity-50 cursor-pointer'>
  {isPending?'Actualizando...':`Marcar como: ${CONFIG[siguiente].label}`}
  </button>
  )}

@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import type { EstadoMesa, Mesa } from '../../../src/types';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3500';
 
 export async function cambiarEstadoMesa(
   mesaId: string,
