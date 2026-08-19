@@ -3,7 +3,6 @@ import type { Pedido } from "../../src/types";
 import { getPedido } from "../../src/services/api";
 import ComandaCard from "./ComandaCard";
 
-// Metadata estática — sin async
 export const metadata: Metadata = {
   title: 'Comandas — Restaurante',
 };

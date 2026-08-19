@@ -1,4 +1,3 @@
-// app/menu/page.tsx — Server Component
 import type { Metadata } from 'next';
 import type { Plato } from '../../src/types';
 import { getPlatos } from '../../src/services/api';

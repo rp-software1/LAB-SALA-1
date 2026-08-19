@@ -1,5 +1,3 @@
-// En Next.js no usamos Axios por defecto — fetch nativo es suficiente
-// El fetch nativo de Next.js tiene superpoderes: cache, revalidación
 import type { Mesa, Plato, Pedido, EstadoPedido } from '../types';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;

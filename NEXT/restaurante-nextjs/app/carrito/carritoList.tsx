@@ -67,7 +67,7 @@ if (confirmacion) {
     if (pedido.items.length === 0) {
         return <CarritoVacio />;
     }
-    // 3. Vista principal del carrito con el botón de envío
+    
     return (
         <div>
             <div className="max-w-2xl mx-auto">

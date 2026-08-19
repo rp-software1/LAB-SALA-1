@@ -1,4 +1,3 @@
-// app/carrito/actions.ts
 'use server';
 
 import type { EstadoPedidoContext } from '../../src/types';
@@ -14,7 +13,7 @@ export async function enviarComanda(
   }
 
   try {
-    console.log("🚀 Intentando enviar pedido a:", `${BASE_URL}/pedidos`);
+    console.log("Intentando enviar pedido a:", `${BASE_URL}/pedidos`);
 
     const res = await fetch(`${BASE_URL}/pedidos`, {
       method: 'POST',
@@ -39,11 +38,11 @@ export async function enviarComanda(
     const pedidoId = data._id || data.id || (typeof data === 'string' ? data : null);
 
     if (!pedidoId) {
-      console.error("⚠️ El backend respondió pero no se encontró un ID válido. Objeto recibido:", data);
+      console.error("El backend respondió pero no se encontró un ID válido. Objeto recibido:", data);
       return { ok: false, error: 'El servidor no devolvió un ID de pedido válido' };
     }
 
-    console.log("✅ Pedido creado con ID real:", pedidoId);
+    console.log("Pedido creado con ID real:", pedidoId);
     return { ok: true, pedidoId: String(pedidoId) };
 
   } catch (err: unknown) {

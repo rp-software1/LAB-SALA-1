@@ -1,4 +1,3 @@
-// app/comandas/ComandaCard.tsx
 'use client';
 
 import { useTransition } from 'react';
