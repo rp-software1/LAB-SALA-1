@@ -11,3 +11,7 @@
 ## Bloque C 
 1) **¿Encontraron algo inesperado en la auditoría? ¿Qué fue lo más común?**
     - Nada inesperado y lo común fue tener comentarios breves explicando ese fragmento de código, lo cual dejé por si se mantiene la aplicación más adelante.
+
+## Bloque D 
+1) **¿El build tuvo errores? ¿Cuáles y cómo los resolvieron?**
+    - No hubo error, solo no tenemos correctamente el endpoint del backend.
