@@ -4,8 +4,8 @@ import { getMesas } from "../../src/services/api";
 import MesaCard from "./MesaCard";
 
 export const metadata: Metadata = {
-    title: "Restaurante - Mesas", 
-    description: "Listado de mesas del restaurante El Buen Sabor"
+  title: "Mesas — Sistema de Restaurante", 
+  description: "Gestiona las mesas del restaurante — ve su estado y asigna comandas.",
 }
 
 export default async function MesasPage() {

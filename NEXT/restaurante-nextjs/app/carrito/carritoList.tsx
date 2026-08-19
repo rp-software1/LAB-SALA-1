@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { usePedido } from "@/src/context/PedidoProvider";
 import CarritoVacio from "./carritoVacio";
@@ -20,23 +20,29 @@ export default function CarritoList() {
     const [enviando, setEnviando] = useState<boolean>(false);
     const [confirmacion, setConfirmacion] = useState<string | null>(null);
     const [errorEnvio, setErrorEnvio] = useState<string | null>(null);
+    
+    useEffect(() => {
+        document.title = pedido.items.length > 0
+            ? `Carrito (${pedido.items.length}) — Sistema de Restaurante`
+            : 'Carrito — Sistema de Restaurante';
+    }, [pedido.items.length]);
 
   const handleEnviar = async (e: React.SyntheticEvent): Promise<void> => {
-          e.preventDefault();
-          setEnviando(true);
-          setErrorEnvio(null);
+        e.preventDefault();
+        setEnviando(true);
+        setErrorEnvio(null);
 
-          const resultado = await enviarComanda(pedido);
+        const resultado = await enviarComanda(pedido);
 
-          if (resultado.ok) {
-              setConfirmacion(resultado.pedidoId);
-              // Mantenemos esto comentado o limpio para que la pantalla de confirmación muestre el ID
-          } else {
-              setErrorEnvio(resultado.error);
-          }
+        if (resultado.ok) {
+            setConfirmacion(resultado.pedidoId);
+            limpiarPedido(); 
+        } else {
+            setErrorEnvio(resultado.error);
+        }
 
-          setEnviando(false);
-      };
+        setEnviando(false);
+    };
 
 if (confirmacion) {
         return (

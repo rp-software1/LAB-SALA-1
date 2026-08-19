@@ -2014,6 +2014,78 @@
       ],
       "total": 116,
       "id": "sy6h6B4Vi40"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 1,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 53,
+      "id": "qEnR5VA9LOU"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 1,
+          "precioUnitario": 25
+        },
+        {
+          "platoId": 4,
+          "nombre": "Arroz con Mariscos",
+          "cantidad": 1,
+          "precioUnitario": 28
+        }
+      ],
+      "total": 53,
+      "id": "553MOzxVwN4"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 50,
+      "id": "OkzCY2zO1dk"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 50,
+      "id": "doRHqkSlBhA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
