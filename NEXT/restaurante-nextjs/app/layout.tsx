@@ -15,8 +15,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sistema de Restaurante",
-  description: "Gestión de mesas, menú y comandas",
+  title: {
+    default: "Sistema de Restaurante",
+    template: "%s — Sistema de Restaurante",
+  },
+  description: "Panel de gestión de mesas, menú y comandas del restaurante.",
+  robots: {
+    index: false,   // App interna — no indexar en Google
+    follow: false,
+  },
+  openGraph: {
+    title: "Sistema de Restaurante",
+    description: "Panel de gestión de mesas, menú y comandas del restaurante.",
+    type: "website",
+    locale: "es_PE",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sistema de Restaurante",
+    description: "Panel de gestión de mesas, menú y comandas del restaurante.",
+  },
 };
 
 export default function RootLayout({
