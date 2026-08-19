@@ -7,7 +7,7 @@
 ---
 
 ## Bloques
-- [ ] A — Metadata completa en /mesas /menu /carrito
+- [x] A — Metadata completa en /mesas /menu /carrito
 - [ ] B — Open Graph en layout.tsx + next.config.ts
 - [ ] C — Auditoría del proyecto (TODO, console.log, imports)
 - [ ] D — npm run build sin errores + .env.production.local
