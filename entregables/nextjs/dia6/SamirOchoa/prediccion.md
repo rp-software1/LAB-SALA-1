@@ -9,3 +9,7 @@
 1) **Si el restaurante usa imágenes de platos almacenadas en un servicio externo (como Cloudinary o AWS S3), ¿qué hay que configurar en next.config.ts para que <Image> de Next.js las muestre?**
 - ¿Dónde se configura para imágenes externas?: En next.config.ts
 - ¿Qué campo de next.config.ts controla eso?: Por lo que pude investigar es images.remotePatterns
+
+## Bloque D 
+1) **Si el `backend` no está corriendo cuando ejecutas `npm run build`, ¿el `build` va a fallar para las páginas con `generateMetadata async` que hacen `fetch`?**
+- No, el build no va a fallar, ya que `generateMetadata` se ejecuta en tiempo de build y no depende del backend.
