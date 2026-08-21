@@ -15,3 +15,7 @@
 ## Bloque D 
 1) **¿El build tuvo errores? ¿Cuáles y cómo los resolvieron?**
     - No hubo error, solo no tenemos correctamente el endpoint del backend.
+
+## Bloque E
+1) **¿Encontraron errores de TypeScript? ¿Cuáles?**
+    - No hubo errores de TypeScript.
