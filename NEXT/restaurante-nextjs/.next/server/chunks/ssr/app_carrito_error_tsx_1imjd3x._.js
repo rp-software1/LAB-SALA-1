@@ -1,0 +1,3 @@
+module.exports=[71538,a=>{"use strict";var b=a.i(87924),c=a.i(72131);a.s(["default",0,function({error:a,reset:d}){return(0,c.useEffect)(()=>{console.error(a)},[a]),(0,b.jsxs)("div",{className:"text-center mt-12",children:[(0,b.jsx)("p",{className:"text-4xl mb-4",children:"⚠️"}),(0,b.jsx)("p",{className:"font-bold mb-4",children:"Error en el carrito"}),(0,b.jsx)("button",{onClick:d,className:"bg-blue-600 text-white px-6 py-2 rounded",children:"Reintentar"})]})}])}];
+
+//# sourceMappingURL=app_carrito_error_tsx_1imjd3x._.js.map

@@ -1,0 +1,17 @@
+{
+  "node": {
+    "406ab5801a06c5afe45cd118270bf1c9d4b0465e56": {
+      "workers": {
+        "app/carrito/page": {
+          "moduleId": 64568,
+          "async": false,
+          "exportedName": "enviarComanda",
+          "filename": "app/carrito/actions.ts"
+        }
+      },
+      "exportedName": "enviarComanda",
+      "filename": "app/carrito/actions.ts"
+    }
+  },
+  "edge": {}
+}

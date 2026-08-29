@@ -1,0 +1,3 @@
+module.exports=[31996,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function(){return(0,b.jsxs)("div",{children:[(0,b.jsx)("h1",{className:"text-2xl font-bold mb-6",children:"Mesas del Restaurante"}),(0,b.jsx)("div",{className:"grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4",children:Array.from({length:8}).map((a,c)=>(0,b.jsxs)("div",{className:"border-2 border-gray-200 rounded-lg p-4 animate-pulse",children:[(0,b.jsx)("div",{className:"h-5 bg-gray-200 rounded mb-2 w-2/3"}),(0,b.jsx)("div",{className:"h-4 bg-gray-200 rounded mb-2 w-1/2"}),(0,b.jsx)("div",{className:"h-4 bg-gray-200 rounded w-1/3"})]},c))})]})}])},88059,a=>{a.n(a.i(31996))}];
+
+//# sourceMappingURL=app_mesas_loading_tsx_2090apn._.js.map

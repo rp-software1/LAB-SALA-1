@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/carrito/page": "/carrito",
+  "/comandas/page": "/comandas",
+  "/favicon.ico/route": "/favicon.ico",
+  "/menu/page": "/menu",
+  "/mesa/[mesaId]/page": "/mesa/[mesaId]",
+  "/mesas/page": "/mesas",
+  "/page": "/",
+  "/reporte/[año]/[mes]/page": "/reporte/[año]/[mes]"
+}

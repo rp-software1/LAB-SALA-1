@@ -1,0 +1,42 @@
+{
+  "node": {
+    "406ab5801a06c5afe45cd118270bf1c9d4b0465e56": {
+      "workers": {
+        "app/carrito/page": {
+          "moduleId": 64568,
+          "async": false,
+          "exportedName": "enviarComanda",
+          "filename": "app/carrito/actions.ts"
+        }
+      },
+      "filename": "app/carrito/actions.ts",
+      "exportedName": "enviarComanda"
+    },
+    "606177afab8ba4657030fe8608b77bdec0ed68eae9": {
+      "workers": {
+        "app/comandas/page": {
+          "moduleId": 12190,
+          "async": false,
+          "exportedName": "avanzarEstadoPedido",
+          "filename": "app/comandas/actions.ts"
+        }
+      },
+      "filename": "app/comandas/actions.ts",
+      "exportedName": "avanzarEstadoPedido"
+    },
+    "601058d8e33f5ada3a6f968e3b45a3fe1ea49d0200": {
+      "workers": {
+        "app/mesa/[mesaId]/page": {
+          "moduleId": 16317,
+          "async": false,
+          "exportedName": "cambiarEstadoMesa",
+          "filename": "app/mesa/[mesaId]/actions.ts"
+        }
+      },
+      "filename": "app/mesa/[mesaId]/actions.ts",
+      "exportedName": "cambiarEstadoMesa"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "OZaPEVS+7iSIQt2hHsHonBcXUoFOwJw+xUxKnktpqHU="
+}
