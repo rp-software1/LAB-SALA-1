@@ -2086,6 +2086,21 @@
       ],
       "total": 50,
       "id": "doRHqkSlBhA"
+    },
+    {
+      "mesaId": null,
+      "tipo": "para_llevar",
+      "estado": "pendiente",
+      "items": [
+        {
+          "platoId": 1,
+          "nombre": "Ceviche",
+          "cantidad": 2,
+          "precioUnitario": 25
+        }
+      ],
+      "total": 50,
+      "id": "v1EKn8sX4YM"
     }
   ]
 }
