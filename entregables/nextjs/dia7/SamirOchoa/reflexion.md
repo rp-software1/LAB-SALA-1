@@ -16,4 +16,7 @@
 
 ## Bloque D
 1) **¿Qué ruta tuvo más problemas en producción? ¿Cómo lo resolvieron?**
-  - Bueno en si tuvimos varios problemas anteriormente por el tema que no se visualizaban las mesas comandas y platos que tenian. Lo resolvimos modificando el archivo src/services/api.ts para que las funciones del servidor leyeran los datos y funcione correctamente como quiere. 
+  - Bueno en si tuvimos varios problemas anteriormente por el tema que no se visualizaban las mesas comandas y platos que tenian. Lo resolvimos modificando el archivo src/services/api.ts para que las funciones del servidor leyeran los datos y funcione correctamente como quiere.
+## Bloque E 
+1) **¿El push del README activó automáticamente un nuevo deploy en Vercel? ¿Tardó más o menos que los anteriores?**
+  - Si, se activo no se tardo nada.
