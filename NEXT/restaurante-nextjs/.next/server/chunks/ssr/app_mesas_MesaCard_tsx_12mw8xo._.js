@@ -1,5 +1,0 @@
-module.exports=[10117,a=>{"use strict";var b=a.i(87924),c=a.i(50944);let d={Disponible:"bg-green-100 border-green-400 hover:bg-green-200",Ocupada:"bg-red-100   border-red-400   hover:bg-red-200",Reservada:"bg-yellow-100 border-yellow-400 hover:bg-yellow-200",Fuera_Servicio:"bg-gray-100  border-gray-400"};a.s(["default",0,function({mesa:a}){let e=(0,c.useRouter)();return(0,b.jsxs)("button",{onClick:()=>{"Fuera_Servicio"!==a.estado&&e.push(`/mesa/${a._id}`)},className:`border-2 rounded-lg p-4 text-left w-full
-               ${d[a.estado]}
-               ${"Fuera_Servicio"===a.estado?"cursor-not-allowed":"cursor-pointer"}`,children:[(0,b.jsxs)("p",{className:"font-bold text-lg",children:["Mesa ",a.numero]}),(0,b.jsxs)("p",{className:"text-sm text-gray-600",children:["Cap: ",a.capacidad]}),(0,b.jsx)("p",{className:"text-sm capitalize",children:a.estado.replace("_"," ")})]})}])}];
-
-//# sourceMappingURL=app_mesas_MesaCard_tsx_12mw8xo._.js.map

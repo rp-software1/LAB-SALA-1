@@ -1,3 +1,0 @@
-module.exports=[95533,a=>{"use strict";var b=a.i(7997);a.s(["default",0,function(){return(0,b.jsxs)("div",{className:"max-w-2xl mx-auto",children:[(0,b.jsx)("div",{className:"h-8 bg-gray-200 rounded mb-6 w-1/3 animate-pulse"}),Array.from({length:3}).map((a,c)=>(0,b.jsxs)("div",{className:"bg-white rounded-lg p-4 shadow-sm mb-3 animate-pulse",children:[(0,b.jsx)("div",{className:"h-4 bg-gray-200 rounded mb-2 w-2/3"}),(0,b.jsx)("div",{className:"h-3 bg-gray-200 rounded w-1/3"})]},c))]})}])},25605,a=>{a.n(a.i(95533))}];
-
-//# sourceMappingURL=app_carrito_loading_tsx_0awuz4s._.js.map

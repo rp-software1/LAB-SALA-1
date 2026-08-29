@@ -1,3 +1,0 @@
-module.exports=[34302,a=>{"use strict";var b=a.i(87924),c=a.i(72131);a.s(["default",0,function({error:a,reset:d}){return(0,c.useEffect)(()=>{console.error("Error en /mesas:",a.message)},[a]),(0,b.jsxs)("div",{className:"text-center mt-12",children:[(0,b.jsx)("p",{className:"text-4xl mb-4",children:"⚠️"}),(0,b.jsx)("h2",{className:"text-xl font-bold mb-2",children:"No se pudieron cargar las mesas"}),(0,b.jsx)("p",{className:"text-gray-500 mb-6 text-sm",children:a.message}),(0,b.jsx)("button",{onClick:d,className:"bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700",children:"Reintentar"})]})}])}];
-
-//# sourceMappingURL=app_mesas_error_tsx_0pcq2-9._.js.map
