@@ -15,3 +15,7 @@
 ## Bloque D 
 1) **¿Qué ruta tuvo más problemas en producción? ¿Cómo lo resolvieron?**
     - Pues todos al principio por tema de falta del backend, ya que al entrar salia error por hacer el `fetch`.
+
+## Bloque E 
+1) **¿El push del README activó automáticamente un nuevo deploy en Vercel? ¿Tardó más o menos que los anteriores?**
+    - Si, se activó automáticamente y tardó menos que los anteriores.
