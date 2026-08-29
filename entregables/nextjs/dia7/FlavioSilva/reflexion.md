@@ -11,3 +11,7 @@
 ## Bloque C 
 1) **¿El redeploy fue automático o tuvieron que triggerearlo manualmente?** 
     - Solo hacer click y ya.
+
+## Bloque D 
+1) **¿Qué ruta tuvo más problemas en producción? ¿Cómo lo resolvieron?**
+    - Pues todos al principio por tema de falta del backend, ya que al entrar salia error por hacer el `fetch`.

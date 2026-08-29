@@ -11,7 +11,7 @@
 - [x] A — Verificar .gitignore y estado del repositorio
 - [x] B — Conectar a Vercel y primer deploy
 - [x] C — Configurar variables de entorno en Vercel + redeploy
-- [ ] D — Verificación completa en producción
+- [x] D — Verificación completa en producción
 - [ ] E — Actualizar openGraph y README con URL real
 - [ ] F — Evaluación final del sprint Next.js + Loom
 
