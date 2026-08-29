@@ -72,7 +72,7 @@ export async function getMesasById(id: string): Promise<Mesa> {
   if (typeof window === 'undefined') {
     const data = leerDbLocal();
     const mesas: Mesa[] = data.mesas || [];
-    const mesaEncontrada = mesas.find((m: any) => m._id === id || m.id === id);
+    const mesaEncontrada = mesas.find((m: Mesa) => m._id === id || m.id === id);
     if (!mesaEncontrada) throw new Error(`No se encontró la mesa con el _id ${id}`);
     return mesaEncontrada;
   }
