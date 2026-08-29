@@ -39,9 +39,11 @@ NEXT_PUBLIC_API_URL=http://localhost:3500
 - /comandas → Panel de gestión de comandas (staff)
 - /mesa/[id] → Detalle y cambio de estado de una mesa
 
-### restaurante-frontend (React — referencia)
-Stack: React 18 · TypeScript · Axios · React Router DOM
-Proyecto de referencia — la versión Next.js lo reemplaza.
+
+## Producción 
+```txt 
+URL de la aplicación: https://lab-sala-1.vercel.app/
+```
 
 ## Equipo
 I-SALA1 — RPSoft Bootcamp

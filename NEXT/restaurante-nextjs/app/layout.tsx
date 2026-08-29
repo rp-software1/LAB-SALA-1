@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     description: "Panel de gestión de mesas, menú y comandas del restaurante.",
     type: "website",
     locale: "es_PE",
+    url : "https://lab-sala-1.vercel.app/"
   },
   twitter: {
     card: "summary",
